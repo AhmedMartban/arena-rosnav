@@ -71,10 +71,10 @@
     uri: https://github.com/Arena-Rosnav/arena-ros.git
     version: master
 
-#- git:
-#    local-name: ../planners/cadrl-ros
-#    uri: https://github.com/Arena-Rosnav/cadrl-ros.git
-#    version: master
+- git:
+    local-name: ../planners/cadrl-ros
+    uri: https://github.com/Arena-Rosnav/cadrl-ros.git
+    version: master
 
 #- git:
 #   local-name: ../planners/crowdnav-ros
