@@ -9,7 +9,11 @@
  
 
   <!-- SARL_star Planner -->
-  <node pkg="sarl_star_ros" type="sarl_tb3_node.py" name="sarl_star_node" output="screen" />
+  <node pkg="sarl_star_ros" type="sarl_tb3_node.py" name="sarl_star_node" output="screen" >
+
+  <remap from="move_base/global_costmap/costmap" to="move_base_flex/global_costmap/costmap" />
+
+  </node>
 
 
   <!-- spacial_horizon -->
