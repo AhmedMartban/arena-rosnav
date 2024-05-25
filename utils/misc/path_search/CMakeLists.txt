@@ -54,7 +54,7 @@ ament_export_dependencies(rclcpp)
 ament_export_dependencies(rclpy)
 ament_export_dependencies(std_msgs)
 ament_export_dependencies(mapping)
-ament_export_include_directories(${INCLUDE_DIRS})
+include_directories(${INCLUDE_DIRS})
 ament_export_libraries(path_search ${LIBS})
 
 ament_package()

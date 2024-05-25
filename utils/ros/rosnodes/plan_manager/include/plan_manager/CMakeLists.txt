@@ -244,6 +244,6 @@ ament_export_dependencies(tf2_geometry_msgs)
 ament_export_dependencies(plan_visualization)
 ament_export_dependencies(rclcpp)
 ament_export_dependencies(std_msgs)
-ament_export_include_directories(${INCLUDE_DIRS})
+include_directories(${INCLUDE_DIRS})
 
 ament_package()

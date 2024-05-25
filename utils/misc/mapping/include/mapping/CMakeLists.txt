@@ -237,7 +237,7 @@ ament_export_dependencies(Eigen3)
 ament_export_dependencies(PCL)
 ament_export_dependencies(rclcpp)
 ament_export_dependencies(laser_geometry)
-ament_export_include_directories(${INCLUDE_DIRS})
+include_directories(${INCLUDE_DIRS})
 ament_export_libraries(mapping ${LIBS})
 
 ament_package()

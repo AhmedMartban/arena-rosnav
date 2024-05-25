@@ -215,7 +215,7 @@ ament_export_dependencies(rclcpp)
 ament_export_dependencies(sensor_msgs)
 ament_export_dependencies(Eigen3)
 ament_export_dependencies(nav_msgs)
-ament_export_include_directories(${INCLUDE_DIRS})
+include_directories(${INCLUDE_DIRS})
 ament_export_libraries(plan_visualization ${LIBS})
 
 ament_package()

@@ -49,6 +49,6 @@ ament_export_dependencies(rclpy)
 ament_export_dependencies(rosidl_default_generators)
 ament_export_dependencies(tf2_ros)
 ament_export_dependencies(nav_msgs)
-ament_export_include_directories(${INCLUDE_DIRS})
+include_directories(${INCLUDE_DIRS})
 
 ament_package()

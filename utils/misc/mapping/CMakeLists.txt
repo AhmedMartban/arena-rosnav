@@ -88,7 +88,7 @@ ament_export_dependencies(
 )
 
 ## Export include directories
-ament_export_include_directories(include)
+include_directories(include)
 
 ## Export libraries
 ament_export_libraries(mapping)

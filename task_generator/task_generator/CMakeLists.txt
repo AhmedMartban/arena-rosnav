@@ -24,6 +24,6 @@ catkin_install_python(PROGRAMS scripts/main.py scripts/scenario_helper.py
 
 ament_export_dependencies(ament_cmake)
 ament_export_dependencies(rclpy)
-ament_export_include_directories(${INCLUDE_DIRS})
+include_directories(${INCLUDE_DIRS})
 
 ament_package()

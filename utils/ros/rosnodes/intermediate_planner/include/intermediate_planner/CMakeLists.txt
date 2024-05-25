@@ -68,6 +68,6 @@ ament_export_dependencies(path_search)
 ament_export_dependencies(1.7)
 ament_export_dependencies(visualization_msgs)
 ament_export_dependencies(plan_msgs)
-ament_export_include_directories(${INCLUDE_DIRS})
+include_directories(${INCLUDE_DIRS})
 
 ament_package()
