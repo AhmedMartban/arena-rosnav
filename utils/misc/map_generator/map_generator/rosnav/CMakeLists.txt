@@ -38,7 +38,7 @@ rosidl_generate_interfaces(${PROJECT_NAME} "msg/ResetStackedObs.msg"
 
 
 
-catkin_install_python(PROGRAMS scripts/rosnav_node.py
+install(PROGRAMS scripts/rosnav_node.py
   DESTINATION bin)
 
 ament_export_dependencies(ament_cmake)
@@ -49,6 +49,6 @@ ament_export_dependencies(rclpy)
 ament_export_dependencies(rosidl_default_generators)
 ament_export_dependencies(tf2_ros)
 ament_export_dependencies(nav_msgs)
-include_directories(${INCLUDE_DIRS})
+ament_export_include_directories(${INCLUDE_DIRS})
 
 ament_package()

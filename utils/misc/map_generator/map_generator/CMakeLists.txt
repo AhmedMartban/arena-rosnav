@@ -26,7 +26,7 @@ set(LIBS ${ament_cmake_LIBRARIES} ${rclpy_LIBRARIES} ${nav_msgs_LIBRARIES}
   ${rosidl_default_generators_LIBRARIES})
 
 
-catkin_install_python(PROGRAMS map_generator/map_generator_node.py
+install(PROGRAMS map_generator/map_generator_node.py
   map_generator/map_server.py
   DESTINATION bin)
 
@@ -36,6 +36,6 @@ ament_export_dependencies(nav_msgs)
 ament_export_dependencies(std_msgs)
 ament_export_dependencies(map_distance_server)
 ament_export_dependencies(rosidl_default_generators)
-include_directories(${INCLUDE_DIRS})
+ament_export_include_directories(${INCLUDE_DIRS})
 
 ament_package()

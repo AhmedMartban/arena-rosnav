@@ -18,6 +18,7 @@ find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(REQUIRED REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(nav_msgs REQUIRED)
@@ -162,7 +163,7 @@ add_library(plan_visualization src/planning_visualization.cpp)
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
+# install(PROGRAMS
 #   scripts/my_python_script
 #   DESTINATION bin
 # )
@@ -212,10 +213,11 @@ ament_export_dependencies(ament_cmake)
 ament_export_dependencies(std_msgs)
 ament_export_dependencies(geometry_msgs)
 ament_export_dependencies(rclcpp)
+ament_export_dependencies(REQUIRED)
 ament_export_dependencies(sensor_msgs)
 ament_export_dependencies(Eigen3)
 ament_export_dependencies(nav_msgs)
-include_directories(${INCLUDE_DIRS})
+ament_export_include_directories(${INCLUDE_DIRS})
 ament_export_libraries(plan_visualization ${LIBS})
 
 ament_package()

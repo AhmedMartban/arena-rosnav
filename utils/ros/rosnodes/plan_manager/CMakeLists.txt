@@ -133,6 +133,7 @@ find_package(tf2 REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(plan_visualization REQUIRED)
+find_package(REQUIRED REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 set(INCLUDE_DIRS ${ament_cmake_INCLUDE_DIRS} ${tf2_ros_INCLUDE_DIRS}
@@ -185,7 +186,7 @@ add_dependencies(test_node ${${PROJECT_NAME}_EXPORTED_TARGETS}
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
+# install(PROGRAMS
 #   scripts/my_python_script
 #   DESTINATION bin
 # )
@@ -242,8 +243,9 @@ ament_export_dependencies(tf2)
 ament_export_dependencies(geometry_msgs)
 ament_export_dependencies(tf2_geometry_msgs)
 ament_export_dependencies(plan_visualization)
+ament_export_dependencies(REQUIRED)
 ament_export_dependencies(rclcpp)
 ament_export_dependencies(std_msgs)
-include_directories(${INCLUDE_DIRS})
+ament_export_include_directories(${INCLUDE_DIRS})
 
 ament_package()

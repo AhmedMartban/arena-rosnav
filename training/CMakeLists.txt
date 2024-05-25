@@ -370,7 +370,7 @@ ament_package()
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-catkin_install_python(PROGRAMS
+install(PROGRAMS
   scripts/train_agent.py
 #    scripts/env/flatland_gym_env.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

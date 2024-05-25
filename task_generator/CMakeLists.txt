@@ -15,15 +15,14 @@ include_directories(${INCLUDE_DIRS})
 set(LIBRARY_DIRS ${ament_cmake_LIBRARIES} ${rclpy_LIBRARIES})
 set(LIBS ${ament_cmake_LIBRARIES} ${rclpy_LIBRARIES})
 
-generate_dynamic_reconfigure_options(cfg/TaskGenerator.cfg)
 
 
-catkin_install_python(PROGRAMS scripts/main.py scripts/scenario_helper.py
+install(PROGRAMS scripts/main.py scripts/scenario_helper.py
   scripts/server.py scripts/filewatcher.py scripts/delay_restart.py
   DESTINATION bin)
 
 ament_export_dependencies(ament_cmake)
 ament_export_dependencies(rclpy)
-include_directories(${INCLUDE_DIRS})
+ament_export_include_directories(${INCLUDE_DIRS})
 
 ament_package()

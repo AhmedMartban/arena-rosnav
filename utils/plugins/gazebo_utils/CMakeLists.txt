@@ -139,7 +139,7 @@ ament_package()
 ## Install ##
 #############
 
-catkin_install_python(PROGRAMS
+install(PROGRAMS
   scripts/odom.py
   scripts/generate_world.py
   scripts/emergency_brake_node.py

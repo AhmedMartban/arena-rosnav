@@ -19,6 +19,7 @@ find_package(nav_msgs REQUIRED)
 find_package(nlopt REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(rclpy REQUIRED)
+find_package(REQUIRED REQUIRED)
 find_package(mapping REQUIRED)
 set(INCLUDE_DIRS ${ament_cmake_INCLUDE_DIRS} ${Eigen3_INCLUDE_DIRS}
   ${geometry_msgs_INCLUDE_DIRS} ${path_search_INCLUDE_DIRS} ${rclcpp_INCLUDE_DIRS}
@@ -173,7 +174,7 @@ add_library(traj_planner src/bspline_optimizer_esdf.cpp
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
+# install(PROGRAMS
 #   scripts/my_python_script
 #   DESTINATION bin
 # )
@@ -229,8 +230,9 @@ ament_export_dependencies(nav_msgs)
 ament_export_dependencies(nlopt)
 ament_export_dependencies(std_msgs)
 ament_export_dependencies(rclpy)
+ament_export_dependencies(REQUIRED)
 ament_export_dependencies(mapping)
-include_directories(${INCLUDE_DIRS})
+ament_export_include_directories(${INCLUDE_DIRS})
 ament_export_libraries(traj_planner ${LIBS})
 
 ament_package()

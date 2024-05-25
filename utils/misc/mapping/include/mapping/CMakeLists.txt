@@ -18,6 +18,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(pcl_ros REQUIRED)
+find_package(REQUIRED REQUIRED)
 find_package(1.7 REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(PCL REQUIRED)
@@ -177,7 +178,7 @@ add_library(mapping src/mapping.cpp src/raycast.cpp)
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
+# install(PROGRAMS
 #   scripts/my_python_script
 #   DESTINATION bin
 # )
@@ -232,12 +233,13 @@ ament_export_dependencies(sensor_msgs)
 ament_export_dependencies(visualization_msgs)
 ament_export_dependencies(tf2)
 ament_export_dependencies(pcl_ros)
+ament_export_dependencies(REQUIRED)
 ament_export_dependencies(1.7)
 ament_export_dependencies(Eigen3)
 ament_export_dependencies(PCL)
 ament_export_dependencies(rclcpp)
 ament_export_dependencies(laser_geometry)
-include_directories(${INCLUDE_DIRS})
+ament_export_include_directories(${INCLUDE_DIRS})
 ament_export_libraries(mapping ${LIBS})
 
 ament_package()

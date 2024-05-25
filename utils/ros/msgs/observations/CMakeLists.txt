@@ -56,7 +56,7 @@ add_dependencies(observation_packer observations_generate_messages_cpp)
 target_link_libraries(observation_packer ${catkin_LIBRARIES})
 
 # # adding ros agent
-# catkin_install_python(PROGRAMS
+# install(PROGRAMS
 # agents/agent_play.py
 # DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
