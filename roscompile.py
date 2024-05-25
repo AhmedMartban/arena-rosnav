@@ -3,7 +3,7 @@ import subprocess
 from ros_introspection.util import get_packages
 
 # Pfad zu Ihrem Workspace
-workspace_path = '/home/ahmo030/arena_ws/src'
+workspace_path = '/home/jonas/ros2-migration_all/ros2-migration/arena/arena-rosnav'
 
 # Pakete identifizieren
 packages = get_packages(workspace_path)
