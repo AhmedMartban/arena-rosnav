@@ -1,152 +1,76 @@
 cmake_minimum_required(VERSION 3.5)
-project(gazebo_utils)
+project(rviz_plugins)
 
-## Find catkin macros and libraries
-## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
-## is used, also find other catkin packages
+# Add support for C++14 or later
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
 
-## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
- find_package(gazebo REQUIRED )
+# Find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(gazebo_ros REQUIRED)
-find_package(geometry_msgs REQUIRED)
+find_package(rviz_common REQUIRED)
+find_package(rviz_default_plugins REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(rclpy REQUIRED)
-find_package(gazebo_msgs REQUIRED)
-find_package(pedsim REQUIRED)
-find_package(pedsim_msgs REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake REQUIRED)
+find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
 
-################################################
-## Declare ROS messages, services and actions ##
-################################################
-
-################################################
-## Declare ROS dynamic reconfigure parameters ##
-################################################
-
-###################################
-## catkin specific configuration ##
-###################################
-
-###########
-## Build ##
-###########
-
-## Specify additional locations of header files
-## Your package locations should be listed before other locations
+# Specify additional locations of header files
 include_directories(
   include
-  ${GAZEBO_INCLUDE_DIRS}
+  ${rclcpp_INCLUDE_DIRS}
+  ${rviz_common_INCLUDE_DIRS}
+  ${rviz_default_plugins_INCLUDE_DIRS}
+  ${Qt5Core_INCLUDE_DIRS}
+  ${Qt5Widgets_INCLUDE_DIRS}
 )
 
-add_library(ActorPosePlugin src/ActorPlugin.cpp)
+# Define the library
+set(SOURCE_FILES
+  src/pose_tool.cpp
+  src/goal_tool.cpp
+  src/task_tool.cpp
+  ${MOC_FILES}
+)
 
-add_library(ActorCollisionsPlugin src/ActorCollisionsPlugin.cc)
+# Wrap Qt meta-object compiler
+qt5_wrap_cpp(MOC_FILES
+  src/goal_tool.h
+  src/task_tool.h
+)
 
-add_library(AttachModelPlugin src/AttachModelPlugin.cc)
-ament_target_dependencies(ActorPosePlugin ${GAZEBO_LIBRARIES} "tf2_ros" "rclpy" "task_generator" "gazebo_msgs" "pedsim_msgs" "sensor_msgs" "rclcpp" "tf2_ros" "nav_msgs" "geometry_msgs")
-ament_target_dependencies(ActorCollisionsPlugin ${GAZEBO_LIBRARIES} "tf2_ros" "rclpy" "task_generator" "gazebo_msgs" "pedsim_msgs" "sensor_msgs" "rclcpp" "tf2_ros" "nav_msgs" "geometry_msgs")
-ament_target_dependencies(AttachModelPlugin  ${GAZEBO_LIBRARIES}  "tf2_ros"  "rclpy"  "task_generator"  "gazebo_msgs"  "pedsim_msgs"  "sensor_msgs"  "rclcpp"  "tf2_ros"  "nav_msgs"  "geometry_msgs")
+add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES} ${MOC_FILES})
 
-ament_export_dependencies(gazebo_ros rclcpp geometry_msgs pedsim_msgs)
+# Link libraries
+ament_target_dependencies(${PROJECT_NAME}
+  "rclcpp"
+  "rviz_common"
+  "rviz_default_plugins"
+  "Qt5Core"
+  "Qt5Widgets"
+)
+
+target_link_libraries(${PROJECT_NAME} ${Qt5_LIBRARIES})
+
+# Install targets
+install(
+  TARGETS ${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+
+# Install plugin description
+install(FILES
+  plugin_description.xml
+  DESTINATION share/${PROJECT_NAME}
+)
+
+# Install directories
+install(DIRECTORY media/
+  DESTINATION share/${PROJECT_NAME}/media
+)
+
+install(DIRECTORY icons/
+  DESTINATION share/${PROJECT_NAME}/icons
+)
+
 ament_package()
-
-#############
-## Install ##
-#############
-
-install(PROGRAMS
-  scripts/odom.py
-  scripts/generate_world.py
-  scripts/emergency_brake_node.py
-   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-
-## Compile as C++11, supported in ROS Kinetic and newer
- add_compile_options(-std=c++11)
- add_compile_options(-std=c++17)
- link_directories(${GAZEBO_LIBRARY_DIRS})

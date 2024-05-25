@@ -14,6 +14,7 @@ find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(nav_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)
 
 # Include directories
 include_directories(
@@ -24,6 +25,7 @@ include_directories(
   ${sensor_msgs_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIR}
   ${nav_msgs_INCLUDE_DIRS}
+  ${visualization_msgs_INCLUDE_DIRS}
 )
 
 # Declare a C++ library
@@ -37,6 +39,7 @@ target_link_libraries(plan_visualization
   ${sensor_msgs_LIBRARIES}
   Eigen3::Eigen
   ${nav_msgs_LIBRARIES}
+  ${visualization_msgs_LIBRARIES}
 )
 
 # Install targets
@@ -61,6 +64,7 @@ ament_export_dependencies(
   sensor_msgs
   Eigen3
   nav_msgs
+  visualization_msgs
 )
 
 ament_export_include_directories(include)
