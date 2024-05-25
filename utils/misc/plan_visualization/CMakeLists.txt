@@ -22,7 +22,7 @@ include_directories(
   ${geometry_msgs_INCLUDE_DIRS}
   ${rclcpp_INCLUDE_DIRS}
   ${sensor_msgs_INCLUDE_DIRS}
-  ${Eigen3_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIR}
   ${nav_msgs_INCLUDE_DIRS}
 )
 
@@ -35,7 +35,7 @@ target_link_libraries(plan_visualization
   ${geometry_msgs_LIBRARIES}
   ${rclcpp_LIBRARIES}
   ${sensor_msgs_LIBRARIES}
-  ${Eigen3_LIBRARIES}
+  Eigen3::Eigen
   ${nav_msgs_LIBRARIES}
 )
 
