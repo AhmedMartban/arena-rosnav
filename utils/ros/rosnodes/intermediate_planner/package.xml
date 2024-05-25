@@ -32,11 +32,5 @@
   <exec_depend>plan_visualization</exec_depend>
   <exec_depend>plan_msgs</exec_depend>
   <exec_depend>laser_geometry</exec_depend>
-  <export>
-    
-
-  </export>
-  <export>
-    <build_type>ament_cmake</build_type>
-  </export>
-</package>
+  <export><build_type>ament_cmake</build_type>
+  </export></package>
