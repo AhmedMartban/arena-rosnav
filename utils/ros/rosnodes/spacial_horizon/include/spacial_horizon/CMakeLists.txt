@@ -238,7 +238,6 @@ ament_export_dependencies(nav_msgs)
 ament_export_dependencies(rclcpp)
 ament_export_dependencies(tf2)
 ament_export_dependencies(1.7)
-ament_export_dependencies(REQUIRED)
 ament_export_dependencies(rclpy)
 ament_export_include_directories(${INCLUDE_DIRS})
 
