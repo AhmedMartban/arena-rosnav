@@ -123,7 +123,6 @@ find_package(nav_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(1.7 REQUIRED)
-find_package(REQUIRED REQUIRED)
 find_package(rclpy REQUIRED)
 set(INCLUDE_DIRS ${ament_cmake_INCLUDE_DIRS} ${std_msgs_INCLUDE_DIRS}
   ${Eigen3_INCLUDE_DIRS} ${visualization_msgs_INCLUDE_DIRS} ${PCL_INCLUDE_DIRS}
@@ -239,7 +238,6 @@ ament_export_dependencies(nav_msgs)
 ament_export_dependencies(rclcpp)
 ament_export_dependencies(tf2)
 ament_export_dependencies(1.7)
-ament_export_dependencies(REQUIRED)
 ament_export_dependencies(rclpy)
 ament_export_include_directories(${INCLUDE_DIRS})
 
