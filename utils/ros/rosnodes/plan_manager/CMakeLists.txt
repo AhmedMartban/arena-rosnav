@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 project(plan_manager)
 
-set(CMAKE_CXX_FLAGS -std=c++14) # -Wextra -Werror
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -169,9 +170,7 @@ set(LIBS ${ament_cmake_LIBRARIES} ${tf2_ros_LIBRARIES} ${sensor_msgs_LIBRARIES}
 ## same as for the library above
 
 add_dependencies(plan_manager_node ${${PROJECT_NAME}_EXPORTED_TARGETS}
-  ${catkin_EXPORTED_TARGETS})
 add_dependencies(test_node ${${PROJECT_NAME}_EXPORTED_TARGETS}
-  ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 
