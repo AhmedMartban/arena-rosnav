@@ -19,7 +19,6 @@ find_package(nav_msgs REQUIRED)
 find_package(nlopt REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(rclpy REQUIRED)
-find_package(REQUIRED REQUIRED)
 find_package(mapping REQUIRED)
 set(INCLUDE_DIRS ${ament_cmake_INCLUDE_DIRS} ${Eigen3_INCLUDE_DIRS}
   ${geometry_msgs_INCLUDE_DIRS} ${path_search_INCLUDE_DIRS} ${rclcpp_INCLUDE_DIRS}
