@@ -1,2 +1,0 @@
-[console_scripts]
-script_name = eval.script:main
