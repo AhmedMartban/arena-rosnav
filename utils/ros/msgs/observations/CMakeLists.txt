@@ -12,24 +12,15 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
-find_package(message_generation REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 
-# Uncomment the following lines if you have external dependencies
-# find_package(SDL2 REQUIRED)
-# find_package(OpenGL REQUIRED)
-# find_package(OpenCV REQUIRED)
-
-add_message_files(
-  FILES
-  Observation.msg
+# Add message files
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/Observation.msg"
 )
 
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-  sensor_msgs
-  geometry_msgs
-)
+# Include generated messages
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/include)
 
 ament_package()
 
@@ -37,27 +28,12 @@ ament_package()
 ## Build ##
 ###########
 
-## Specify additional locations of header files
-## Your package locations should be listed before other locations
-include_directories(
-  ./
-  ${SDL2_INCLUDE_DIRS}
-  ${catkin_INCLUDE_DIRS}
-  ${OPENGL_INCLUDE_DIRS}
-)
-
 # adding observation_packer
 add_executable(observation_packer src/observation_packer.cpp src/common/zVector2d.cpp src/common/f_math.cpp)
 ament_target_dependencies(observation_packer rclcpp std_msgs sensor_msgs geometry_msgs)
-add_dependencies(observation_packer observations_generate_messages_cpp)
+add_dependencies(observation_packer ${PROJECT_NAME}_generate_interfaces)
 
 install(TARGETS
   observation_packer
   DESTINATION lib/${PROJECT_NAME}
 )
-
-# Uncomment the following lines if you have scripts to install
-# install(PROGRAMS
-#   scripts/agent_play.py
-#   DESTINATION lib/${PROJECT_NAME}
-# )
