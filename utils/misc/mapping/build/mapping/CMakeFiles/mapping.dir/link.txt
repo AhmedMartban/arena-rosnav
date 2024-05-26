@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmapping.a CMakeFiles/mapping.dir/src/mapping.cpp.o CMakeFiles/mapping.dir/src/raycast.cpp.o
+/usr/bin/ranlib libmapping.a

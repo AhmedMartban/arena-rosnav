@@ -1,0 +1,1027 @@
+[0.010s] Invoking command in '/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping -- -j8 -l8
+[0.034s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.155s] -- Found message_filters: 4.3.4 (/opt/ros/humble/share/message_filters/cmake)
+[0.185s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.187s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.193s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.205s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.222s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.284s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.285s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.402s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.583s] -- Found rclpy: 3.3.13 (/opt/ros/humble/share/rclpy/cmake)
+[0.584s] -- Found std_srvs: 4.2.3 (/opt/ros/humble/share/std_srvs/cmake)
+[0.601s] -- Found pcl_conversions: 2.4.0 (/opt/ros/humble/share/pcl_conversions/cmake)
+[0.902s] -- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)
+[1.031s] -- Found tf2: 0.25.6 (/opt/ros/humble/share/tf2/cmake)
+[1.040s] -- Found pcl_ros: 2.4.0 (/opt/ros/humble/share/pcl_ros/cmake)
+[1.159s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.160s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.572s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.599s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[1.871s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.876s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.018s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.024s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.029s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.161s] -- Found Qhull version 8.0.2
+[2.296s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.454s] [33mCMake Warning (dev) at CMakeLists.txt:19 (find_package):
+[2.454s]   Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+[2.454s]   Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+[2.454s]   command to set the policy and suppress this warning.
+[2.454s] 
+[2.454s]   CMake variable PCL_ROOT is set to:
+[2.454s] 
+[2.454s]     /usr
+[2.454s] 
+[2.454s]   For compatibility, CMake is ignoring the variable.
+[2.454s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.455s] [0m
+[2.460s] -- Found laser_geometry: 2.4.0 (/opt/ros/humble/share/laser_geometry/cmake)
+[2.475s] -- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.640s] -- Configuring done
+[2.715s] -- Generating done
+[2.718s] -- Build files have been written to: /ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping
+[2.745s] [35m[1mConsolidate compiler generated dependencies of target mapping[0m
+[2.756s] [ 33%] [32mBuilding CXX object CMakeFiles/mapping.dir/src/mapping.cpp.o[0m
+[2.757s] [ 66%] [32mBuilding CXX object CMakeFiles/mapping.dir/src/raycast.cpp.o[0m
+[7.921s] In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[7.921s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:237:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ does not name a type
+[7.921s]   237 |         [01;31m[Kros[m[K::Subscriber indep_scan_sub_, indep_odom_sub_;
+[7.921s]       |         [01;31m[K^~~[m[K
+[7.923s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:240:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ does not name a type
+[7.923s]   240 |         [01;31m[Kros[m[K::ServiceClient static_map_client_;
+[7.923s]       |         [01;31m[K^~~[m[K
+[7.925s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:244:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ does not name a type
+[7.925s]   244 |         [01;31m[Kros[m[K::Publisher map_pub_,static_map_pub_,dynamic_map_pub_;
+[7.925s]       |         [01;31m[K^~~[m[K
+[7.926s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:245:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ does not name a type
+[7.927s]   245 |         [01;31m[Kros[m[K::Publisher esdf_pub_,esdf_static_pub_;
+[7.927s]       |         [01;31m[K^~~[m[K
+[7.928s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:246:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ does not name a type
+[7.928s]   246 |         [01;31m[Kros[m[K::Publisher depth_pub_; //laser pointcloud2
+[7.928s]       |         [01;31m[K^~~[m[K
+[7.930s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:247:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ does not name a type
+[7.930s]   247 |         [01;31m[Kros[m[K::Publisher update_range_pub_;
+[7.930s]       |         [01;31m[K^~~[m[K
+[7.932s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:248:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ does not name a type
+[7.932s]   248 |         [01;31m[Kros[m[K::Publisher unknown_pub_;
+[7.932s]       |         [01;31m[K^~~[m[K
+[7.932s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:252:17:[m[K [01;31m[Kerror: [m[K‘[01m[KTimer[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type; did you mean ‘[01m[KTime[m[K’?
+[7.932s]   252 |         rclcpp::[01;31m[KTimer[m[K occ_timer_;
+[7.932s]       |                 [01;31m[K^~~~~[m[K
+[7.932s]       |                 [32m[KTime[m[K
+[7.932s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:253:17:[m[K [01;31m[Kerror: [m[K‘[01m[KTimer[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type; did you mean ‘[01m[KTime[m[K’?
+[7.932s]   253 |         rclcpp::[01;31m[KTimer[m[K esdf_timer_;
+[7.933s]       |                 [01;31m[K^~~~~[m[K
+[7.933s]       |                 [32m[KTime[m[K
+[7.933s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:254:17:[m[K [01;31m[Kerror: [m[K‘[01m[KTimer[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type; did you mean ‘[01m[KTime[m[K’?
+[7.933s]   254 |         rclcpp::[01;31m[KTimer[m[K vis_timer_;
+[7.933s]       |                 [01;31m[K^~~~~[m[K
+[7.933s]       |                 [32m[KTime[m[K
+[7.933s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:263:52:[m[K [01;31m[Kerror: [m[K‘[01m[KTimerEvent[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type
+[7.933s]   263 |         void updateOccupancyCallback(const rclcpp::[01;31m[KTimerEvent[m[K& /*event*/);
+[7.933s]       |                                                    [01;31m[K^~~~~~~~~~[m[K
+[7.933s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:264:47:[m[K [01;31m[Kerror: [m[K‘[01m[KTimerEvent[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type
+[7.933s]   264 |         void updateESDFCallback(const rclcpp::[01;31m[KTimerEvent[m[K& /*event*/);
+[7.933s]       |                                               [01;31m[K^~~~~~~~~~[m[K
+[7.933s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:265:40:[m[K [01;31m[Kerror: [m[K‘[01m[KTimerEvent[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type
+[7.933s]   265 |         void visCallback(const rclcpp::[01;31m[KTimerEvent[m[K& /*event*/);
+[7.934s]       |                                        [01;31m[K^~~~~~~~~~[m[K
+[7.934s] In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[7.934s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:[m[K In constructor ‘[01m[KGridMap::GridMap()[m[K’:
+[7.934s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:141:19:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::Node()[m[K’
+[7.934s]   141 |         GridMap() [01;31m[K{[m[K}
+[7.934s]       |                   [01;31m[K^[m[K
+[7.934s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[7.934s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[7.934s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[7.934s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[7.934s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[7.934s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1294:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const rclcpp::Node&, const string&)[m[K’
+[7.934s]  1294 |   [01;36m[KNode[m[K(
+[7.934s]       |   [01;36m[K^~~~[m[K
+[7.934s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1294:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[7.935s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:101:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const string&, const string&, const rclcpp::NodeOptions&)[m[K’
+[7.935s]   101 |   explicit [01;36m[KNode[m[K(
+[7.935s]       |            [01;36m[K^~~~[m[K
+[7.935s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:101:12:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[7.935s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:89:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const string&, const rclcpp::NodeOptions&)[m[K’
+[7.935s]    89 |   explicit [01;36m[KNode[m[K(
+[7.935s]       |            [01;36m[K^~~~[m[K
+[7.935s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:89:12:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[7.938s] In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[7.938s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:141:19:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Ktf2_ros::TransformListener::TransformListener()[m[K’
+[7.938s]   141 |         GridMap() [01;31m[K{[m[K}
+[7.938s]       |                   [01;31m[K^[m[K
+[7.938s] In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:20[m[K,
+[7.938s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[7.939s] [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/transform_listener.h:90:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class NodeT, class AllocatorT> tf2_ros::TransformListener::TransformListener(tf2::BufferCore&, NodeT&&, bool, const rclcpp::QoS&, const rclcpp::QoS&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&)[m[K’
+[7.939s]    90 |   [01;36m[KTransformListener[m[K(
+[7.939s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[7.939s] [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/transform_listener.h:90:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[7.939s] In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[7.939s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:141:19:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 0 provided
+[7.939s]   141 |         GridMap() [01;36m[K{[m[K}
+[7.939s]       |                   [01;36m[K^[m[K
+[7.939s] In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:20[m[K,
+[7.939s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[7.939s] [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/transform_listener.h:87:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktf2_ros::TransformListener::TransformListener(tf2::BufferCore&, bool)[m[K’
+[7.939s]    87 |   explicit [01;36m[KTransformListener[m[K(tf2::BufferCore & buffer, bool spin_thread = true);
+[7.939s]       |            [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[7.939s] [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/transform_listener.h:87:12:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[7.950s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::initMap(rclcpp::Node&)[m[K’:
+[7.950s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:5:13:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Krclcpp::Node& rclcpp::Node::operator=(const rclcpp::Node&)[m[K’
+[7.950s]     5 |     node_ = [01;31m[Knh[m[K;
+[7.950s]       |             [01;31m[K^~[m[K
+[7.950s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/context.hpp:35[m[K,
+[7.950s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:34[m[K,
+[7.950s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[7.951s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[7.951s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[7.951s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[7.951s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[7.951s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1299:3:[m[K [01;36m[Knote: [m[Kdeclared here
+[7.951s]  1299 |   [01;36m[KRCLCPP_DISABLE_COPY[m[K(Node)
+[7.951s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[7.951s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:9:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+[7.951s]     9 |     [01;31m[Kros[m[K::service::waitForService(static_map_service_name); // important
+[7.951s]       |     [01;31m[K^~~[m[K
+[7.972s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:10:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kstatic_map_client_[m[K’ was not declared in this scope
+[7.972s]    10 |     [01;31m[Kstatic_map_client_[m[K= nh.serviceClient<nav_msgs::srv::GetMap>(static_map_service_name);
+[7.972s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[7.973s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:10:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[KserviceClient[m[K’
+[7.973s]    10 |     static_map_client_= nh.[01;31m[KserviceClient[m[K<nav_msgs::srv::GetMap>(static_map_service_name);
+[7.973s]       |                            [01;31m[K^~~~~~~~~~~~~[m[K
+[7.973s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:10:63:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[7.973s]    10 |     static_map_client_= nh.serviceClient<nav_msgs::srv::GetMap[01;31m[K>[m[K(static_map_service_name);
+[7.973s]       |                                                               [01;31m[K^[m[K
+[7.973s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:15:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.973s]    15 |     node_.[01;31m[Kparam[m[K("sdf_map/use_occ_esdf", mp_.use_occ_esdf_, true);
+[7.974s]       |           [01;31m[K^~~~~[m[K
+[7.974s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:18:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.974s]    18 |     node_.[01;31m[Kparam[m[K("sdf_map/local_update_range_x", mp_.local_update_range_(0), 5.5);
+[7.974s]       |           [01;31m[K^~~~~[m[K
+[7.974s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:19:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.974s]    19 |     node_.[01;31m[Kparam[m[K("sdf_map/local_update_range_y", mp_.local_update_range_(1), 5.5);
+[7.974s]       |           [01;31m[K^~~~~[m[K
+[7.974s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:22:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.974s]    22 |     node_.[01;31m[Kparam[m[K("sdf_map/p_hit", mp_.p_hit_, 0.55);
+[7.974s]       |           [01;31m[K^~~~~[m[K
+[7.974s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:23:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.974s]    23 |     node_.[01;31m[Kparam[m[K("sdf_map/p_miss", mp_.p_miss_, 0.2);
+[7.974s]       |           [01;31m[K^~~~~[m[K
+[7.974s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:24:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.974s]    24 |     node_.[01;31m[Kparam[m[K("sdf_map/p_min", mp_.p_min_, 0.12);
+[7.975s]       |           [01;31m[K^~~~~[m[K
+[7.975s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:25:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.975s]    25 |     node_.[01;31m[Kparam[m[K("sdf_map/p_max", mp_.p_max_, 0.80);
+[7.975s]       |           [01;31m[K^~~~~[m[K
+[7.975s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:26:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.975s]    26 |     node_.[01;31m[Kparam[m[K("sdf_map/p_occ", mp_.p_occ_, 0.70);
+[7.975s]       |           [01;31m[K^~~~~[m[K
+[7.975s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:29:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.975s]    29 |     node_.[01;31m[Kparam[m[K("sdf_map/min_ray_length", mp_.min_ray_length_, 0.5);
+[7.975s]       |           [01;31m[K^~~~~[m[K
+[7.975s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:30:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.975s]    30 |     node_.[01;31m[Kparam[m[K("sdf_map/max_ray_length", mp_.max_ray_length_, 3.5);
+[7.975s]       |           [01;31m[K^~~~~[m[K
+[7.975s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:33:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.975s]    33 |     node_.[01;31m[Kparam[m[K("sdf_map/show_occ_time", mp_.show_occ_time_, false);
+[7.976s]       |           [01;31m[K^~~~~[m[K
+[7.976s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:34:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.976s]    34 |     node_.[01;31m[Kparam[m[K("sdf_map/show_esdf_time", mp_.show_esdf_time_, false);
+[7.976s]       |           [01;31m[K^~~~~[m[K
+[7.976s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:37:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.976s]    37 |     node_.[01;31m[Kparam[m[K("sdf_map/frame_id", mp_.frame_id_, std::string("map"));
+[7.976s]       |           [01;31m[K^~~~~[m[K
+[7.976s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:38:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.976s]    38 |     node_.[01;31m[Kparam[m[K("sdf_map/obstacles_inflation", mp_.obstacles_inflation_, 0.01);
+[7.976s]       |           [01;31m[K^~~~~[m[K
+[7.976s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:39:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.976s]    39 |     node_.[01;31m[Kparam[m[K("sdf_map/local_bound_inflate", mp_.local_bound_inflate_, 0.0);
+[7.976s]       |           [01;31m[K^~~~~[m[K
+[7.976s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:40:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kparam[m[K’
+[7.976s]    40 |     node_.[01;31m[Kparam[m[K("sdf_map/local_map_margin", mp_.local_map_margin_, 50);
+[7.976s]       |           [01;31m[K^~~~~[m[K
+[8.092s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:162:103:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmessage_filters::Subscriber<sensor_msgs::msg::LaserScan_<std::allocator<void> > >::Subscriber(rclcpp::Node&, const char [5], int)[m[K’
+[8.092s]   162 |     scan_sub_.reset(new message_filters::Subscriber<sensor_msgs::msg::LaserScan>(public_nh, "scan", 50[01;31m[K)[m[K);
+[8.092s]       |                                                                                                       [01;31m[K^[m[K
+[8.092s] In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:40[m[K,
+[8.092s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.092s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:203:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kmessage_filters::Subscriber<M, NodeType>::Subscriber() [with M = sensor_msgs::msg::LaserScan_<std::allocator<void> >; NodeType = rclcpp::Node][m[K’
+[8.093s]   203 |   [01;36m[KSubscriber[m[K() = default;
+[8.093s]       |   [01;36m[K^~~~~~~~~~[m[K
+[8.093s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:203:3:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 3 provided
+[8.093s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:191:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kmessage_filters::Subscriber<M, NodeType>::Subscriber(NodeType*, const string&, rmw_qos_profile_t, rclcpp::SubscriptionOptions) [with M = sensor_msgs::msg::LaserScan_<std::allocator<void> >; NodeType = rclcpp::Node; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’
+[8.093s]   191 |   [01;36m[KSubscriber[m[K(
+[8.093s]       |   [01;36m[K^~~~~~~~~~[m[K
+[8.093s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:191:3:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[8.093s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:182:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kmessage_filters::Subscriber<M, NodeType>::Subscriber(message_filters::Subscriber<M, NodeType>::NodePtr, const string&, rmw_qos_profile_t, rclcpp::SubscriptionOptions) [with M = sensor_msgs::msg::LaserScan_<std::allocator<void> >; NodeType = rclcpp::Node; message_filters::Subscriber<M, NodeType>::NodePtr = std::shared_ptr<rclcpp::Node>; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’
+[8.093s]   182 |   [01;36m[KSubscriber[m[K(
+[8.093s]       |   [01;36m[K^~~~~~~~~~[m[K
+[8.093s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:182:3:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[8.093s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:167:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kmessage_filters::Subscriber<M, NodeType>::Subscriber(NodeType*, const string&, rmw_qos_profile_t) [with M = sensor_msgs::msg::LaserScan_<std::allocator<void> >; NodeType = rclcpp::Node; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s][m[K’
+[8.093s]   167 |   [01;36m[KSubscriber[m[K(NodeType * node, const std::string& topic, const rmw_qos_profile_t qos = rmw_qos_profile_default)
+[8.093s]       |   [01;36m[K^~~~~~~~~~[m[K
+[8.093s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:167:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Krclcpp::Node[m[K’ to ‘[01m[Krclcpp::Node*[m[K’
+[8.094s]   167 |   Subscriber([01;36m[KNodeType * node[m[K, const std::string& topic, const rmw_qos_profile_t qos = rmw_qos_profile_default)
+[8.094s]       |              [01;36m[K~~~~~~~~~~~^~~~[m[K
+[8.094s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:162:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kmessage_filters::Subscriber<M, NodeType>::Subscriber(message_filters::Subscriber<M, NodeType>::NodePtr, const string&, rmw_qos_profile_t) [with M = sensor_msgs::msg::LaserScan_<std::allocator<void> >; NodeType = rclcpp::Node; message_filters::Subscriber<M, NodeType>::NodePtr = std::shared_ptr<rclcpp::Node>; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s][m[K’
+[8.094s]   162 |   [01;36m[KSubscriber[m[K(NodePtr node, const std::string& topic, const rmw_qos_profile_t qos = rmw_qos_profile_default)
+[8.094s]       |   [01;36m[K^~~~~~~~~~[m[K
+[8.094s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:162:22:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Krclcpp::Node[m[K’ to ‘[01m[Kmessage_filters::Subscriber<sensor_msgs::msg::LaserScan_<std::allocator<void> > >::NodePtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::Node>[m[K’}
+[8.094s]   162 |   Subscriber([01;36m[KNodePtr node[m[K, const std::string& topic, const rmw_qos_profile_t qos = rmw_qos_profile_default)
+[8.094s]       |              [01;36m[K~~~~~~~~^~~~[m[K
+[8.133s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:163:117:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmessage_filters::Subscriber<nav_msgs::msg::Odometry_<std::allocator<void> > >::Subscriber(rclcpp::Node&, const char [22], int)[m[K’
+[8.133s]   163 |     odom_sub_.reset(new message_filters::Subscriber<nav_msgs::msg::Odometry>(public_nh, "odometry/ground_truth", 100[01;31m[K)[m[K);
+[8.133s]       |                                                                                                                     [01;31m[K^[m[K
+[8.133s] In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:40[m[K,
+[8.133s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.133s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:203:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kmessage_filters::Subscriber<M, NodeType>::Subscriber() [with M = nav_msgs::msg::Odometry_<std::allocator<void> >; NodeType = rclcpp::Node][m[K’
+[8.133s]   203 |   [01;36m[KSubscriber[m[K() = default;
+[8.133s]       |   [01;36m[K^~~~~~~~~~[m[K
+[8.133s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:203:3:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 3 provided
+[8.133s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:191:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kmessage_filters::Subscriber<M, NodeType>::Subscriber(NodeType*, const string&, rmw_qos_profile_t, rclcpp::SubscriptionOptions) [with M = nav_msgs::msg::Odometry_<std::allocator<void> >; NodeType = rclcpp::Node; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’
+[8.133s]   191 |   [01;36m[KSubscriber[m[K(
+[8.134s]       |   [01;36m[K^~~~~~~~~~[m[K
+[8.134s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:191:3:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[8.134s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:182:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kmessage_filters::Subscriber<M, NodeType>::Subscriber(message_filters::Subscriber<M, NodeType>::NodePtr, const string&, rmw_qos_profile_t, rclcpp::SubscriptionOptions) [with M = nav_msgs::msg::Odometry_<std::allocator<void> >; NodeType = rclcpp::Node; message_filters::Subscriber<M, NodeType>::NodePtr = std::shared_ptr<rclcpp::Node>; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s; rclcpp::SubscriptionOptions = rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> >][m[K’
+[8.134s]   182 |   [01;36m[KSubscriber[m[K(
+[8.134s]       |   [01;36m[K^~~~~~~~~~[m[K
+[8.134s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:182:3:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[8.134s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:167:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kmessage_filters::Subscriber<M, NodeType>::Subscriber(NodeType*, const string&, rmw_qos_profile_t) [with M = nav_msgs::msg::Odometry_<std::allocator<void> >; NodeType = rclcpp::Node; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s][m[K’
+[8.134s]   167 |   [01;36m[KSubscriber[m[K(NodeType * node, const std::string& topic, const rmw_qos_profile_t qos = rmw_qos_profile_default)
+[8.134s]       |   [01;36m[K^~~~~~~~~~[m[K
+[8.134s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:167:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Krclcpp::Node[m[K’ to ‘[01m[Krclcpp::Node*[m[K’
+[8.134s]   167 |   Subscriber([01;36m[KNodeType * node[m[K, const std::string& topic, const rmw_qos_profile_t qos = rmw_qos_profile_default)
+[8.134s]       |              [01;36m[K~~~~~~~~~~~^~~~[m[K
+[8.134s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:162:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kmessage_filters::Subscriber<M, NodeType>::Subscriber(message_filters::Subscriber<M, NodeType>::NodePtr, const string&, rmw_qos_profile_t) [with M = nav_msgs::msg::Odometry_<std::allocator<void> >; NodeType = rclcpp::Node; message_filters::Subscriber<M, NodeType>::NodePtr = std::shared_ptr<rclcpp::Node>; std::string = std::__cxx11::basic_string<char>; rmw_qos_profile_t = rmw_qos_profile_s][m[K’
+[8.134s]   162 |   [01;36m[KSubscriber[m[K(NodePtr node, const std::string& topic, const rmw_qos_profile_t qos = rmw_qos_profile_default)
+[8.134s]       |   [01;36m[K^~~~~~~~~~[m[K
+[8.135s] [01m[K/opt/ros/humble/include/message_filters/message_filters/subscriber.h:162:22:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Krclcpp::Node[m[K’ to ‘[01m[Kmessage_filters::Subscriber<nav_msgs::msg::Odometry_<std::allocator<void> > >::NodePtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::Node>[m[K’}
+[8.135s]   162 |   Subscriber([01;36m[KNodePtr node[m[K, const std::string& topic, const rmw_qos_profile_t qos = rmw_qos_profile_default)
+[8.135s]       |              [01;36m[K~~~~~~~~^~~~[m[K
+[8.201s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:165:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kbind[m[K’ is not a member of ‘[01m[Kboost[m[K’; did you mean ‘[01m[Kfind[m[K’?
+[8.201s]   165 |     sync_scan_odom_->registerCallback(boost::[01;31m[Kbind[m[K(&GridMap::scanOdomCallback, this, _1, _2));
+[8.201s]       |                                              [01;31m[K^~~~[m[K
+[8.202s]       |                                              [32m[Kfind[m[K
+[8.203s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:165:85:[m[K [01;31m[Kerror: [m[K‘[01m[K_1[m[K’ was not declared in this scope
+[8.203s]   165 |     sync_scan_odom_->registerCallback(boost::bind(&GridMap::scanOdomCallback, this, [01;31m[K_1[m[K, _2));
+[8.203s]       |                                                                                     [01;31m[K^~[m[K
+[8.203s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:165:85:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[8.203s] In file included from [01m[K/usr/include/boost/mpl/aux_/include_preprocessed.hpp:37[m[K,
+[8.203s]                  from [01m[K/usr/include/boost/mpl/placeholders.hpp:43[m[K,
+[8.203s]                  from [01m[K/usr/include/boost/mpl/apply.hpp:24[m[K,
+[8.203s]                  from [01m[K/usr/include/boost/mpl/aux_/iter_apply.hpp:17[m[K,
+[8.203s]                  from [01m[K/usr/include/boost/mpl/aux_/find_if_pred.hpp:14[m[K,
+[8.203s]                  from [01m[K/usr/include/boost/mpl/find_if.hpp:17[m[K,
+[8.203s]                  from [01m[K/usr/include/boost/mpl/find.hpp:17[m[K,
+[8.203s]                  from [01m[K/usr/include/boost/mpl/aux_/contains_impl.hpp:20[m[K,
+[8.204s]                  from [01m[K/usr/include/boost/mpl/contains.hpp:20[m[K,
+[8.204s]                  from [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:49[m[K,
+[8.204s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[8.204s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_representation.h:45[m[K,
+[8.204s]                  from [01m[K/usr/include/pcl-1.12/pcl/kdtree/kdtree.h:44[m[K,
+[8.204s]                  from [01m[K/usr/include/pcl-1.12/pcl/kdtree/kdtree_flann.h:43[m[K,
+[8.204s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:15[m[K,
+[8.204s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.204s] [01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:29:16:[m[K [01;36m[Knote: [m[K  ‘[01m[Kmpl_::_1[m[K’
+[8.204s]    29 | typedef arg<1> [01;36m[K_1[m[K;
+[8.204s]       |                [01;36m[K^~[m[K
+[8.204s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:85[m[K,
+[8.205s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[8.205s]                  from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+[8.205s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:5[m[K,
+[8.205s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.205s] [01m[K/usr/include/c++/11/functional:225:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::placeholders::_1[m[K’
+[8.205s]   225 |     extern const _Placeholder<1> [01;36m[K_1[m[K;
+[8.205s]       |                                  [01;36m[K^~[m[K
+[8.205s] In file included from [01m[K/usr/include/boost/mpl/aux_/include_preprocessed.hpp:37[m[K,
+[8.205s]                  from [01m[K/usr/include/boost/mpl/placeholders.hpp:43[m[K,
+[8.205s]                  from [01m[K/usr/include/boost/mpl/apply.hpp:24[m[K,
+[8.205s]                  from [01m[K/usr/include/boost/mpl/aux_/iter_apply.hpp:17[m[K,
+[8.205s]                  from [01m[K/usr/include/boost/mpl/aux_/find_if_pred.hpp:14[m[K,
+[8.205s]                  from [01m[K/usr/include/boost/mpl/find_if.hpp:17[m[K,
+[8.205s]                  from [01m[K/usr/include/boost/mpl/find.hpp:17[m[K,
+[8.205s]                  from [01m[K/usr/include/boost/mpl/aux_/contains_impl.hpp:20[m[K,
+[8.205s]                  from [01m[K/usr/include/boost/mpl/contains.hpp:20[m[K,
+[8.206s]                  from [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:49[m[K,
+[8.206s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[8.206s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_representation.h:45[m[K,
+[8.206s]                  from [01m[K/usr/include/pcl-1.12/pcl/kdtree/kdtree.h:44[m[K,
+[8.206s]                  from [01m[K/usr/include/pcl-1.12/pcl/kdtree/kdtree_flann.h:43[m[K,
+[8.206s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:15[m[K,
+[8.206s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.206s] [01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:29:16:[m[K [01;36m[Knote: [m[K  ‘[01m[Kmpl_::_1[m[K’
+[8.206s]    29 | typedef arg<1> [01;36m[K_1[m[K;
+[8.206s]       |                [01;36m[K^~[m[K
+[8.206s] [01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:29:16:[m[K [01;36m[Knote: [m[K  ‘[01m[Kmpl_::_1[m[K’
+[8.206s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:165:89:[m[K [01;31m[Kerror: [m[K‘[01m[K_2[m[K’ was not declared in this scope
+[8.206s]   165 |     sync_scan_odom_->registerCallback(boost::bind(&GridMap::scanOdomCallback, this, _1, [01;31m[K_2[m[K));
+[8.206s]       |                                                                                         [01;31m[K^~[m[K
+[8.206s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:165:89:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[8.207s] In file included from [01m[K/usr/include/boost/mpl/aux_/include_preprocessed.hpp:37[m[K,
+[8.207s]                  from [01m[K/usr/include/boost/mpl/placeholders.hpp:43[m[K,
+[8.207s]                  from [01m[K/usr/include/boost/mpl/apply.hpp:24[m[K,
+[8.207s]                  from [01m[K/usr/include/boost/mpl/aux_/iter_apply.hpp:17[m[K,
+[8.207s]                  from [01m[K/usr/include/boost/mpl/aux_/find_if_pred.hpp:14[m[K,
+[8.207s]                  from [01m[K/usr/include/boost/mpl/find_if.hpp:17[m[K,
+[8.207s]                  from [01m[K/usr/include/boost/mpl/find.hpp:17[m[K,
+[8.207s]                  from [01m[K/usr/include/boost/mpl/aux_/contains_impl.hpp:20[m[K,
+[8.207s]                  from [01m[K/usr/include/boost/mpl/contains.hpp:20[m[K,
+[8.207s]                  from [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:49[m[K,
+[8.207s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[8.207s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_representation.h:45[m[K,
+[8.207s]                  from [01m[K/usr/include/pcl-1.12/pcl/kdtree/kdtree.h:44[m[K,
+[8.207s]                  from [01m[K/usr/include/pcl-1.12/pcl/kdtree/kdtree_flann.h:43[m[K,
+[8.207s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:15[m[K,
+[8.208s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.212s] [01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:42:16:[m[K [01;36m[Knote: [m[K  ‘[01m[Kmpl_::_2[m[K’
+[8.212s]    42 | typedef arg<2> [01;36m[K_2[m[K;
+[8.212s]       |                [01;36m[K^~[m[K
+[8.212s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:85[m[K,
+[8.212s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[8.212s]                  from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+[8.212s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:5[m[K,
+[8.212s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.212s] [01m[K/usr/include/c++/11/functional:226:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::placeholders::_2[m[K’
+[8.212s]   226 |     extern const _Placeholder<2> [01;36m[K_2[m[K;
+[8.212s]       |                                  [01;36m[K^~[m[K
+[8.212s] In file included from [01m[K/usr/include/boost/mpl/aux_/include_preprocessed.hpp:37[m[K,
+[8.213s]                  from [01m[K/usr/include/boost/mpl/placeholders.hpp:43[m[K,
+[8.213s]                  from [01m[K/usr/include/boost/mpl/apply.hpp:24[m[K,
+[8.213s]                  from [01m[K/usr/include/boost/mpl/aux_/iter_apply.hpp:17[m[K,
+[8.213s]                  from [01m[K/usr/include/boost/mpl/aux_/find_if_pred.hpp:14[m[K,
+[8.213s]                  from [01m[K/usr/include/boost/mpl/find_if.hpp:17[m[K,
+[8.213s]                  from [01m[K/usr/include/boost/mpl/find.hpp:17[m[K,
+[8.213s]                  from [01m[K/usr/include/boost/mpl/aux_/contains_impl.hpp:20[m[K,
+[8.213s]                  from [01m[K/usr/include/boost/mpl/contains.hpp:20[m[K,
+[8.213s]                  from [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:49[m[K,
+[8.213s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[8.213s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_representation.h:45[m[K,
+[8.213s]                  from [01m[K/usr/include/pcl-1.12/pcl/kdtree/kdtree.h:44[m[K,
+[8.213s]                  from [01m[K/usr/include/pcl-1.12/pcl/kdtree/kdtree_flann.h:43[m[K,
+[8.213s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:15[m[K,
+[8.213s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.213s] [01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:42:16:[m[K [01;36m[Knote: [m[K  ‘[01m[Kmpl_::_2[m[K’
+[8.214s]    42 | typedef arg<2> [01;36m[K_2[m[K;
+[8.214s]       |                [01;36m[K^~[m[K
+[8.214s] [01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:42:16:[m[K [01;36m[Knote: [m[K  ‘[01m[Kmpl_::_2[m[K’
+[8.224s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:168:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kindep_scan_sub_[m[K’ was not declared in this scope
+[8.224s]   168 |     [01;31m[Kindep_scan_sub_[m[K =public_nh.subscribe<sensor_msgs::msg::LaserScan>("scan", 10, &GridMap::scanCallback, this);
+[8.224s]       |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[8.224s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:168:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Ksubscribe[m[K’
+[8.224s]   168 |     indep_scan_sub_ =public_nh.[01;31m[Ksubscribe[m[K<sensor_msgs::msg::LaserScan>("scan", 10, &GridMap::scanCallback, this);
+[8.224s]       |                                [01;31m[K^~~~~~~~~[m[K
+[8.224s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:168:69:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[8.224s]   168 |     indep_scan_sub_ =public_nh.subscribe<sensor_msgs::msg::LaserScan[01;31m[K>[m[K("scan", 10, &GridMap::scanCallback, this);
+[8.224s]       |                                                                     [01;31m[K^[m[K
+[8.243s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:169:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kindep_odom_sub_[m[K’ was not declared in this scope
+[8.243s]   169 |     [01;31m[Kindep_odom_sub_[m[K =public_nh.subscribe<nav_msgs::msg::Odometry>("odometry/ground_truth", 10, &GridMap::odomCallback, this);
+[8.244s]       |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[8.244s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:169:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Ksubscribe[m[K’
+[8.244s]   169 |     indep_odom_sub_ =public_nh.[01;31m[Ksubscribe[m[K<nav_msgs::msg::Odometry>("odometry/ground_truth", 10, &GridMap::odomCallback, this);
+[8.244s]       |                                [01;31m[K^~~~~~~~~[m[K
+[8.244s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:169:65:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[8.244s]   169 |     indep_odom_sub_ =public_nh.subscribe<nav_msgs::msg::Odometry[01;31m[K>[m[K("odometry/ground_truth", 10, &GridMap::odomCallback, this);
+[8.244s]       |                                                                 [01;31m[K^[m[K
+[8.253s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:172:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kocc_timer_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_timer_t[m[K’?
+[8.253s]   172 |     [01;31m[Kocc_timer_[m[K = public_nh.createTimer(rclcpp::Duration(0.05),   &GridMap::updateOccupancyCallback, this); // raycasting & setCacheOccupancy is the key
+[8.254s]       |     [01;31m[K^~~~~~~~~~[m[K
+[8.254s]       |     [32m[Krcl_timer_t[m[K
+[8.254s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:172:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[KcreateTimer[m[K’
+[8.254s]   172 |     occ_timer_ = public_nh.[01;31m[KcreateTimer[m[K(rclcpp::Duration(0.05),   &GridMap::updateOccupancyCallback, this); // raycasting & setCacheOccupancy is the key
+[8.254s]       |                            [01;31m[K^~~~~~~~~~~[m[K
+[8.254s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:172:61:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Duration::Duration(double)[m[K’
+[8.254s]   172 |     occ_timer_ = public_nh.createTimer(rclcpp::Duration(0.05[01;31m[K)[m[K,   &GridMap::updateOccupancyCallback, this); // raycasting & setCacheOccupancy is the key
+[8.254s]       |                                                             [01;31m[K^[m[K
+[8.254s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[8.254s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[8.254s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[8.254s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.254s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.254s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.254s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.255s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.255s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.255s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.255s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.255s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.255s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[8.255s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.255s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:48:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Rep, class Period> rclcpp::Duration::Duration(const std::chrono::duration<_Rep1, _Period1>&)[m[K’
+[8.255s]    48 |   [01;36m[KDuration[m[K(const std::chrono::duration<Rep, Period> & duration)  // NOLINT(runtime/explicit)
+[8.255s]       |   [01;36m[K^~~~~~~~[m[K
+[8.255s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:48:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[8.255s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:172:61:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::chrono::duration<_Rep1, _Period1>[m[K’ and ‘[01m[Kdouble[m[K’
+[8.255s]   172 |     occ_timer_ = public_nh.createTimer(rclcpp::Duration(0.05[01;36m[K)[m[K,   &GridMap::updateOccupancyCallback, this); // raycasting & setCacheOccupancy is the key
+[8.255s]       |                                                             [01;36m[K^[m[K
+[8.255s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[8.255s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[8.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[8.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.256s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[8.256s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.256s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:151:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration()[m[K’
+[8.256s]   151 |   [01;36m[KDuration[m[K() = default;
+[8.256s]       |   [01;36m[K^~~~~~~~[m[K
+[8.256s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:151:3:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[8.257s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:61:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const rclcpp::Duration&)[m[K’
+[8.257s]    61 |   [01;36m[KDuration[m[K(const Duration & rhs);
+[8.257s]       |   [01;36m[K^~~~~~~~[m[K
+[8.257s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:61:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst rclcpp::Duration&[m[K’
+[8.257s]    61 |   Duration([01;36m[Kconst Duration & rhs[m[K);
+[8.257s]       |            [01;36m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[8.257s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:59:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const rcl_duration_t&)[m[K’
+[8.257s]    59 |   explicit [01;36m[KDuration[m[K(const rcl_duration_t & duration);
+[8.257s]       |            [01;36m[K^~~~~~~~[m[K
+[8.257s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:59:44:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst rcl_duration_t&[m[K’ {aka ‘[01m[Kconst rcl_duration_s&[m[K’}
+[8.257s]    59 |   explicit Duration([01;36m[Kconst rcl_duration_t & duration[m[K);
+[8.257s]       |                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[8.257s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:53:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const Duration&)[m[K’
+[8.257s]    53 |   [01;36m[KDuration[m[K(const builtin_interfaces::msg::Duration & duration_msg);  // NOLINT(runtime/explicit)
+[8.257s]       |   [01;36m[K^~~~~~~~[m[K
+[8.258s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:53:54:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst Duration&[m[K’ {aka ‘[01m[Kconst builtin_interfaces::msg::Duration_<std::allocator<void> >&[m[K’}
+[8.258s]    53 |   Duration([01;36m[Kconst builtin_interfaces::msg::Duration & duration_msg[m[K);  // NOLINT(runtime/explicit)
+[8.258s]       |            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[8.258s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:42:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(std::chrono::nanoseconds)[m[K’
+[8.258s]    42 |   explicit [01;36m[KDuration[m[K(std::chrono::nanoseconds nanoseconds);
+[8.258s]       |            [01;36m[K^~~~~~~~[m[K
+[8.258s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:42:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kstd::chrono::nanoseconds[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’}
+[8.258s]    42 |   explicit Duration([01;36m[Kstd::chrono::nanoseconds nanoseconds[m[K);
+[8.258s]       |                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[8.258s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:39:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(int32_t, uint32_t)[m[K’
+[8.258s]    39 |   [01;36m[KDuration[m[K(int32_t seconds, uint32_t nanoseconds);
+[8.258s]       |   [01;36m[K^~~~~~~~[m[K
+[8.258s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:39:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[8.265s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:174:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kesdf_timer_[m[K’ was not declared in this scope
+[8.266s]   174 |       [01;31m[Kesdf_timer_[m[K = public_nh.createTimer(rclcpp::Duration(0.05), &GridMap::updateESDFCallback, this);
+[8.266s]       |       [01;31m[K^~~~~~~~~~~[m[K
+[8.266s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:174:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[KcreateTimer[m[K’
+[8.266s]   174 |       esdf_timer_ = public_nh.[01;31m[KcreateTimer[m[K(rclcpp::Duration(0.05), &GridMap::updateESDFCallback, this);
+[8.266s]       |                               [01;31m[K^~~~~~~~~~~[m[K
+[8.266s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:174:64:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Duration::Duration(double)[m[K’
+[8.266s]   174 |       esdf_timer_ = public_nh.createTimer(rclcpp::Duration(0.05[01;31m[K)[m[K, &GridMap::updateESDFCallback, this);
+[8.266s]       |                                                                [01;31m[K^[m[K
+[8.266s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[8.266s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[8.266s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[8.266s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.266s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.266s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.267s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.267s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.267s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.267s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.267s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.267s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.267s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[8.267s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.267s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:48:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Rep, class Period> rclcpp::Duration::Duration(const std::chrono::duration<_Rep1, _Period1>&)[m[K’
+[8.267s]    48 |   [01;36m[KDuration[m[K(const std::chrono::duration<Rep, Period> & duration)  // NOLINT(runtime/explicit)
+[8.267s]       |   [01;36m[K^~~~~~~~[m[K
+[8.267s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:48:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[8.267s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:174:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::chrono::duration<_Rep1, _Period1>[m[K’ and ‘[01m[Kdouble[m[K’
+[8.267s]   174 |       esdf_timer_ = public_nh.createTimer(rclcpp::Duration(0.05[01;36m[K)[m[K, &GridMap::updateESDFCallback, this);
+[8.267s]       |                                                                [01;36m[K^[m[K
+[8.267s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[8.268s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[8.268s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[8.268s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.268s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.268s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.268s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.268s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.268s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.268s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.268s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.268s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.268s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[8.268s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.268s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:151:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration()[m[K’
+[8.268s]   151 |   [01;36m[KDuration[m[K() = default;
+[8.269s]       |   [01;36m[K^~~~~~~~[m[K
+[8.269s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:151:3:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[8.269s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:61:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const rclcpp::Duration&)[m[K’
+[8.269s]    61 |   [01;36m[KDuration[m[K(const Duration & rhs);
+[8.269s]       |   [01;36m[K^~~~~~~~[m[K
+[8.269s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:61:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst rclcpp::Duration&[m[K’
+[8.269s]    61 |   Duration([01;36m[Kconst Duration & rhs[m[K);
+[8.269s]       |            [01;36m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[8.269s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:59:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const rcl_duration_t&)[m[K’
+[8.269s]    59 |   explicit [01;36m[KDuration[m[K(const rcl_duration_t & duration);
+[8.269s]       |            [01;36m[K^~~~~~~~[m[K
+[8.269s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:59:44:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst rcl_duration_t&[m[K’ {aka ‘[01m[Kconst rcl_duration_s&[m[K’}
+[8.269s]    59 |   explicit Duration([01;36m[Kconst rcl_duration_t & duration[m[K);
+[8.269s]       |                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[8.269s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:53:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const Duration&)[m[K’
+[8.269s]    53 |   [01;36m[KDuration[m[K(const builtin_interfaces::msg::Duration & duration_msg);  // NOLINT(runtime/explicit)
+[8.270s]       |   [01;36m[K^~~~~~~~[m[K
+[8.270s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:53:54:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst Duration&[m[K’ {aka ‘[01m[Kconst builtin_interfaces::msg::Duration_<std::allocator<void> >&[m[K’}
+[8.270s]    53 |   Duration([01;36m[Kconst builtin_interfaces::msg::Duration & duration_msg[m[K);  // NOLINT(runtime/explicit)
+[8.270s]       |            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[8.270s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:42:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(std::chrono::nanoseconds)[m[K’
+[8.270s]    42 |   explicit [01;36m[KDuration[m[K(std::chrono::nanoseconds nanoseconds);
+[8.270s]       |            [01;36m[K^~~~~~~~[m[K
+[8.270s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:42:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kstd::chrono::nanoseconds[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’}
+[8.270s]    42 |   explicit Duration([01;36m[Kstd::chrono::nanoseconds nanoseconds[m[K);
+[8.270s]       |                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[8.270s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:39:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(int32_t, uint32_t)[m[K’
+[8.270s]    39 |   [01;36m[KDuration[m[K(int32_t seconds, uint32_t nanoseconds);
+[8.270s]       |   [01;36m[K^~~~~~~~[m[K
+[8.270s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:39:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[8.275s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:176:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvis_timer_[m[K’ was not declared in this scope
+[8.275s]   176 |     [01;31m[Kvis_timer_[m[K = public_nh.createTimer(rclcpp::Duration(0.05), &GridMap::visCallback, this);
+[8.275s]       |     [01;31m[K^~~~~~~~~~[m[K
+[8.276s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:176:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[KcreateTimer[m[K’
+[8.276s]   176 |     vis_timer_ = public_nh.[01;31m[KcreateTimer[m[K(rclcpp::Duration(0.05), &GridMap::visCallback, this);
+[8.276s]       |                            [01;31m[K^~~~~~~~~~~[m[K
+[8.276s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:176:61:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Duration::Duration(double)[m[K’
+[8.276s]   176 |     vis_timer_ = public_nh.createTimer(rclcpp::Duration(0.05[01;31m[K)[m[K, &GridMap::visCallback, this);
+[8.276s]       |                                                             [01;31m[K^[m[K
+[8.276s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[8.276s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[8.276s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[8.276s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.276s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.276s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.276s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.276s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.276s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.277s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.277s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.277s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.277s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[8.277s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.277s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:48:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Rep, class Period> rclcpp::Duration::Duration(const std::chrono::duration<_Rep1, _Period1>&)[m[K’
+[8.277s]    48 |   [01;36m[KDuration[m[K(const std::chrono::duration<Rep, Period> & duration)  // NOLINT(runtime/explicit)
+[8.277s]       |   [01;36m[K^~~~~~~~[m[K
+[8.277s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:48:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[8.277s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:176:61:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::chrono::duration<_Rep1, _Period1>[m[K’ and ‘[01m[Kdouble[m[K’
+[8.277s]   176 |     vis_timer_ = public_nh.createTimer(rclcpp::Duration(0.05[01;36m[K)[m[K, &GridMap::visCallback, this);
+[8.277s]       |                                                             [01;36m[K^[m[K
+[8.277s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[8.277s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[8.277s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[8.277s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.278s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.278s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.278s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.278s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.278s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.278s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.278s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.278s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.278s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[8.278s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.278s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:151:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration()[m[K’
+[8.278s]   151 |   [01;36m[KDuration[m[K() = default;
+[8.278s]       |   [01;36m[K^~~~~~~~[m[K
+[8.278s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:151:3:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[8.278s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:61:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const rclcpp::Duration&)[m[K’
+[8.278s]    61 |   [01;36m[KDuration[m[K(const Duration & rhs);
+[8.279s]       |   [01;36m[K^~~~~~~~[m[K
+[8.279s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:61:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst rclcpp::Duration&[m[K’
+[8.279s]    61 |   Duration([01;36m[Kconst Duration & rhs[m[K);
+[8.279s]       |            [01;36m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[8.279s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:59:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const rcl_duration_t&)[m[K’
+[8.279s]    59 |   explicit [01;36m[KDuration[m[K(const rcl_duration_t & duration);
+[8.279s]       |            [01;36m[K^~~~~~~~[m[K
+[8.279s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:59:44:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst rcl_duration_t&[m[K’ {aka ‘[01m[Kconst rcl_duration_s&[m[K’}
+[8.279s]    59 |   explicit Duration([01;36m[Kconst rcl_duration_t & duration[m[K);
+[8.279s]       |                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[8.279s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:53:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const Duration&)[m[K’
+[8.279s]    53 |   [01;36m[KDuration[m[K(const builtin_interfaces::msg::Duration & duration_msg);  // NOLINT(runtime/explicit)
+[8.279s]       |   [01;36m[K^~~~~~~~[m[K
+[8.279s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:53:54:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst Duration&[m[K’ {aka ‘[01m[Kconst builtin_interfaces::msg::Duration_<std::allocator<void> >&[m[K’}
+[8.279s]    53 |   Duration([01;36m[Kconst builtin_interfaces::msg::Duration & duration_msg[m[K);  // NOLINT(runtime/explicit)
+[8.280s]       |            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[8.280s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:42:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(std::chrono::nanoseconds)[m[K’
+[8.280s]    42 |   explicit [01;36m[KDuration[m[K(std::chrono::nanoseconds nanoseconds);
+[8.280s]       |            [01;36m[K^~~~~~~~[m[K
+[8.280s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:42:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kstd::chrono::nanoseconds[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’}
+[8.280s]    42 |   explicit Duration([01;36m[Kstd::chrono::nanoseconds nanoseconds[m[K);
+[8.280s]       |                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[8.280s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:39:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(int32_t, uint32_t)[m[K’
+[8.280s]    39 |   [01;36m[KDuration[m[K(int32_t seconds, uint32_t nanoseconds);
+[8.280s]       |   [01;36m[K^~~~~~~~[m[K
+[8.280s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:39:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[8.284s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:179:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap_pub_[m[K’ was not declared in this scope
+[8.284s]   179 |     [01;31m[Kmap_pub_[m[K = public_nh.advertise<sensor_msgs::msg::PointCloud2>("sdf_map/occupancy", 10);
+[8.285s]       |     [01;31m[K^~~~~~~~[m[K
+[8.285s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:179:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kadvertise[m[K’
+[8.285s]   179 |     map_pub_ = public_nh.[01;31m[Kadvertise[m[K<sensor_msgs::msg::PointCloud2>("sdf_map/occupancy", 10);
+[8.285s]       |                          [01;31m[K^~~~~~~~~[m[K
+[8.285s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:179:65:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[8.285s]   179 |     map_pub_ = public_nh.advertise<sensor_msgs::msg::PointCloud2[01;31m[K>[m[K("sdf_map/occupancy", 10);
+[8.285s]       |                                                                 [01;31m[K^[m[K
+[8.298s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:180:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kstatic_map_pub_[m[K’ was not declared in this scope; did you mean ‘[01m[Kstatic_map_[m[K’?
+[8.298s]   180 |     [01;31m[Kstatic_map_pub_[m[K= public_nh.advertise<sensor_msgs::msg::PointCloud2>("sdf_map/occupancy_static", 10);
+[8.298s]       |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[8.298s]       |     [32m[Kstatic_map_[m[K
+[8.298s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:180:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kadvertise[m[K’
+[8.298s]   180 |     static_map_pub_= public_nh.[01;31m[Kadvertise[m[K<sensor_msgs::msg::PointCloud2>("sdf_map/occupancy_static", 10);
+[8.298s]       |                                [01;31m[K^~~~~~~~~[m[K
+[8.298s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:180:71:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[8.298s]   180 |     static_map_pub_= public_nh.advertise<sensor_msgs::msg::PointCloud2[01;31m[K>[m[K("sdf_map/occupancy_static", 10);
+[8.298s]       |                                                                       [01;31m[K^[m[K
+[8.317s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:181:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdynamic_map_pub_[m[K’ was not declared in this scope
+[8.317s]   181 |     [01;31m[Kdynamic_map_pub_[m[K= public_nh.advertise<sensor_msgs::msg::PointCloud2>("sdf_map/occupancy_dynamic", 10);
+[8.317s]       |     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[8.317s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:181:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kadvertise[m[K’
+[8.318s]   181 |     dynamic_map_pub_= public_nh.[01;31m[Kadvertise[m[K<sensor_msgs::msg::PointCloud2>("sdf_map/occupancy_dynamic", 10);
+[8.318s]       |                                 [01;31m[K^~~~~~~~~[m[K
+[8.318s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:181:72:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[8.318s]   181 |     dynamic_map_pub_= public_nh.advertise<sensor_msgs::msg::PointCloud2[01;31m[K>[m[K("sdf_map/occupancy_dynamic", 10);
+[8.318s]       |                                                                        [01;31m[K^[m[K
+[8.328s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:185:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kesdf_pub_[m[K’ was not declared in this scope
+[8.328s]   185 |     [01;31m[Kesdf_pub_[m[K = public_nh.advertise<sensor_msgs::msg::PointCloud2>("sdf_map/esdf", 10);
+[8.328s]       |     [01;31m[K^~~~~~~~~[m[K
+[8.328s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:185:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kadvertise[m[K’
+[8.328s]   185 |     esdf_pub_ = public_nh.[01;31m[Kadvertise[m[K<sensor_msgs::msg::PointCloud2>("sdf_map/esdf", 10);
+[8.328s]       |                           [01;31m[K^~~~~~~~~[m[K
+[8.328s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:185:66:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[8.328s]   185 |     esdf_pub_ = public_nh.advertise<sensor_msgs::msg::PointCloud2[01;31m[K>[m[K("sdf_map/esdf", 10);
+[8.328s]       |                                                                  [01;31m[K^[m[K
+[8.348s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:186:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kesdf_static_pub_[m[K’ was not declared in this scope
+[8.348s]   186 |     [01;31m[Kesdf_static_pub_[m[K = public_nh.advertise<sensor_msgs::msg::PointCloud2>("sdf_map/esdf_static", 10);
+[8.348s]       |     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[8.348s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:186:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kadvertise[m[K’
+[8.348s]   186 |     esdf_static_pub_ = public_nh.[01;31m[Kadvertise[m[K<sensor_msgs::msg::PointCloud2>("sdf_map/esdf_static", 10);
+[8.348s]       |                                  [01;31m[K^~~~~~~~~[m[K
+[8.348s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:186:73:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[8.348s]   186 |     esdf_static_pub_ = public_nh.advertise<sensor_msgs::msg::PointCloud2[01;31m[K>[m[K("sdf_map/esdf_static", 10);
+[8.348s]       |                                                                         [01;31m[K^[m[K
+[8.369s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:187:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_range_pub_[m[K’ was not declared in this scope
+[8.369s]   187 |     [01;31m[Kupdate_range_pub_[m[K = public_nh.advertise<visualization_msgs::msg::Marker>("sdf_map/update_range", 10);
+[8.369s]       |     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[8.369s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:187:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kadvertise[m[K’
+[8.369s]   187 |     update_range_pub_ = public_nh.[01;31m[Kadvertise[m[K<visualization_msgs::msg::Marker>("sdf_map/update_range", 10);
+[8.369s]       |                                   [01;31m[K^~~~~~~~~[m[K
+[8.369s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:187:76:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[8.369s]   187 |     update_range_pub_ = public_nh.advertise<visualization_msgs::msg::Marker[01;31m[K>[m[K("sdf_map/update_range", 10);
+[8.369s]       |                                                                            [01;31m[K^[m[K
+[8.383s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:188:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kunknown_pub_[m[K’ was not declared in this scope
+[8.384s]   188 |     [01;31m[Kunknown_pub_[m[K = public_nh.advertise<sensor_msgs::msg::PointCloud2>("sdf_map/unknown", 10);
+[8.384s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[8.384s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:188:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kadvertise[m[K’
+[8.384s]   188 |     unknown_pub_ = public_nh.[01;31m[Kadvertise[m[K<sensor_msgs::msg::PointCloud2>("sdf_map/unknown", 10);
+[8.384s]       |                              [01;31m[K^~~~~~~~~[m[K
+[8.384s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:188:69:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[8.384s]   188 |     unknown_pub_ = public_nh.advertise<sensor_msgs::msg::PointCloud2[01;31m[K>[m[K("sdf_map/unknown", 10);
+[8.384s]       |                                                                     [01;31m[K^[m[K
+[8.395s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:189:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdepth_pub_[m[K’ was not declared in this scope
+[8.395s]   189 |     [01;31m[Kdepth_pub_[m[K = public_nh.advertise<sensor_msgs::msg::PointCloud2>("sdf_map/depth_cloud", 10);
+[8.395s]       |     [01;31m[K^~~~~~~~~~[m[K
+[8.395s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:189:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Node[m[K’ has no member named ‘[01m[Kadvertise[m[K’
+[8.396s]   189 |     depth_pub_ = public_nh.[01;31m[Kadvertise[m[K<sensor_msgs::msg::PointCloud2>("sdf_map/depth_cloud", 10);
+[8.396s]       |                            [01;31m[K^~~~~~~~~[m[K
+[8.396s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:189:67:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[8.396s]   189 |     depth_pub_ = public_nh.advertise<sensor_msgs::msg::PointCloud2[01;31m[K>[m[K("sdf_map/depth_cloud", 10);
+[8.396s]       |                                                                   [01;31m[K^[m[K
+[8.396s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kbool GridMap::get_static_map()[m[K’:
+[8.396s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:196:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct nav_msgs::srv::GetMap[m[K’ has no member named ‘[01m[Krequest[m[K’; did you mean ‘[01m[KRequest[m[K’?
+[8.396s]   196 |     srv.[01;31m[Krequest[m[K={}; //std_srvs::srv::Empty::Request& request
+[8.396s]       |         [01;31m[K^~~~~~~[m[K
+[8.396s]       |         [32m[KRequest[m[K
+[8.418s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:198:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstatic_map_client_[m[K’ was not declared in this scope
+[8.418s]   198 |     if ([01;31m[Kstatic_map_client_[m[K.call(srv))
+[8.418s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[8.418s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:200:50:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kconst char [26][m[K’ and ‘[01m[Kconst char [5][m[K’ to binary ‘[01m[Koperator<<[m[K’
+[8.418s]   200 |       ROS_INFO_STREAM([32m[K"Is stacic map available: "[m[K[01;31m[K<<[m[K[34m[K"True"[m[K);
+[8.418s]       |                       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K[01;31m[K^~[m[K[34m[K~~~~~~[m[K
+[8.418s]       |                       [32m[K|[m[K                            [34m[K|[m[K
+[8.418s]       |                       [32m[Kconst char [26][m[K              [34m[Kconst char [5][m[K
+[8.432s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:200:7:[m[K [01;31m[Kerror: [m[K‘[01m[KROS_INFO_STREAM[m[K’ was not declared in this scope; did you mean ‘[01m[KPCL_INFO_STREAM[m[K’?
+[8.432s]   200 |       [01;31m[KROS_INFO_STREAM[m[K("Is stacic map available: "<<"True");
+[8.432s]       |       [01;31m[K^~~~~~~~~~~~~~~[m[K
+[8.432s]       |       [32m[KPCL_INFO_STREAM[m[K
+[8.432s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:202:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct nav_msgs::srv::GetMap[m[K’ has no member named ‘[01m[Kresponse[m[K’; did you mean ‘[01m[KResponse[m[K’?
+[8.432s]   202 |       static_map_=srv.[01;31m[Kresponse[m[K.map;
+[8.432s]       |                       [01;31m[K^~~~~~~~[m[K
+[8.432s]       |                       [32m[KResponse[m[K
+[8.432s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:208:50:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kconst char [26][m[K’ and ‘[01m[Kconst char [6][m[K’ to binary ‘[01m[Koperator<<[m[K’
+[8.432s]   208 |       ROS_INFO_STREAM([32m[K"Is stacic map available: "[m[K[01;31m[K<<[m[K[34m[K"False"[m[K);
+[8.432s]       |                       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K[01;31m[K^~[m[K[34m[K~~~~~~~[m[K
+[8.432s]       |                       [32m[K|[m[K                            [34m[K|[m[K
+[8.432s]       |                       [32m[Kconst char [26][m[K              [34m[Kconst char [6][m[K
+[8.446s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:208:7:[m[K [01;31m[Kerror: [m[K‘[01m[KROS_INFO_STREAM[m[K’ was not declared in this scope; did you mean ‘[01m[KPCL_INFO_STREAM[m[K’?
+[8.446s]   208 |       [01;31m[KROS_INFO_STREAM[m[K("Is stacic map available: "<<"False");
+[8.446s]       |       [01;31m[K^~~~~~~~~~~~~~~[m[K
+[8.446s]       |       [32m[KPCL_INFO_STREAM[m[K
+[8.465s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::scanOdomCallback(const ConstSharedPtr&, const ConstSharedPtr&)[m[K’:
+[8.466s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:393:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass tf2_ros::TransformListener[m[K’ has no member named ‘[01m[KwaitForTransform[m[K’
+[8.466s]   393 |   if(!tfListener_.[01;31m[KwaitForTransform[m[K(
+[8.466s]       |                   [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[8.466s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:396:52:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::Duration::Duration()[m[K’ is private within this context
+[8.466s]   396 |         laser_scan.header.stamp + rclcpp::Duration([01;31m[K)[m[K.fromSec(laser_scan.ranges.size()*laser_scan.time_increment),
+[8.466s]       |                                                    [01;31m[K^[m[K
+[8.466s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[8.467s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[8.467s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[8.467s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.467s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.467s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.467s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.467s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.467s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.467s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.468s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.468s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.468s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[8.468s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.468s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:151:3:[m[K [01;36m[Knote: [m[Kdeclared private here
+[8.468s]   151 |   [01;36m[KDuration[m[K() = default;
+[8.468s]       |   [01;36m[K^~~~~~~~[m[K
+[8.468s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:396:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Duration[m[K’ has no member named ‘[01m[KfromSec[m[K’
+[8.468s]   396 |         laser_scan.header.stamp + rclcpp::Duration().[01;31m[KfromSec[m[K(laser_scan.ranges.size()*laser_scan.time_increment),
+[8.468s]       |                                                      [01;31m[K^~~~~~~[m[K
+[8.469s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:397:29:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Duration::Duration(double)[m[K’
+[8.469s]   397 |         rclcpp::Duration(1.0[01;31m[K)[m[K)){return;}
+[8.469s]       |                             [01;31m[K^[m[K
+[8.469s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[8.469s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[8.469s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[8.469s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.469s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.469s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.469s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.469s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.469s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.469s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.470s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.470s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.470s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[8.470s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.470s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:48:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Rep, class Period> rclcpp::Duration::Duration(const std::chrono::duration<_Rep1, _Period1>&)[m[K’
+[8.470s]    48 |   [01;36m[KDuration[m[K(const std::chrono::duration<Rep, Period> & duration)  // NOLINT(runtime/explicit)
+[8.470s]       |   [01;36m[K^~~~~~~~[m[K
+[8.470s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:48:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[8.470s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:397:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::chrono::duration<_Rep1, _Period1>[m[K’ and ‘[01m[Kdouble[m[K’
+[8.470s]   397 |         rclcpp::Duration(1.0[01;36m[K)[m[K)){return;}
+[8.470s]       |                             [01;36m[K^[m[K
+[8.470s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[8.470s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[8.470s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[8.470s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.471s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.471s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.471s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.471s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.471s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.471s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.471s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.471s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.471s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[8.471s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.471s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:151:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration()[m[K’
+[8.471s]   151 |   [01;36m[KDuration[m[K() = default;
+[8.471s]       |   [01;36m[K^~~~~~~~[m[K
+[8.471s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:151:3:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[8.472s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:61:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const rclcpp::Duration&)[m[K’
+[8.472s]    61 |   [01;36m[KDuration[m[K(const Duration & rhs);
+[8.472s]       |   [01;36m[K^~~~~~~~[m[K
+[8.472s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:61:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst rclcpp::Duration&[m[K’
+[8.472s]    61 |   Duration([01;36m[Kconst Duration & rhs[m[K);
+[8.472s]       |            [01;36m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[8.472s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:59:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const rcl_duration_t&)[m[K’
+[8.472s]    59 |   explicit [01;36m[KDuration[m[K(const rcl_duration_t & duration);
+[8.472s]       |            [01;36m[K^~~~~~~~[m[K
+[8.472s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:59:44:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst rcl_duration_t&[m[K’ {aka ‘[01m[Kconst rcl_duration_s&[m[K’}
+[8.472s]    59 |   explicit Duration([01;36m[Kconst rcl_duration_t & duration[m[K);
+[8.472s]       |                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[8.472s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:53:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const Duration&)[m[K’
+[8.472s]    53 |   [01;36m[KDuration[m[K(const builtin_interfaces::msg::Duration & duration_msg);  // NOLINT(runtime/explicit)
+[8.472s]       |   [01;36m[K^~~~~~~~[m[K
+[8.473s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:53:54:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst Duration&[m[K’ {aka ‘[01m[Kconst builtin_interfaces::msg::Duration_<std::allocator<void> >&[m[K’}
+[8.473s]    53 |   Duration([01;36m[Kconst builtin_interfaces::msg::Duration & duration_msg[m[K);  // NOLINT(runtime/explicit)
+[8.473s]       |            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[8.473s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:42:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(std::chrono::nanoseconds)[m[K’
+[8.473s]    42 |   explicit [01;36m[KDuration[m[K(std::chrono::nanoseconds nanoseconds);
+[8.473s]       |            [01;36m[K^~~~~~~~[m[K
+[8.473s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:42:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kstd::chrono::nanoseconds[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’}
+[8.473s]    42 |   explicit Duration([01;36m[Kstd::chrono::nanoseconds nanoseconds[m[K);
+[8.473s]       |                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[8.473s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:39:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(int32_t, uint32_t)[m[K’
+[8.473s]    39 |   [01;36m[KDuration[m[K(int32_t seconds, uint32_t nanoseconds);
+[8.473s]       |   [01;36m[K^~~~~~~~[m[K
+[8.473s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:39:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[8.473s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:401:79:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Ktf2_ros::TransformListener[m[K’ to ‘[01m[Ktf2::BufferCore&[m[K’
+[8.473s]   401 |   projector_.transformLaserScanToPointCloud(mp_.frame_id_, laser_scan, cloud, [01;31m[KtfListener_[m[K);  //projector_.projectLaser(laser_scan, cloud);
+[8.473s]       |                                                                               [01;31m[K^~~~~~~~~~~[m[K
+[8.474s]       |                                                                               [01;31m[K|[m[K
+[8.474s]       |                                                                               [01;31m[Ktf2_ros::TransformListener[m[K
+[8.474s] In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:27[m[K,
+[8.474s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.474s] [01m[K/opt/ros/humble/include/laser_geometry/laser_geometry/laser_geometry.hpp:158:23:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid laser_geometry::LaserProjection::transformLaserScanToPointCloud(const string&, const LaserScan&, sensor_msgs::msg::PointCloud2&, tf2::BufferCore&, double, int)[m[K’
+[8.474s]   158 |     [01;36m[Ktf2::BufferCore & tf[m[K,
+[8.474s]       |     [01;36m[K~~~~~~~~~~~~~~~~~~^~[m[K
+[8.474s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::scanCallback(const ConstSharedPtr&)[m[K’:
+[8.474s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:456:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass tf2_ros::TransformListener[m[K’ has no member named ‘[01m[KwaitForTransform[m[K’
+[8.474s]   456 |   if(!tfListener_.[01;31m[KwaitForTransform[m[K(
+[8.474s]       |                   [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[8.474s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:459:52:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::Duration::Duration()[m[K’ is private within this context
+[8.474s]   459 |         laser_scan.header.stamp + rclcpp::Duration([01;31m[K)[m[K.fromSec(laser_scan.ranges.size()*laser_scan.time_increment),
+[8.474s]       |                                                    [01;31m[K^[m[K
+[8.474s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[8.475s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[8.475s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[8.475s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.475s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.475s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.475s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.475s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.475s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.475s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.475s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.475s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.475s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[8.475s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.475s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:151:3:[m[K [01;36m[Knote: [m[Kdeclared private here
+[8.475s]   151 |   [01;36m[KDuration[m[K() = default;
+[8.475s]       |   [01;36m[K^~~~~~~~[m[K
+[8.476s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:459:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Duration[m[K’ has no member named ‘[01m[KfromSec[m[K’
+[8.476s]   459 |         laser_scan.header.stamp + rclcpp::Duration().[01;31m[KfromSec[m[K(laser_scan.ranges.size()*laser_scan.time_increment),
+[8.476s]       |                                                      [01;31m[K^~~~~~~[m[K
+[8.476s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:460:29:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Duration::Duration(double)[m[K’
+[8.476s]   460 |         rclcpp::Duration(1.0[01;31m[K)[m[K)){return;}
+[8.476s]       |                             [01;31m[K^[m[K
+[8.476s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[8.476s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[8.476s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[8.476s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.476s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.476s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.476s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.476s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.476s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.476s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.477s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.477s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.477s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[8.477s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.477s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:48:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Rep, class Period> rclcpp::Duration::Duration(const std::chrono::duration<_Rep1, _Period1>&)[m[K’
+[8.477s]    48 |   [01;36m[KDuration[m[K(const std::chrono::duration<Rep, Period> & duration)  // NOLINT(runtime/explicit)
+[8.477s]       |   [01;36m[K^~~~~~~~[m[K
+[8.477s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:48:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[8.477s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:460:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::chrono::duration<_Rep1, _Period1>[m[K’ and ‘[01m[Kdouble[m[K’
+[8.477s]   460 |         rclcpp::Duration(1.0[01;36m[K)[m[K)){return;}
+[8.477s]       |                             [01;36m[K^[m[K
+[8.477s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[8.477s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[8.477s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[8.477s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.477s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.478s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.478s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.478s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.478s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.478s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.478s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.478s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.478s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:7[m[K,
+[8.478s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.478s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:151:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration()[m[K’
+[8.478s]   151 |   [01;36m[KDuration[m[K() = default;
+[8.478s]       |   [01;36m[K^~~~~~~~[m[K
+[8.478s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:151:3:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[8.478s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:61:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const rclcpp::Duration&)[m[K’
+[8.478s]    61 |   [01;36m[KDuration[m[K(const Duration & rhs);
+[8.478s]       |   [01;36m[K^~~~~~~~[m[K
+[8.479s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:61:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst rclcpp::Duration&[m[K’
+[8.479s]    61 |   Duration([01;36m[Kconst Duration & rhs[m[K);
+[8.479s]       |            [01;36m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[8.479s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:59:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const rcl_duration_t&)[m[K’
+[8.479s]    59 |   explicit [01;36m[KDuration[m[K(const rcl_duration_t & duration);
+[8.479s]       |            [01;36m[K^~~~~~~~[m[K
+[8.479s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:59:44:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst rcl_duration_t&[m[K’ {aka ‘[01m[Kconst rcl_duration_s&[m[K’}
+[8.479s]    59 |   explicit Duration([01;36m[Kconst rcl_duration_t & duration[m[K);
+[8.479s]       |                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[8.479s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:53:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(const Duration&)[m[K’
+[8.479s]    53 |   [01;36m[KDuration[m[K(const builtin_interfaces::msg::Duration & duration_msg);  // NOLINT(runtime/explicit)
+[8.480s]       |   [01;36m[K^~~~~~~~[m[K
+[8.480s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:53:54:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst Duration&[m[K’ {aka ‘[01m[Kconst builtin_interfaces::msg::Duration_<std::allocator<void> >&[m[K’}
+[8.480s]    53 |   Duration([01;36m[Kconst builtin_interfaces::msg::Duration & duration_msg[m[K);  // NOLINT(runtime/explicit)
+[8.480s]       |            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[8.480s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:42:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(std::chrono::nanoseconds)[m[K’
+[8.480s]    42 |   explicit [01;36m[KDuration[m[K(std::chrono::nanoseconds nanoseconds);
+[8.480s]       |            [01;36m[K^~~~~~~~[m[K
+[8.480s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:42:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kstd::chrono::nanoseconds[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’}
+[8.480s]    42 |   explicit Duration([01;36m[Kstd::chrono::nanoseconds nanoseconds[m[K);
+[8.480s]       |                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[8.480s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:39:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Duration::Duration(int32_t, uint32_t)[m[K’
+[8.480s]    39 |   [01;36m[KDuration[m[K(int32_t seconds, uint32_t nanoseconds);
+[8.480s]       |   [01;36m[K^~~~~~~~[m[K
+[8.480s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:39:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[8.480s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:464:84:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Ktf2_ros::TransformListener[m[K’ to ‘[01m[Ktf2::BufferCore&[m[K’
+[8.480s]   464 |   projector_.transformLaserScanToPointCloud(mp_.frame_id_, laser_scan, scan_cloud, [01;31m[KtfListener_[m[K);
+[8.481s]       |                                                                                    [01;31m[K^~~~~~~~~~~[m[K
+[8.481s]       |                                                                                    [01;31m[K|[m[K
+[8.481s]       |                                                                                    [01;31m[Ktf2_ros::TransformListener[m[K
+[8.481s] In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:27[m[K,
+[8.481s]                  from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[8.481s] [01m[K/opt/ros/humble/include/laser_geometry/laser_geometry/laser_geometry.hpp:158:23:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid laser_geometry::LaserProjection::transformLaserScanToPointCloud(const string&, const LaserScan&, sensor_msgs::msg::PointCloud2&, tf2::BufferCore&, double, int)[m[K’
+[8.481s]   158 |     [01;36m[Ktf2::BufferCore & tf[m[K,
+[8.481s]       |     [01;36m[K~~~~~~~~~~~~~~~~~~^~[m[K
+[8.482s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K At global scope:
+[8.482s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:586:53:[m[K [01;31m[Kerror: [m[K‘[01m[KTimerEvent[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type
+[8.482s]   586 | void GridMap::updateOccupancyCallback(const rclcpp::[01;31m[KTimerEvent[m[K& /*event*/) {
+[8.482s]       |                                                     [01;31m[K^~~~~~~~~~[m[K
+[8.482s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::updateOccupancyCallback(const int&)[m[K’:
+[8.482s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:594:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+[8.482s]   594 |   [01;31m[Kros[m[K::WallTime t1, t2;
+[8.482s]       |   [01;31m[K^~~[m[K
+[8.488s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:595:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kt1[m[K’ was not declared in this scope; did you mean ‘[01m[Ky1[m[K’?
+[8.488s]   595 |   [01;31m[Kt1[m[K = ros::WallTime::now();
+[8.488s]       |   [01;31m[K^~[m[K
+[8.488s]       |   [32m[Ky1[m[K
+[8.488s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:595:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+[8.488s]   595 |   t1 = [01;31m[Kros[m[K::WallTime::now();
+[8.488s]       |        [01;31m[K^~~[m[K
+[8.493s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:603:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kt2[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+[8.493s]   603 |   [01;31m[Kt2[m[K = ros::WallTime::now();
+[8.493s]       |   [01;31m[K^~[m[K
+[8.493s]       |   [32m[Ktm[m[K
+[8.493s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:603:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+[8.494s]   603 |   t2 = [01;31m[Kros[m[K::WallTime::now();
+[8.494s]       |        [01;31m[K^~~[m[K
+[8.609s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K At global scope:
+[8.609s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:968:48:[m[K [01;31m[Kerror: [m[K‘[01m[KTimerEvent[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type
+[8.609s]   968 | void GridMap::updateESDFCallback(const rclcpp::[01;31m[KTimerEvent[m[K& /*event*/) {
+[8.609s]       |                                                [01;31m[K^~~~~~~~~~[m[K
+[8.609s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::updateESDFCallback(const int&)[m[K’:
+[8.609s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:973:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+[8.609s]   973 |   [01;31m[Kros[m[K::WallTime t1, t2;
+[8.610s]       |   [01;31m[K^~~[m[K
+[8.615s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:974:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kt1[m[K’ was not declared in this scope; did you mean ‘[01m[Ky1[m[K’?
+[8.615s]   974 |   [01;31m[Kt1[m[K = ros::WallTime::now();
+[8.615s]       |   [01;31m[K^~[m[K
+[8.615s]       |   [32m[Ky1[m[K
+[8.615s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:974:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+[8.615s]   974 |   t1 = [01;31m[Kros[m[K::WallTime::now();
+[8.615s]       |        [01;31m[K^~~[m[K
+[8.621s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:978:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kt2[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+[8.621s]   978 |   [01;31m[Kt2[m[K = ros::WallTime::now();
+[8.621s]       |   [01;31m[K^~[m[K
+[8.621s]       |   [32m[Ktm[m[K
+[8.621s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:978:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+[8.621s]   978 |   t2 = [01;31m[Kros[m[K::WallTime::now();
+[8.621s]       |        [01;31m[K^~~[m[K
+[8.670s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::publishMap()[m[K’:
+[8.670s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1217:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap_pub_[m[K’ was not declared in this scope
+[8.670s]  1217 |   [01;31m[Kmap_pub_[m[K.publish(cloud_msg);
+[8.670s]       |   [01;31m[K^~~~~~~~[m[K
+[8.685s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::publishStaticMap()[m[K’:
+[8.685s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1248:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kstatic_map_pub_[m[K’ was not declared in this scope; did you mean ‘[01m[Kstatic_map_[m[K’?
+[8.685s]  1248 |   [01;31m[Kstatic_map_pub_[m[K.publish(cloud_msg);
+[8.685s]       |   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[8.685s]       |   [32m[Kstatic_map_[m[K
+[8.706s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::publishDynamicMap()[m[K’:
+[8.706s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1278:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdynamic_map_pub_[m[K’ was not declared in this scope
+[8.706s]  1278 |     [01;31m[Kdynamic_map_pub_[m[K.publish(cloud_msg);
+[8.706s]       |     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[8.723s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::publishESDF()[m[K’:
+[8.723s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1319:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kesdf_pub_[m[K’ was not declared in this scope
+[8.723s]  1319 |   [01;31m[Kesdf_pub_[m[K.publish(cloud_msg);
+[8.723s]       |   [01;31m[K^~~~~~~~~[m[K
+[8.745s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::publishStaticESDF()[m[K’:
+[8.745s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1362:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kesdf_static_pub_[m[K’ was not declared in this scope
+[8.745s]  1362 |   [01;31m[Kesdf_static_pub_[m[K.publish(cloud_msg);
+[8.745s]       |   [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[8.757s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::publishDepth()[m[K’:
+[8.757s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1385:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kdepth_pub_[m[K’ was not declared in this scope
+[8.757s]  1385 |   [01;31m[Kdepth_pub_[m[K.publish(cloud_msg);
+[8.757s]       |   [01;31m[K^~~~~~~~~~[m[K
+[8.766s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::publishUpdateRange()[m[K’:
+[8.766s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1398:35:[m[K [01;31m[Kerror: [m[K‘[01m[Know[m[K’ is not a member of ‘[01m[Krclcpp::Time[m[K’
+[8.766s]  1398 |   mk.header.stamp = rclcpp::Time::[01;31m[Know[m[K();
+[8.767s]       |                                   [01;31m[K^~~[m[K
+[8.788s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1421:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_range_pub_[m[K’ was not declared in this scope
+[8.788s]  1421 |   [01;31m[Kupdate_range_pub_[m[K.publish(mk);
+[8.788s]       |   [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[8.805s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kvoid GridMap::publishUnknown()[m[K’:
+[8.805s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1457:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kunknown_pub_[m[K’ was not declared in this scope
+[8.805s]  1457 |   [01;31m[Kunknown_pub_[m[K.publish(cloud_msg);
+[8.805s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[8.805s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K At global scope:
+[8.805s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1460:41:[m[K [01;31m[Kerror: [m[K‘[01m[KTimerEvent[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type
+[8.805s]  1460 | void GridMap::visCallback(const rclcpp::[01;31m[KTimerEvent[m[K& /*event*/) {
+[8.805s]       |                                         [01;31m[K^~~~~~~~~~[m[K
+[10.059s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:[m[K In member function ‘[01m[Kbool GridMap::get_static_map()[m[K’:
+[10.059s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:212:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[10.059s]   212 | [01;35m[K}[m[K
+[10.059s]       | [01;35m[K^[m[K
+[10.166s] gmake[2]: *** [CMakeFiles/mapping.dir/build.make:76: CMakeFiles/mapping.dir/src/mapping.cpp.o] Error 1
+[10.166s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mapping.dir/all] Error 2
+[10.167s] gmake: *** [Makefile:146: all] Error 2
+[10.168s] Invoked command in '/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping -- -j8 -l8

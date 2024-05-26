@@ -1,0 +1,18 @@
+[0.009s] Invoking command in '/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping -- -j8 -l8
+[0.050s] [ 33%] [32mBuilding CXX object CMakeFiles/mapping.dir/src/mapping.cpp.o[0m
+[0.052s] [ 66%] [32mBuilding CXX object CMakeFiles/mapping.dir/src/raycast.cpp.o[0m
+[0.056s] In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[0.056s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:5:10:[m[K [01;31m[Kfatal error: [m[KEigen/Eigen: No such file or directory
+[0.056s]     5 | #include [01;31m[K<Eigen/Eigen>[m[K
+[0.056s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[0.056s] compilation terminated.
+[0.057s] gmake[2]: *** [CMakeFiles/mapping.dir/build.make:76: CMakeFiles/mapping.dir/src/mapping.cpp.o] Error 1
+[0.057s] gmake[2]: *** Waiting for unfinished jobs....
+[0.057s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/raycast.cpp:2:10:[m[K [01;31m[Kfatal error: [m[KEigen/Eigen: No such file or directory
+[0.057s]     2 | #include [01;31m[K<Eigen/Eigen>[m[K
+[0.057s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[0.058s] compilation terminated.
+[0.058s] gmake[2]: *** [CMakeFiles/mapping.dir/build.make:90: CMakeFiles/mapping.dir/src/raycast.cpp.o] Error 1
+[0.058s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mapping.dir/all] Error 2
+[0.058s] gmake: *** [Makefile:146: all] Error 2
+[0.060s] Invoked command in '/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping -- -j8 -l8

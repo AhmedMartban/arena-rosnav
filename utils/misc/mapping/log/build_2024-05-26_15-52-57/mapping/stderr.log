@@ -1,0 +1,8 @@
+In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:24:10:[m[K [01;31m[Kfatal error: [m[Ksensor_msgs/msg/point_cloud.hpp: No such file or directory
+   24 | #include [01;31m[K<sensor_msgs/msg/point_cloud.hpp>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/mapping.dir/build.make:76: CMakeFiles/mapping.dir/src/mapping.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mapping.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

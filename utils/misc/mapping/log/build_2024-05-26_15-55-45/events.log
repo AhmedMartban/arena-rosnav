@@ -1,0 +1,108 @@
+[0.000000] (-) TimerEvent: {}
+[0.000215] (mapping) JobQueued: {'identifier': 'mapping', 'dependencies': OrderedDict()}
+[0.000786] (mapping) JobStarted: {'identifier': 'mapping'}
+[0.006321] (mapping) JobProgress: {'identifier': 'mapping', 'progress': 'cmake'}
+[0.007465] (mapping) JobProgress: {'identifier': 'mapping', 'progress': 'build'}
+[0.008513] (mapping) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping', '--', '-j8', '-l8'], 'cwd': '/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ARENA_DIR', '/arena_ws'), ('HOSTNAME', 'b7d6e8308065'), ('GIT_ASKPASS', '/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/extensions/git/dist/askpass.sh'), ('BRANCH', 'ros2'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/ros2-migration'), ('TERM_PROGRAM_VERSION', '1.89.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-b2836d17-3255-4724-bec0-7bbbe7192c90.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/node'), ('LC_CTYPE', 'C.UTF-8'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('PYTHON_KEYRING_BACKEND', 'keyring.backends.fail.Keyring'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-3352fd2a-35ff-4102-8ac9-6e0fee5aae01.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.local/bin:/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/remote-cli:/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-3352fd2a-35ff-4102-8ac9-6e0fee5aae01.sock","/tmp/.X11-unix/X6","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':6'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-bb16fb8514.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-3352fd2a-35ff-4102-8ac9-6e0fee5aae01.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X6'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.032948] (mapping) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099325] (-) TimerEvent: {}
+[0.153202] (mapping) StdoutLine: {'line': b'-- Found message_filters: 4.3.4 (/opt/ros/humble/share/message_filters/cmake)\n'}
+[0.182645] (mapping) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.185057] (mapping) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.191015] (mapping) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.199421] (-) TimerEvent: {}
+[0.202024] (mapping) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.217931] (mapping) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.277194] (mapping) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.278444] (mapping) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.299524] (-) TimerEvent: {}
+[0.391964] (mapping) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.399626] (-) TimerEvent: {}
+[0.499846] (-) TimerEvent: {}
+[0.565987] (mapping) StdoutLine: {'line': b'-- Found rclpy: 3.3.13 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[0.589088] (mapping) StdoutLine: {'line': b'-- Found std_srvs: 4.2.3 (/opt/ros/humble/share/std_srvs/cmake)\n'}
+[0.599943] (-) TimerEvent: {}
+[0.616265] (mapping) StdoutLine: {'line': b'-- Found pcl_conversions: 2.4.0 (/opt/ros/humble/share/pcl_conversions/cmake)\n'}
+[0.700071] (-) TimerEvent: {}
+[0.800307] (-) TimerEvent: {}
+[0.900560] (-) TimerEvent: {}
+[0.908000] (mapping) StdoutLine: {'line': b'-- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[1.000672] (-) TimerEvent: {}
+[1.033568] (mapping) StdoutLine: {'line': b'-- Found tf2: 0.25.6 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.041660] (mapping) StdoutLine: {'line': b'-- Found pcl_ros: 2.4.0 (/opt/ros/humble/share/pcl_ros/cmake)\n'}
+[1.100790] (-) TimerEvent: {}
+[1.156565] (mapping) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.157872] (mapping) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.200905] (-) TimerEvent: {}
+[1.301156] (-) TimerEvent: {}
+[1.401377] (-) TimerEvent: {}
+[1.501631] (-) TimerEvent: {}
+[1.552757] (mapping) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[1.579476] (mapping) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)\n'}
+[1.601705] (-) TimerEvent: {}
+[1.701986] (-) TimerEvent: {}
+[1.802260] (-) TimerEvent: {}
+[1.862186] (mapping) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[1.867511] (mapping) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[1.902371] (-) TimerEvent: {}
+[2.002625] (-) TimerEvent: {}
+[2.005620] (mapping) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[2.010758] (mapping) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.016164] (mapping) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[2.102715] (-) TimerEvent: {}
+[2.144604] (mapping) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[2.202834] (-) TimerEvent: {}
+[2.278878] (mapping) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.302951] (-) TimerEvent: {}
+[2.403209] (-) TimerEvent: {}
+[2.435779] (mapping) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at CMakeLists.txt:19 (find_package):\n'}
+[2.435934] (mapping) StderrLine: {'line': b'  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.\n'}
+[2.436009] (mapping) StderrLine: {'line': b'  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy\n'}
+[2.436078] (mapping) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[2.436144] (mapping) StderrLine: {'line': b'\n'}
+[2.436215] (mapping) StderrLine: {'line': b'  CMake variable PCL_ROOT is set to:\n'}
+[2.436282] (mapping) StderrLine: {'line': b'\n'}
+[2.436346] (mapping) StderrLine: {'line': b'    /usr\n'}
+[2.436409] (mapping) StderrLine: {'line': b'\n'}
+[2.436473] (mapping) StderrLine: {'line': b'  For compatibility, CMake is ignoring the variable.\n'}
+[2.436537] (mapping) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.436601] (mapping) StderrLine: {'line': b'\x1b[0m\n'}
+[2.442426] (mapping) StdoutLine: {'line': b'-- Found laser_geometry: 2.4.0 (/opt/ros/humble/share/laser_geometry/cmake)\n'}
+[2.456749] (mapping) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[2.503302] (-) TimerEvent: {}
+[2.603550] (-) TimerEvent: {}
+[2.622708] (mapping) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.698052] (mapping) StdoutLine: {'line': b'-- Generating done\n'}
+[2.700956] (mapping) StdoutLine: {'line': b'-- Build files have been written to: /ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping\n'}
+[2.703647] (-) TimerEvent: {}
+[2.728787] (mapping) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target mapping\x1b[0m\n'}
+[2.739917] (mapping) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/mapping.dir/src/mapping.cpp.o\x1b[0m\n'}
+[2.741526] (mapping) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/mapping.dir/src/raycast.cpp.o\x1b[0m\n'}
+[2.803779] (-) TimerEvent: {}
+[2.904072] (-) TimerEvent: {}
+[3.004337] (-) TimerEvent: {}
+[3.104593] (-) TimerEvent: {}
+[3.204851] (-) TimerEvent: {}
+[3.305115] (-) TimerEvent: {}
+[3.405377] (-) TimerEvent: {}
+[3.505610] (-) TimerEvent: {}
+[3.605850] (-) TimerEvent: {}
+[3.706093] (-) TimerEvent: {}
+[3.806364] (-) TimerEvent: {}
+[3.906610] (-) TimerEvent: {}
+[4.006861] (-) TimerEvent: {}
+[4.107115] (-) TimerEvent: {}
+[4.207365] (-) TimerEvent: {}
+[4.307707] (-) TimerEvent: {}
+[4.370786] (mapping) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1\x1b[m\x1b[K:\n'}
+[4.371280] (mapping) StderrLine: {'line': b'\x1b[01m\x1b[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:46:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kvisualization_msgs/msg/marker.hpp: No such file or directory\n'}
+[4.371674] (mapping) StderrLine: {'line': b'   46 | #include \x1b[01;31m\x1b[K<visualization_msgs/msg/marker.hpp>\x1b[m\x1b[K\n'}
+[4.371988] (mapping) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.372319] (mapping) StderrLine: {'line': b'compilation terminated.\n'}
+[4.404057] (mapping) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/mapping.dir/build.make:76: CMakeFiles/mapping.dir/src/mapping.cpp.o] Error 1\n'}
+[4.404277] (mapping) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mapping.dir/all] Error 2\n'}
+[4.404452] (mapping) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[4.406501] (mapping) CommandEnded: {'returncode': 2}
+[4.408004] (-) TimerEvent: {}
+[4.434829] (mapping) JobEnded: {'identifier': 'mapping', 'rc': 2}
+[4.445374] (-) EventReactorShutdown: {}

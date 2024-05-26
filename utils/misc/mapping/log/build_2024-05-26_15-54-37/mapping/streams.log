@@ -1,0 +1,56 @@
+[0.010s] Invoking command in '/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping -- -j8 -l8
+[0.033s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.152s] -- Found message_filters: 4.3.4 (/opt/ros/humble/share/message_filters/cmake)
+[0.181s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.184s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.190s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.201s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.216s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.275s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.277s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.390s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.561s] -- Found rclpy: 3.3.13 (/opt/ros/humble/share/rclpy/cmake)
+[0.561s] -- Found pcl_conversions: 2.4.0 (/opt/ros/humble/share/pcl_conversions/cmake)
+[0.854s] -- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.979s] -- Found tf2: 0.25.6 (/opt/ros/humble/share/tf2/cmake)
+[0.987s] -- Found pcl_ros: 2.4.0 (/opt/ros/humble/share/pcl_ros/cmake)
+[1.102s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.103s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.495s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.522s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[1.786s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.791s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.928s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.933s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.938s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.066s] -- Found Qhull version 8.0.2
+[2.198s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.352s] [33mCMake Warning (dev) at CMakeLists.txt:18 (find_package):
+[2.352s]   Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+[2.352s]   Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+[2.352s]   command to set the policy and suppress this warning.
+[2.352s] 
+[2.352s]   CMake variable PCL_ROOT is set to:
+[2.352s] 
+[2.352s]     /usr
+[2.352s] 
+[2.352s]   For compatibility, CMake is ignoring the variable.
+[2.352s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.352s] [0m
+[2.358s] -- Found laser_geometry: 2.4.0 (/opt/ros/humble/share/laser_geometry/cmake)
+[2.372s] -- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.537s] -- Configuring done
+[2.611s] -- Generating done
+[2.614s] -- Build files have been written to: /ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping
+[2.640s] [35m[1mConsolidate compiler generated dependencies of target mapping[0m
+[2.651s] [ 33%] [32mBuilding CXX object CMakeFiles/mapping.dir/src/mapping.cpp.o[0m
+[2.652s] [ 66%] [32mBuilding CXX object CMakeFiles/mapping.dir/src/raycast.cpp.o[0m
+[4.260s] In file included from [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/src/mapping.cpp:1[m[K:
+[4.261s] [01m[K/ros2-migration/arena/arena-rosnav/utils/misc/mapping/include/mapping/mapping.h:36:10:[m[K [01;31m[Kfatal error: [m[Kstd_srvs/srv/empty.hpp: No such file or directory
+[4.261s]    36 | #include [01;31m[K<std_srvs/srv/empty.hpp>[m[K
+[4.262s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.262s] compilation terminated.
+[4.297s] gmake[2]: *** [CMakeFiles/mapping.dir/build.make:76: CMakeFiles/mapping.dir/src/mapping.cpp.o] Error 1
+[4.298s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mapping.dir/all] Error 2
+[4.298s] gmake: *** [Makefile:146: all] Error 2
+[4.301s] Invoked command in '/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping -- -j8 -l8

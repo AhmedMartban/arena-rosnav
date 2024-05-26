@@ -1,0 +1,8 @@
+running egg_info
+creating build/eval/eval.egg-info
+writing build/eval/eval.egg-info/PKG-INFO
+writing dependency_links to build/eval/eval.egg-info/dependency_links.txt
+writing entry points to build/eval/eval.egg-info/entry_points.txt
+writing requirements to build/eval/eval.egg-info/requires.txt
+writing top-level names to build/eval/eval.egg-info/top_level.txt
+writing manifest file 'build/eval/eval.egg-info/SOURCES.txt'

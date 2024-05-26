@@ -1484,33 +1484,5 @@ int main(int argc, char **argv){
     grid_map_.reset(new GridMap);
     grid_map_->initMap(nh);
     rclcpp::spin(node);
-    return 0;
+    return 0; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

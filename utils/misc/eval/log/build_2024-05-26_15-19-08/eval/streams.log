@@ -1,0 +1,11 @@
+[0.744s] Invoking command in '/ros2-migration/arena/arena-rosnav/utils/misc/eval': PYTHONPATH=/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval/prefix_override:/ros2-migration/arena/arena-rosnav/utils/misc/eval/install/eval/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/eval build --build-base /ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval/build install --record /ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval/install.log --single-version-externally-managed install_data
+[0.989s] running egg_info
+[0.989s] creating build/eval/eval.egg-info
+[1.004s] writing build/eval/eval.egg-info/PKG-INFO
+[1.004s] writing dependency_links to build/eval/eval.egg-info/dependency_links.txt
+[1.004s] writing entry points to build/eval/eval.egg-info/entry_points.txt
+[1.005s] writing requirements to build/eval/eval.egg-info/requires.txt
+[1.005s] writing top-level names to build/eval/eval.egg-info/top_level.txt
+[1.005s] writing manifest file 'build/eval/eval.egg-info/SOURCES.txt'
+[1.021s] error: package directory 'eval' does not exist
+[1.038s] Invoked command in '/ros2-migration/arena/arena-rosnav/utils/misc/eval' returned '1': PYTHONPATH=/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval/prefix_override:/ros2-migration/arena/arena-rosnav/utils/misc/eval/install/eval/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/eval build --build-base /ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval/build install --record /ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval/install.log --single-version-externally-managed install_data

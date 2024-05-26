@@ -24,7 +24,7 @@
 #include <sensor_msgs/msg/point_cloud.hpp>
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <sensor_msgs/msg/laser_scan.hpp>
-#include <laser_geometry/laser_geometry.h>
+#include <laser_geometry/laser_geometry.hpp>
 #include <pcl_conversions/pcl_conversions.h>
 
 // Odom & Pose
