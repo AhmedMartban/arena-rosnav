@@ -1,0 +1,9 @@
+{
+  "package_name": "plan_msgs",
+  "non_idl_tuples": [
+    "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs:msg/RobotState.msg",
+    "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs:msg/RobotStateStamped.msg",
+    "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs:srv/Subgoal.srv",
+    "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs:srv/MakeGlobalPlan.srv"
+  ]
+}

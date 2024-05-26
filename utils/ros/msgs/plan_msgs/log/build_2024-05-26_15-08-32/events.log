@@ -1,0 +1,282 @@
+[0.000000] (-) TimerEvent: {}
+[0.000084] (plan_msgs) JobQueued: {'identifier': 'plan_msgs', 'dependencies': OrderedDict()}
+[0.000108] (plan_msgs) JobStarted: {'identifier': 'plan_msgs'}
+[0.004914] (plan_msgs) JobProgress: {'identifier': 'plan_msgs', 'progress': 'cmake'}
+[0.006095] (plan_msgs) JobProgress: {'identifier': 'plan_msgs', 'progress': 'build'}
+[0.006126] (plan_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs', '--', '-j8', '-l8'], 'cwd': '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ARENA_DIR', '/arena_ws'), ('HOSTNAME', 'b7d6e8308065'), ('GIT_ASKPASS', '/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/extensions/git/dist/askpass.sh'), ('BRANCH', 'ros2'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/ros2-migration'), ('TERM_PROGRAM_VERSION', '1.89.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-b2836d17-3255-4724-bec0-7bbbe7192c90.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/node'), ('LC_CTYPE', 'C.UTF-8'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('PYTHON_KEYRING_BACKEND', 'keyring.backends.fail.Keyring'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-3352fd2a-35ff-4102-8ac9-6e0fee5aae01.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.local/bin:/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/remote-cli:/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-3352fd2a-35ff-4102-8ac9-6e0fee5aae01.sock","/tmp/.X11-unix/X6","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':6'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-bb16fb8514.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-3352fd2a-35ff-4102-8ac9-6e0fee5aae01.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X6'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.024158] (plan_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099522] (-) TimerEvent: {}
+[0.122730] (plan_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.124266] (plan_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.126913] (plan_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.155193] (plan_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.182468] (plan_msgs) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.199620] (-) TimerEvent: {}
+[0.299843] (-) TimerEvent: {}
+[0.306568] (plan_msgs) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[0.391871] (plan_msgs) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.399938] (-) TimerEvent: {}
+[0.500148] (-) TimerEvent: {}
+[0.600385] (-) TimerEvent: {}
+[0.700620] (-) TimerEvent: {}
+[0.800153] (plan_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.800708] (-) TimerEvent: {}
+[0.900913] (-) TimerEvent: {}
+[1.001125] (-) TimerEvent: {}
+[1.080725] (plan_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.101219] (-) TimerEvent: {}
+[1.201433] (-) TimerEvent: {}
+[1.301644] (-) TimerEvent: {}
+[1.401885] (-) TimerEvent: {}
+[1.449915] (plan_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.471102] (plan_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.491838] (plan_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.491965] (plan_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.492041] (plan_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.501985] (-) TimerEvent: {}
+[1.551188] (plan_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.595380] (plan_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.599490] (plan_msgs) StdoutLine: {'line': b'-- Build files have been written to: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs\n'}
+[1.602085] (-) TimerEvent: {}
+[1.618725] (plan_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target plan_msgs__rosidl_generator_c\x1b[0m\n'}
+[1.625700] (plan_msgs) StdoutLine: {'line': b'[  1%] Built target plan_msgs__cpp\n'}
+[1.629089] (plan_msgs) StdoutLine: {'line': b'[ 12%] Built target plan_msgs__rosidl_generator_c\n'}
+[1.633064] (plan_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_plan_msgs\n'}
+[1.634011] (plan_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target plan_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[1.634284] (plan_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target plan_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[1.634364] (plan_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target plan_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[1.637673] (plan_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target plan_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[1.638279] (plan_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target plan_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[1.638427] (plan_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target plan_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[1.646686] (plan_msgs) StdoutLine: {'line': b'[ 34%] Built target plan_msgs__rosidl_typesupport_cpp\n'}
+[1.646841] (plan_msgs) StdoutLine: {'line': b'[ 34%] Built target plan_msgs__rosidl_typesupport_c\n'}
+[1.647016] (plan_msgs) StdoutLine: {'line': b'[ 45%] Built target plan_msgs__rosidl_typesupport_introspection_cpp\n'}
+[1.647590] (plan_msgs) StdoutLine: {'line': b'[ 56%] Built target plan_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[1.648897] (plan_msgs) StdoutLine: {'line': b'[ 67%] Built target plan_msgs__rosidl_typesupport_introspection_c\n'}
+[1.652490] (plan_msgs) StdoutLine: {'line': b'[ 78%] Built target plan_msgs__rosidl_typesupport_fastrtps_c\n'}
+[1.667416] (plan_msgs) StdoutLine: {'line': b'[ 78%] Built target plan_msgs\n'}
+[1.682101] (plan_msgs) StdoutLine: {'line': b'[ 80%] Built target plan_msgs__py\n'}
+[1.689755] (plan_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target plan_msgs__rosidl_generator_py\x1b[0m\n'}
+[1.701688] (plan_msgs) StdoutLine: {'line': b'[ 89%] Built target plan_msgs__rosidl_generator_py\n'}
+[1.702177] (-) TimerEvent: {}
+[1.709125] (plan_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target plan_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[1.709268] (plan_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target plan_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[1.709346] (plan_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target plan_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[1.720052] (plan_msgs) StdoutLine: {'line': b'[100%] Built target plan_msgs__rosidl_typesupport_c__pyext\n'}
+[1.720199] (plan_msgs) StdoutLine: {'line': b'[100%] Built target plan_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.720277] (plan_msgs) StdoutLine: {'line': b'[100%] Built target plan_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[1.802294] (-) TimerEvent: {}
+[1.843455] (plan_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[1.859420] (plan_msgs) StdoutLine: {'line': b'writing plan_msgs.egg-info/PKG-INFO\n'}
+[1.859892] (plan_msgs) StdoutLine: {'line': b'writing dependency_links to plan_msgs.egg-info/dependency_links.txt\n'}
+[1.860104] (plan_msgs) StdoutLine: {'line': b'writing top-level names to plan_msgs.egg-info/top_level.txt\n'}
+[1.902397] (-) TimerEvent: {}
+[1.906190] (plan_msgs) StdoutLine: {'line': b"reading manifest file 'plan_msgs.egg-info/SOURCES.txt'\n"}
+[1.906889] (plan_msgs) StdoutLine: {'line': b"writing manifest file 'plan_msgs.egg-info/SOURCES.txt'\n"}
+[1.930153] (plan_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_plan_msgs_egg\n'}
+[1.938489] (plan_msgs) CommandEnded: {'returncode': 0}
+[2.002529] (-) TimerEvent: {}
+[2.102938] (-) TimerEvent: {}
+[2.203572] (-) TimerEvent: {}
+[2.304165] (-) TimerEvent: {}
+[2.317955] (plan_msgs) JobProgress: {'identifier': 'plan_msgs', 'progress': 'install'}
+[2.344894] (plan_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs'], 'cwd': '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ARENA_DIR', '/arena_ws'), ('HOSTNAME', 'b7d6e8308065'), ('GIT_ASKPASS', '/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/extensions/git/dist/askpass.sh'), ('BRANCH', 'ros2'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/ros2-migration'), ('TERM_PROGRAM_VERSION', '1.89.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-b2836d17-3255-4724-bec0-7bbbe7192c90.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/node'), ('LC_CTYPE', 'C.UTF-8'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('PYTHON_KEYRING_BACKEND', 'keyring.backends.fail.Keyring'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-3352fd2a-35ff-4102-8ac9-6e0fee5aae01.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.local/bin:/root/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/remote-cli:/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-3352fd2a-35ff-4102-8ac9-6e0fee5aae01.sock","/tmp/.X11-unix/X6","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':6'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-bb16fb8514.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-3352fd2a-35ff-4102-8ac9-6e0fee5aae01.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X6'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[2.368891] (plan_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.369617] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/ament_index/resource_index/rosidl_interfaces/plan_msgs\n'}
+[2.369980] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs\n'}
+[2.370297] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg\n'}
+[2.371007] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail\n'}
+[2.371398] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__functions.c\n'}
+[2.371707] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__struct.h\n'}
+[2.372039] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__type_support.h\n'}
+[2.372323] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__functions.c\n'}
+[2.372571] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__type_support.h\n'}
+[2.372816] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__functions.h\n'}
+[2.373017] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__functions.h\n'}
+[2.373214] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__struct.h\n'}
+[2.373424] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/robot_state_stamped.h\n'}
+[2.373684] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.373884] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/robot_state.h\n'}
+[2.374084] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv\n'}
+[2.374456] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/make_global_plan.h\n'}
+[2.374756] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail\n'}
+[2.375077] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__type_support.h\n'}
+[2.375277] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__type_support.h\n'}
+[2.375477] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__functions.c\n'}
+[2.375734] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__functions.h\n'}
+[2.375882] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__struct.h\n'}
+[2.376093] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__struct.h\n'}
+[2.376273] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__functions.c\n'}
+[2.376527] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__functions.h\n'}
+[2.376760] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/subgoal.h\n'}
+[2.376970] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/library_path.sh\n'}
+[2.377120] (plan_msgs) StdoutLine: {'line': b'-- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/library_path.dsv\n'}
+[2.377322] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_generator_c.so\n'}
+[2.377506] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs\n'}
+[2.377654] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg\n'}
+[2.377809] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail\n'}
+[2.377996] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__rosidl_typesupport_fastrtps_c.h\n'}
+[2.378178] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__rosidl_typesupport_fastrtps_c.h\n'}
+[2.378385] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.378587] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv\n'}
+[2.378851] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail\n'}
+[2.379079] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__rosidl_typesupport_fastrtps_c.h\n'}
+[2.379328] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__rosidl_typesupport_fastrtps_c.h\n'}
+[2.379558] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[2.379769] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs\n'}
+[2.379975] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg\n'}
+[2.380168] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail\n'}
+[2.380385] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__type_support.c\n'}
+[2.380600] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__rosidl_typesupport_introspection_c.h\n'}
+[2.380742] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__rosidl_typesupport_introspection_c.h\n'}
+[2.380884] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__type_support.c\n'}
+[2.381002] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.381115] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv\n'}
+[2.381277] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail\n'}
+[2.381470] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__rosidl_typesupport_introspection_c.h\n'}
+[2.381643] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__type_support.c\n'}
+[2.381825] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__type_support.c\n'}
+[2.381974] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__rosidl_typesupport_introspection_c.h\n'}
+[2.382089] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_introspection_c.so\n'}
+[2.382227] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_c.so\n'}
+[2.382353] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs\n'}
+[2.382466] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg\n'}
+[2.382580] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail\n'}
+[2.382720] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__builder.hpp\n'}
+[2.382832] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__struct.hpp\n'}
+[2.382993] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__traits.hpp\n'}
+[2.383109] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__traits.hpp\n'}
+[2.383229] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__builder.hpp\n'}
+[2.383369] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__struct.hpp\n'}
+[2.383507] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/robot_state_stamped.hpp\n'}
+[2.383622] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/robot_state.hpp\n'}
+[2.383759] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv\n'}
+[2.383874] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/subgoal.hpp\n'}
+[2.384015] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail\n'}
+[2.384128] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__builder.hpp\n'}
+[2.384266] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__traits.hpp\n'}
+[2.384389] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__struct.hpp\n'}
+[2.384507] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__builder.hpp\n'}
+[2.384662] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__traits.hpp\n'}
+[2.384834] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__struct.hpp\n'}
+[2.385007] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/make_global_plan.hpp\n'}
+[2.385177] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs\n'}
+[2.385367] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg\n'}
+[2.385526] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail\n'}
+[2.385641] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.385797] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.385893] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/dds_fastrtps\n'}
+[2.385996] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.386096] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv\n'}
+[2.386190] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail\n'}
+[2.386284] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.386378] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/dds_fastrtps\n'}
+[2.386472] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.386566] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.386660] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs\n'}
+[2.386754] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg\n'}
+[2.386847] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail\n'}
+[2.386941] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__type_support.cpp\n'}
+[2.387036] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__type_support.cpp\n'}
+[2.387129] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.387223] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.387322] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv\n'}
+[2.387416] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail\n'}
+[2.387510] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.387604] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__type_support.cpp\n'}
+[2.387699] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__type_support.cpp\n'}
+[2.387794] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.387888] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[2.387989] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_cpp.so\n'}
+[2.388083] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/pythonpath.sh\n'}
+[2.388177] (plan_msgs) StdoutLine: {'line': b'-- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/pythonpath.dsv\n'}
+[2.388272] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs-0.0.0-py3.10.egg-info\n'}
+[2.388366] (plan_msgs) StdoutLine: {'line': b'-- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[2.388460] (plan_msgs) StdoutLine: {'line': b'-- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[2.388563] (plan_msgs) StdoutLine: {'line': b'-- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[2.388658] (plan_msgs) StdoutLine: {'line': b'-- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[2.388754] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs\n'}
+[2.388848] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/libplan_msgs__rosidl_generator_py.so\n'}
+[2.388943] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.389040] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/_plan_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[2.389135] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg\n'}
+[2.389230] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/__init__.py\n'}
+[2.389325] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/_robot_state_stamped_s.c\n'}
+[2.389427] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/_robot_state_s.c\n'}
+[2.389526] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/_robot_state_stamped.py\n'}
+[2.389626] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/_robot_state.py\n'}
+[2.389721] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/_plan_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[2.389821] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv\n'}
+[2.389915] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/__init__.py\n'}
+[2.390010] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/_make_global_plan.py\n'}
+[2.390105] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/_subgoal_s.c\n'}
+[2.390199] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/_subgoal.py\n'}
+[2.390294] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/_make_global_plan_s.c\n'}
+[2.390389] (plan_msgs) StdoutLine: {'line': b'-- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/__init__.py\n'}
+[2.390483] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.390580] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/_plan_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[2.390688] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.404245] (-) TimerEvent: {}
+[2.424615] (plan_msgs) StdoutLine: {'line': b"Listing '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs'...\n"}
+[2.424773] (plan_msgs) StdoutLine: {'line': b"Compiling '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/__init__.py'...\n"}
+[2.424851] (plan_msgs) StdoutLine: {'line': b"Listing '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg'...\n"}
+[2.424921] (plan_msgs) StdoutLine: {'line': b"Listing '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv'...\n"}
+[2.428997] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.429227] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.429400] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.429771] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_generator_py.so\n'}
+[2.429975] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/msg/RobotState.idl\n'}
+[2.430073] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/msg/RobotStateStamped.idl\n'}
+[2.430149] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/Subgoal.idl\n'}
+[2.430337] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/MakeGlobalPlan.idl\n'}
+[2.430458] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/msg/RobotState.msg\n'}
+[2.430554] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/msg/RobotStateStamped.msg\n'}
+[2.430635] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/Subgoal.srv\n'}
+[2.430702] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/Subgoal_Request.msg\n'}
+[2.430766] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/Subgoal_Response.msg\n'}
+[2.430849] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/MakeGlobalPlan.srv\n'}
+[2.430914] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/MakeGlobalPlan_Request.msg\n'}
+[2.430977] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/MakeGlobalPlan_Response.msg\n'}
+[2.431063] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/ament_index/resource_index/package_run_dependencies/plan_msgs\n'}
+[2.431130] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/ament_index/resource_index/parent_prefix_path/plan_msgs\n'}
+[2.431212] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/ament_prefix_path.sh\n'}
+[2.431276] (plan_msgs) StdoutLine: {'line': b'-- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/ament_prefix_path.dsv\n'}
+[2.431353] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/path.sh\n'}
+[2.431418] (plan_msgs) StdoutLine: {'line': b'-- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/path.dsv\n'}
+[2.431481] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/local_setup.bash\n'}
+[2.431557] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/local_setup.sh\n'}
+[2.431634] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/local_setup.zsh\n'}
+[2.431712] (plan_msgs) StdoutLine: {'line': b'-- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/local_setup.dsv\n'}
+[2.431790] (plan_msgs) StdoutLine: {'line': b'-- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/package.dsv\n'}
+[2.431867] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/ament_index/resource_index/packages/plan_msgs\n'}
+[2.431932] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_generator_cExport.cmake\n'}
+[2.431998] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.432093] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[2.432182] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[2.432248] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.432326] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.432393] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_cExport.cmake\n'}
+[2.432500] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.432580] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_generator_cppExport.cmake\n'}
+[2.432646] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[2.432730] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[2.432795] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.432887] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.432973] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[2.433039] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.433105] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_generator_pyExport.cmake\n'}
+[2.433172] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[2.433292] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[2.433381] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.433456] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.433521] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.433585] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.433648] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.433718] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.433782] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgsConfig.cmake\n'}
+[2.433845] (plan_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgsConfig-version.cmake\n'}
+[2.433909] (plan_msgs) StdoutLine: {'line': b'-- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/package.xml\n'}
+[2.435138] (plan_msgs) CommandEnded: {'returncode': 0}
+[2.504354] (-) TimerEvent: {}
+[2.525777] (plan_msgs) JobEnded: {'identifier': 'plan_msgs', 'rc': 0}
+[2.526447] (-) EventReactorShutdown: {}

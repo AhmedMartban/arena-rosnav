@@ -1,0 +1,4 @@
+
+geometry_msgs/PoseStamped subgoal
+bool success
+string message

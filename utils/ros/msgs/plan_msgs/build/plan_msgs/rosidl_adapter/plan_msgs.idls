@@ -1,0 +1,4 @@
+/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs/rosidl_adapter/plan_msgs:msg/RobotState.idl
+/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs/rosidl_adapter/plan_msgs:msg/RobotStateStamped.idl
+/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs/rosidl_adapter/plan_msgs:srv/Subgoal.idl
+/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs/rosidl_adapter/plan_msgs:srv/MakeGlobalPlan.idl

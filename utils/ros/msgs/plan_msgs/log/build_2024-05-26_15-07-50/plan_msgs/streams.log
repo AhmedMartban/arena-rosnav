@@ -1,0 +1,336 @@
+[0.008s] Invoking command in '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs': /usr/bin/cmake /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs
+[0.050s] -- The C compiler identification is GNU 11.4.0
+[0.095s] -- The CXX compiler identification is GNU 11.4.0
+[0.101s] -- Detecting C compiler ABI info
+[0.152s] -- Detecting C compiler ABI info - done
+[0.160s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.160s] -- Detecting C compile features
+[0.160s] -- Detecting C compile features - done
+[0.163s] -- Detecting CXX compiler ABI info
+[0.229s] -- Detecting CXX compiler ABI info - done
+[0.237s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.237s] -- Detecting CXX compile features
+[0.238s] -- Detecting CXX compile features - done
+[0.240s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.606s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.691s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.694s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.699s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.736s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.770s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.902s] -- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.991s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.404s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.692s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.072s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.093s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.094s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.117s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.117s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.117s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.117s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.138s] -- Found PythonExtra: .so  
+[2.223s] -- Configuring done
+[2.270s] -- Generating done
+[2.273s] [33mCMake Warning:
+[2.273s]   Manually-specified variables were not used by the project:
+[2.273s] 
+[2.273s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[2.273s] 
+[2.273s] [0m
+[2.273s] -- Build files have been written to: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs
+[2.281s] Invoked command in '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs' returned '0': /usr/bin/cmake /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs
+[2.283s] Invoking command in '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs': /usr/bin/cmake --build /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs -- -j8 -l8
+[2.311s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.319s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.324s] [  3%] Built target ament_cmake_python_copy_plan_msgs
+[2.534s] running egg_info
+[2.535s] creating plan_msgs.egg-info
+[2.551s] writing plan_msgs.egg-info/PKG-INFO
+[2.551s] writing dependency_links to plan_msgs.egg-info/dependency_links.txt
+[2.551s] writing top-level names to plan_msgs.egg-info/top_level.txt
+[2.551s] writing manifest file 'plan_msgs.egg-info/SOURCES.txt'
+[2.598s] reading manifest file 'plan_msgs.egg-info/SOURCES.txt'
+[2.599s] writing manifest file 'plan_msgs.egg-info/SOURCES.txt'
+[2.623s] [  3%] Built target ament_cmake_python_build_plan_msgs_egg
+[2.798s] [  3%] Built target plan_msgs__cpp
+[2.805s] [  5%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.806s] [  7%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.812s] [  9%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.830s] [ 14%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_generator_c.dir/rosidl_generator_c/plan_msgs/msg/detail/robot_state_stamped__functions.c.o[0m
+[2.830s] [ 14%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_generator_c.dir/rosidl_generator_c/plan_msgs/srv/detail/subgoal__functions.c.o[0m
+[2.830s] [ 16%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_generator_c.dir/rosidl_generator_c/plan_msgs/srv/detail/make_global_plan__functions.c.o[0m
+[2.831s] [ 16%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_generator_c.dir/rosidl_generator_c/plan_msgs/msg/detail/robot_state__functions.c.o[0m
+[2.887s] [ 18%] [32m[1mLinking C shared library libplan_msgs__rosidl_generator_c.so[0m
+[2.917s] [ 18%] Built target plan_msgs__rosidl_generator_c
+[2.925s] [ 23%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.925s] [ 23%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.925s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.150s] [ 25%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/plan_msgs/msg/robot_state__type_support.cpp.o[0m
+[3.150s] [ 27%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/plan_msgs/msg/robot_state_stamped__type_support.cpp.o[0m
+[3.155s] [ 29%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/plan_msgs/srv/subgoal__type_support.cpp.o[0m
+[3.245s] [ 30%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/plan_msgs/msg/detail/robot_state__type_support.cpp.o[0m
+[3.277s] [ 32%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/plan_msgs/msg/robot_state__type_support.cpp.o[0m
+[3.302s] [ 34%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/plan_msgs/msg/detail/dds_fastrtps/robot_state__type_support.cpp.o[0m
+[3.302s] [ 36%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/plan_msgs/msg/robot_state_stamped__type_support.cpp.o[0m
+[3.330s] [ 38%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/plan_msgs/srv/subgoal__type_support.cpp.o[0m
+[3.358s] [ 40%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/plan_msgs/srv/make_global_plan__type_support.cpp.o[0m
+[3.387s] [ 41%] [32m[1mLinking CXX shared library libplan_msgs__rosidl_typesupport_c.so[0m
+[3.403s] [ 43%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/plan_msgs/msg/detail/robot_state__type_support.c.o[0m
+[3.409s] [ 45%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/plan_msgs/srv/make_global_plan__type_support.cpp.o[0m
+[3.429s] [ 45%] Built target plan_msgs__rosidl_typesupport_c
+[3.430s] [ 47%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/plan_msgs/msg/detail/robot_state_stamped__type_support.c.o[0m
+[3.436s] [ 49%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/plan_msgs/srv/detail/subgoal__type_support.c.o[0m
+[3.446s] [ 50%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/plan_msgs/msg/detail/robot_state__type_support_c.cpp.o[0m
+[3.454s] [ 52%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/plan_msgs/msg/detail/robot_state_stamped__type_support_c.cpp.o[0m
+[3.461s] [ 54%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/plan_msgs/srv/detail/make_global_plan__type_support.c.o[0m
+[3.466s] [ 56%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/plan_msgs/srv/detail/subgoal__type_support_c.cpp.o[0m
+[3.481s] [ 58%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/plan_msgs/srv/detail/make_global_plan__type_support_c.cpp.o[0m
+[3.584s] [ 60%] [32m[1mLinking C shared library libplan_msgs__rosidl_typesupport_introspection_c.so[0m
+[3.606s] [ 61%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/plan_msgs/msg/detail/robot_state_stamped__type_support.cpp.o[0m
+[3.619s] [ 61%] Built target plan_msgs__rosidl_typesupport_introspection_c
+[3.627s] [ 63%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/plan_msgs/srv/detail/subgoal__type_support.cpp.o[0m
+[3.672s] [ 65%] [32m[1mLinking CXX shared library libplan_msgs__rosidl_typesupport_cpp.so[0m
+[3.687s] [ 67%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/plan_msgs/msg/detail/dds_fastrtps/robot_state_stamped__type_support.cpp.o[0m
+[3.709s] [ 67%] Built target plan_msgs__rosidl_typesupport_cpp
+[3.716s] [ 69%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/plan_msgs/srv/detail/dds_fastrtps/subgoal__type_support.cpp.o[0m
+[3.769s] [ 70%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/plan_msgs/srv/detail/dds_fastrtps/make_global_plan__type_support.cpp.o[0m
+[3.776s] [ 72%] [32mBuilding CXX object CMakeFiles/plan_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/plan_msgs/srv/detail/make_global_plan__type_support.cpp.o[0m
+[3.854s] [ 74%] [32m[1mLinking CXX shared library libplan_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[3.950s] [ 74%] Built target plan_msgs__rosidl_typesupport_fastrtps_c
+[4.165s] [ 76%] [32m[1mLinking CXX shared library libplan_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[4.167s] [ 78%] [32m[1mLinking CXX shared library libplan_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.219s] [ 78%] Built target plan_msgs__rosidl_typesupport_introspection_cpp
+[4.232s] [ 78%] Built target plan_msgs__rosidl_typesupport_fastrtps_cpp
+[4.246s] [ 78%] Built target plan_msgs
+[4.260s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.045s] [ 80%] Built target plan_msgs__py
+[5.059s] [ 85%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_generator_py.dir/rosidl_generator_py/plan_msgs/msg/_robot_state_stamped_s.c.o[0m
+[5.059s] [ 85%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_generator_py.dir/rosidl_generator_py/plan_msgs/msg/_robot_state_s.c.o[0m
+[5.059s] [ 85%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_generator_py.dir/rosidl_generator_py/plan_msgs/srv/_subgoal_s.c.o[0m
+[5.059s] [ 87%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_generator_py.dir/rosidl_generator_py/plan_msgs/srv/_make_global_plan_s.c.o[0m
+[5.160s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/plan_msgs/libplan_msgs__rosidl_generator_py.so[0m
+[5.194s] [ 89%] Built target plan_msgs__rosidl_generator_py
+[5.208s] [ 94%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/plan_msgs/_plan_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[5.208s] [ 94%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/plan_msgs/_plan_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.208s] [ 94%] [32mBuilding C object CMakeFiles/plan_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/plan_msgs/_plan_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[5.316s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/plan_msgs/plan_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.316s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/plan_msgs/plan_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.319s] [100%] [32m[1mLinking C shared library rosidl_generator_py/plan_msgs/plan_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.354s] [100%] Built target plan_msgs__rosidl_typesupport_introspection_c__pyext
+[5.354s] [100%] Built target plan_msgs__rosidl_typesupport_c__pyext
+[5.354s] [100%] Built target plan_msgs__rosidl_typesupport_fastrtps_c__pyext
+[5.363s] Invoked command in '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs' returned '0': /usr/bin/cmake --build /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs -- -j8 -l8
+[5.563s] Invoking command in '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs': /usr/bin/cmake --install /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs
+[5.574s] -- Install configuration: ""
+[5.574s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/ament_index/resource_index/rosidl_interfaces/plan_msgs
+[5.574s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs
+[5.574s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg
+[5.575s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail
+[5.575s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__functions.c
+[5.575s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__struct.h
+[5.575s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__type_support.h
+[5.575s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__functions.c
+[5.576s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__type_support.h
+[5.576s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__functions.h
+[5.576s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__functions.h
+[5.576s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__struct.h
+[5.576s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/robot_state_stamped.h
+[5.576s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/rosidl_generator_c__visibility_control.h
+[5.577s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/robot_state.h
+[5.577s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv
+[5.577s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/make_global_plan.h
+[5.577s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail
+[5.577s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__type_support.h
+[5.577s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__type_support.h
+[5.577s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__functions.c
+[5.578s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__functions.h
+[5.578s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__struct.h
+[5.578s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__struct.h
+[5.578s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__functions.c
+[5.578s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__functions.h
+[5.579s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/subgoal.h
+[5.579s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/library_path.sh
+[5.579s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/library_path.dsv
+[5.579s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_generator_c.so
+[5.580s] -- Set runtime path of "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_generator_c.so" to ""
+[5.580s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs
+[5.580s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg
+[5.580s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail
+[5.581s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__rosidl_typesupport_fastrtps_c.h
+[5.581s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__rosidl_typesupport_fastrtps_c.h
+[5.581s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.581s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv
+[5.581s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail
+[5.581s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__rosidl_typesupport_fastrtps_c.h
+[5.581s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__rosidl_typesupport_fastrtps_c.h
+[5.581s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_fastrtps_c.so
+[5.581s] -- Set runtime path of "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[5.582s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs
+[5.582s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg
+[5.582s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail
+[5.582s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__type_support.c
+[5.582s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__rosidl_typesupport_introspection_c.h
+[5.582s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__rosidl_typesupport_introspection_c.h
+[5.582s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__type_support.c
+[5.582s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.582s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv
+[5.583s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail
+[5.583s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__rosidl_typesupport_introspection_c.h
+[5.583s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__type_support.c
+[5.583s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__type_support.c
+[5.583s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__rosidl_typesupport_introspection_c.h
+[5.583s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_introspection_c.so
+[5.584s] -- Set runtime path of "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_introspection_c.so" to ""
+[5.584s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_c.so
+[5.584s] -- Set runtime path of "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_c.so" to ""
+[5.584s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs
+[5.584s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg
+[5.584s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail
+[5.585s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__builder.hpp
+[5.585s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__struct.hpp
+[5.585s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__traits.hpp
+[5.585s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__traits.hpp
+[5.585s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__builder.hpp
+[5.585s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__struct.hpp
+[5.585s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/robot_state_stamped.hpp
+[5.585s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/robot_state.hpp
+[5.585s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv
+[5.586s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/subgoal.hpp
+[5.586s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail
+[5.586s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__builder.hpp
+[5.586s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__traits.hpp
+[5.586s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__struct.hpp
+[5.586s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__builder.hpp
+[5.586s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__traits.hpp
+[5.586s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__struct.hpp
+[5.586s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/make_global_plan.hpp
+[5.587s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs
+[5.587s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg
+[5.587s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail
+[5.587s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__rosidl_typesupport_fastrtps_cpp.hpp
+[5.587s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[5.587s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/dds_fastrtps
+[5.587s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.587s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv
+[5.587s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail
+[5.588s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__rosidl_typesupport_fastrtps_cpp.hpp
+[5.588s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/dds_fastrtps
+[5.588s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__rosidl_typesupport_fastrtps_cpp.hpp
+[5.588s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_fastrtps_cpp.so
+[5.588s] -- Set runtime path of "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.588s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs
+[5.588s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg
+[5.589s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail
+[5.589s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__type_support.cpp
+[5.589s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__type_support.cpp
+[5.589s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state__rosidl_typesupport_introspection_cpp.hpp
+[5.589s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/msg/detail/robot_state_stamped__rosidl_typesupport_introspection_cpp.hpp
+[5.589s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv
+[5.589s] -- Up-to-date: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail
+[5.589s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__rosidl_typesupport_introspection_cpp.hpp
+[5.589s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__type_support.cpp
+[5.589s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/subgoal__type_support.cpp
+[5.589s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/include/plan_msgs/plan_msgs/srv/detail/make_global_plan__rosidl_typesupport_introspection_cpp.hpp
+[5.590s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_introspection_cpp.so
+[5.590s] -- Set runtime path of "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[5.590s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_cpp.so
+[5.590s] -- Set runtime path of "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_typesupport_cpp.so" to ""
+[5.590s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/pythonpath.sh
+[5.591s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/pythonpath.dsv
+[5.591s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs-0.0.0-py3.10.egg-info
+[5.591s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[5.591s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[5.591s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[5.591s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[5.591s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs
+[5.591s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/libplan_msgs__rosidl_generator_py.so
+[5.592s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.592s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/_plan_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.592s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg
+[5.592s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/__init__.py
+[5.592s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/_robot_state_stamped_s.c
+[5.592s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/_robot_state_s.c
+[5.592s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/_robot_state_stamped.py
+[5.592s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/_robot_state.py
+[5.593s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/_plan_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[5.593s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv
+[5.593s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/__init__.py
+[5.593s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/_make_global_plan.py
+[5.593s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/_subgoal_s.c
+[5.593s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/_subgoal.py
+[5.593s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/_make_global_plan_s.c
+[5.594s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/__init__.py
+[5.594s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.594s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/_plan_msgs_s.ep.rosidl_typesupport_c.c
+[5.594s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.631s] Listing '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs'...
+[5.631s] Compiling '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/__init__.py'...
+[5.631s] Listing '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg'...
+[5.631s] Compiling '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/__init__.py'...
+[5.631s] Compiling '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/_robot_state.py'...
+[5.631s] Compiling '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/msg/_robot_state_stamped.py'...
+[5.631s] Listing '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv'...
+[5.631s] Compiling '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/__init__.py'...
+[5.631s] Compiling '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/_make_global_plan.py'...
+[5.631s] Compiling '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/srv/_subgoal.py'...
+[5.635s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.635s] -- Set runtime path of "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.635s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.636s] -- Set runtime path of "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.636s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.636s] -- Set runtime path of "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/local/lib/python3.10/dist-packages/plan_msgs/plan_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.636s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_generator_py.so
+[5.637s] -- Set runtime path of "/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/lib/libplan_msgs__rosidl_generator_py.so" to ""
+[5.637s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/msg/RobotState.idl
+[5.637s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/msg/RobotStateStamped.idl
+[5.637s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/Subgoal.idl
+[5.637s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/MakeGlobalPlan.idl
+[5.637s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/msg/RobotState.msg
+[5.638s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/msg/RobotStateStamped.msg
+[5.638s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/Subgoal.srv
+[5.638s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/Subgoal_Request.msg
+[5.638s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/Subgoal_Response.msg
+[5.638s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/MakeGlobalPlan.srv
+[5.638s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/MakeGlobalPlan_Request.msg
+[5.638s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/srv/MakeGlobalPlan_Response.msg
+[5.639s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/ament_index/resource_index/package_run_dependencies/plan_msgs
+[5.639s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/ament_index/resource_index/parent_prefix_path/plan_msgs
+[5.639s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/ament_prefix_path.sh
+[5.639s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/ament_prefix_path.dsv
+[5.639s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/path.sh
+[5.639s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/environment/path.dsv
+[5.639s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/local_setup.bash
+[5.640s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/local_setup.sh
+[5.640s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/local_setup.zsh
+[5.640s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/local_setup.dsv
+[5.640s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/package.dsv
+[5.640s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/ament_index/resource_index/packages/plan_msgs
+[5.640s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_generator_cExport.cmake
+[5.641s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_generator_cExport-noconfig.cmake
+[5.641s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[5.641s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.641s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_introspection_cExport.cmake
+[5.641s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.641s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_cExport.cmake
+[5.642s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[5.642s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_generator_cppExport.cmake
+[5.642s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.642s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.642s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[5.642s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.643s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_cppExport.cmake
+[5.643s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[5.643s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_generator_pyExport.cmake
+[5.643s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/export_plan_msgs__rosidl_generator_pyExport-noconfig.cmake
+[5.643s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/rosidl_cmake-extras.cmake
+[5.643s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.643s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.644s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[5.644s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[5.644s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.644s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.644s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgsConfig.cmake
+[5.644s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/cmake/plan_msgsConfig-version.cmake
+[5.645s] -- Installing: /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/install/plan_msgs/share/plan_msgs/package.xml
+[5.646s] Invoked command in '/ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs' returned '0': /usr/bin/cmake --install /ros2-migration/arena/arena-rosnav/utils/ros/msgs/plan_msgs/build/plan_msgs
