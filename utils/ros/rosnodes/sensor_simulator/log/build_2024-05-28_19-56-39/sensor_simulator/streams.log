@@ -1,0 +1,8 @@
+[0.006s] Invoking command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/sensor_simulator/build/sensor_simulator': /usr/bin/cmake /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/sensor_simulator -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/sensor_simulator/install/sensor_simulator
+[0.012s] CMake Error at CMakeLists.txt:100 (catkin_package):
+[0.012s]   Unknown CMake command "catkin_package".
+[0.012s] 
+[0.013s] 
+[0.013s] -- Configuring incomplete, errors occurred!
+[0.013s] See also "/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/sensor_simulator/build/sensor_simulator/CMakeFiles/CMakeOutput.log".
+[0.013s] Invoked command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/sensor_simulator/build/sensor_simulator' returned '1': /usr/bin/cmake /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/sensor_simulator -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/sensor_simulator/install/sensor_simulator

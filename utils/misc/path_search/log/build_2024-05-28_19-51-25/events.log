@@ -1,0 +1,433 @@
+[0.000000] (-) TimerEvent: {}
+[0.000136] (path_search) JobQueued: {'identifier': 'path_search', 'dependencies': OrderedDict()}
+[0.000153] (path_search) JobStarted: {'identifier': 'path_search'}
+[0.004590] (path_search) JobProgress: {'identifier': 'path_search', 'progress': 'cmake'}
+[0.005019] (path_search) Command: {'cmd': ['/usr/bin/cmake', '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/path_search', '-DCMAKE_INSTALL_PREFIX=/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/path_search/install/path_search'], 'cwd': '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/path_search/build/path_search', 'env': OrderedDict([('VIRTUALENVWRAPPER_WORKON_CD', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('WORKON_HOME', '/home/ahmo030/python_env'), ('USER', 'ahmo030'), ('ROS_PACKAGE_PATH', '/home/ahmo030/packages_ws/src:/home/ahmo030/packages_ws/src:/home/ahmo030/arena_ws/src/planners/lflh:/home/ahmo030/arena_ws/src/planners/all_in_one/all_in_one_planner:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/amcl_utils:/home/ahmo030/arena_ws/src/planners/applr:/home/ahmo030/arena_ws/src/planners/arena-ros:/home/ahmo030/arena_ws/src/arena/evaluation/arena_evaluation:/home/ahmo030/arena_ws/src/arena/evaluation/arena_evaluation_msgs:/home/ahmo030/arena_ws/src/arena/simulation-setup:/home/ahmo030/arena_ws/src/planners/trail/barn_msgs:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/brics_actuator:/home/ahmo030/arena_ws/src/planners/cadrl-ros:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_base_controller_utils:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_control_msgs:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_gazebo_ros_control:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_helper_tools:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_omni_drive_controller:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_scan_unifier:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_sick_s300:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_srvs:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_twist_controller:/home/ahmo030/arena_ws/src/planners/cohan/cohan_msgs:/home/ahmo030/arena_ws/src/planners/cohan/agent_path_prediction:/home/ahmo030/arena_ws/src/planners/crowdnav-ros:/home/ahmo030/arena_ws/src/planners/trail/drl_vo_barn_nav:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/eval:/home/ahmo030/arena_ws/src/arena/utils/navigation/utils/fake_localization:/home/ahmo030/arena_ws/src/arena/utils/flatland/flatland:/home/ahmo030/arena_ws/src/arena/utils/flatland/flatland_msgs:/home/ahmo030/arena_ws/src/arena/utils/flatland/flatland_server:/home/ahmo030/arena_ws/src/arena/utils/flatland/flatland_viz:/home/ahmo030/arena_ws/src/extern/ford_msgs:/home/ahmo030/arena_ws/src/extern/gazebo_ros_2Dmap_plugin:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/generic_throttle:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/grid_map_generator:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/ira_laser_tools:/home/ahmo030/arena_ws/src/extern/jackal/jackal_control:/home/ahmo030/arena_ws/src/extern/jackal/jackal_description:/home/ahmo030/arena_ws/src/extern/jackal/jackal_msgs:/home/ahmo030/arena_ws/src/extern/jackal/jackal_navigation:/home/ahmo030/arena_ws/src/extern/jackal/jackal_tutorials:/home/ahmo030/arena_ws/src/planners/all_in_one/all_in_one_3rd_party/light_scan_sim:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/rosnodes/map_clock_simulator:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/rosnodes/map_distance_server:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/map_generator:/home/ahmo030/arena_ws/src/arena/utils/navigation/utils/map_server:/home/ahmo030/arena_ws/src/arena/utils/navigation/utils/amcl:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/mapping:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/core/core/mbf_abstract_core:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/core/mbf_msgs:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/utils/mbf_utility:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/core/nav/mbf_abstract_nav:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/core/nav/mbf_simple_nav:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/ridgeback/mecanum_gazebo_plugin:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/move_base_flex:/home/ahmo030/arena_ws/src/planners/mpc/mpc_local_planner_examples:/home/ahmo030/arena_ws/src/planners/mpc/mpc_local_planner_msgs:/home/ahmo030/arena_ws/src/arena/utils/navigation/navigation:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/msgs/observations:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/omni_base_description:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/path_search:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/3rdparty/libpedsim:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_msgs/pedsim_msgs:/home/ahmo030/arena_ws/src/arena/utils/crowdsim/crowdsim_msgs:/home/ahmo030/arena_ws/src/arena/utils/crowdsim/crowdsim_agents:/home/ahmo030/arena_ws/src/arena/utils/flatland/flatland_plugins:/home/ahmo030/arena_ws/src/arena/utils/flatland/arena_plugins:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/plugins/gazebo_utils:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/plugins/pedsim_gazebo_actor_plugin:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/plugins/pedsim_gazebo_plugin:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_ros:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_msgs/pedsim_srvs:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/pedsim_utils:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/pedsim_sensors:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/pedsim_simulator:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/pedsim_visualizer:/home/ahmo030/arena_ws/src/arena/utils/crowdsim/crowdsim:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/msgs/plan_msgs:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/plan_visualization:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/rosnodes/plan_manager:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/pmb2_description:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/ridgeback/ridgeback_control:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/ridgeback/ridgeback_gazebo_plugins:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/rl_utils:/home/ahmo030/arena_ws/src/planners/rlca-ros:/home/ahmo030/arena_ws/src/planners/rosnav:/home/ahmo030/arena_ws/src/planners/cohan/rviz_path_array:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/plugins/rviz_plugins:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/rviz_utils:/home/ahmo030/arena_ws/src/planners/sarl-star/sarl_star_ros:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/rosnodes/sensor_simulator:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/rosnodes/spacial_horizon:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/2ndparty/spencer_messages/spencer_human_attribute_msgs:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/2ndparty/spencer_messages/spencer_social_relation_msgs:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/2ndparty/spencer_messages/spencer_tracking_msgs:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/2ndparty/spencer_tracking_rviz_plugin:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/2ndparty/spencer_messages/spencer_vision_msgs:/home/ahmo030/arena_ws/src/arena/arena-rosnav/task_generator:/home/ahmo030/arena_ws/src/arena/arena-rosnav/testing:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/tiago_bringup:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/tiago_controller_configuration:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/tiago_controller_configuration_gazebo:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/tiago_description:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/tiago_description_calibration:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/tiago_gazebo:/home/ahmo030/arena_ws/src/arena/arena-rosnav/training:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/traj_planner:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/rosnodes/intermediate_planner:/home/ahmo030/arena_ws/src/arena/utils/unitree_ros/unitree_legged_msgs:/home/ahmo030/arena_ws/src/arena/utils/unitree_ros/unitree_controllers/unitree_controller_go1:/home/ahmo030/arena_ws/src/arena/utils/unitree_ros/unitree_ros/unitree_legged_control:/home/ahmo030/arena_ws/src/arena/utils/navigation/utils/voxel_grid:/home/ahmo030/arena_ws/src/arena/utils/navigation/core/costmap_2d:/home/ahmo030/arena_ws/src/planners/cohan/cohan_layers:/home/ahmo030/arena_ws/src/planners/cohan/invisible_humans_detection:/home/ahmo030/arena_ws/src/arena/utils/navigation/core/nav_core:/home/ahmo030/arena_ws/src/planners/all_in_one/all_in_one_global_planner_interface:/home/ahmo030/arena_ws/src/planners/all_in_one/all_in_one_local_planner_interface:/home/ahmo030/arena_ws/src/planners/dragon:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/local/base_local_planner:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/global/carrot_planner:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/recovery/clear_costmap_recovery:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/local/dwa_local_planner:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/core/core/mbf_costmap_core:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/planners/inter/bypass_inter:/home/ahmo030/arena_ws/src/planners/cohan/hateb_local_planner:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/planners/inter/inter_util:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/planners/inter/aggressive_inter:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/core/nav/mbf_costmap_nav:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/recovery/move_slow_and_clear:/home/ahmo030/arena_ws/src/planners/mpc/mpc_local_planner:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/global/navfn:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/global/global_planner:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/planners/inter/polite_inter:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/recovery/rotate_recovery:/home/ahmo030/arena_ws/src/arena/utils/navigation/core/move_base:/home/ahmo030/arena_ws/src/arena/arena-rosnav/arena_bringup:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/planners/inter/shortsighted_inter:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/planners/inter/sideways_inter:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/youbot/youbot_description:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/youbot/youbot_simulation/youbot_gazebo_control:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/youbot/youbot_simulation/youbot_gazebo_robot:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/youbot/youbot_simulation/youbot_gazebo_worlds:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/youbot/youbot_simulation/youbot_simulation:/opt/ros/noetic/share'), ('XDG_SESSION_TYPE', 'x11'), ('EUSDIR', '/opt/ros/noetic/share/euslisp/jskeus/eus/'), ('ROS_ETC_DIR', '/opt/ros/noetic/etc/ros'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/ros/noetic/share/euslisp/jskeus/eus//Linux64/lib:/home/ahmo030/packages_ws/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu:/opt/ros/noetic/share/euslisp/jskeus/eus//Linux64/lib'), ('HOME', '/home/ahmo030'), ('VIRTUALENVWRAPPER_PYTHON', '/usr/bin/python3'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2048'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=aed561dacbae33b9f87bbd166655a113'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ahmo030'), ('_', '/usr/bin/python'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/ahmo030/packages_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ahmo030'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/ahmo030/.local/bin:/home/ahmo030/.local/bin:/home/ahmo030/.local/bin:/home/ahmo030/.local/bin:/home/ahmo030/.local/bin:/opt/ros/noetic/share/euslisp/jskeus/eus//Linux64/bin:/opt/ros/noetic/bin:/home/ahmo030/.local/bin:/opt/ros/noetic/share/euslisp/jskeus/eus//Linux64/bin:/home/ahmo030/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ahmed-ubuntu:@/tmp/.ICE-unix/2048,unix/ahmed-ubuntu:/tmp/.ICE-unix/2048'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/295edf15_c430_481f_b7ad_1da3fd688fe3'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('ROSLISP_PACKAGE_DIRECTORIES', '/home/ahmo030/packages_ws/devel/share/common-lisp:/home/ahmo030/arena_ws/devel/share/common-lisp'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.822'), ('ROS_ROOT', '/opt/ros/noetic/share/ros'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('ARCHDIR', 'Linux64'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VIRTUALENVWRAPPER_PROJECT_FILENAME', '.project'), ('VIRTUALENVWRAPPER_HOOK_DIR', '/home/ahmo030/python_env'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VIRTUALENVWRAPPER_SCRIPT', '/usr/local/bin/virtualenvwrapper.sh'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/path_search/build/path_search'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=aed561dacbae33b9f87bbd166655a113'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('VIRTUALENVWRAPPER_VIRTUALENV', '/usr/bin/virtualenv'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/ahmo030/packages_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble:/home/ahmo030/packages_ws/devel:/home/ahmo030/arena_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[0.011551] (path_search) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.081579] (path_search) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[0.097710] (path_search) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.098947] (path_search) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.099499] (-) TimerEvent: {}
+[0.102221] (path_search) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.108081] (path_search) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.116981] (path_search) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.199608] (-) TimerEvent: {}
+[0.231894] (path_search) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.265779] (path_search) StdoutLine: {'line': b'-- The imported target "vtkParseOGLExt" references the file\n'}
+[0.265885] (path_search) StdoutLine: {'line': b'   "/usr/bin/vtkParseOGLExt-7.1"\n'}
+[0.265923] (path_search) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[0.265955] (path_search) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[0.265987] (path_search) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[0.266019] (path_search) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[0.266050] (path_search) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[0.266082] (path_search) StdoutLine: {'line': b'but not all the files it references.\n'}
+[0.266115] (path_search) StdoutLine: {'line': b'\n'}
+[0.266146] (path_search) StdoutLine: {'line': b'-- The imported target "vtkRenderingPythonTkWidgets" references the file\n'}
+[0.266179] (path_search) StdoutLine: {'line': b'   "/usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so"\n'}
+[0.266210] (path_search) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[0.266242] (path_search) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[0.266273] (path_search) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[0.266304] (path_search) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[0.266335] (path_search) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[0.266367] (path_search) StdoutLine: {'line': b'but not all the files it references.\n'}
+[0.266397] (path_search) StdoutLine: {'line': b'\n'}
+[0.266519] (path_search) StdoutLine: {'line': b'-- The imported target "vtk" references the file\n'}
+[0.266575] (path_search) StdoutLine: {'line': b'   "/usr/bin/vtk"\n'}
+[0.266611] (path_search) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[0.266642] (path_search) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[0.266673] (path_search) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[0.266709] (path_search) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[0.266739] (path_search) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[0.266768] (path_search) StdoutLine: {'line': b'but not all the files it references.\n'}
+[0.266797] (path_search) StdoutLine: {'line': b'\n'}
+[0.266826] (path_search) StdoutLine: {'line': b'-- The imported target "pvtk" references the file\n'}
+[0.266855] (path_search) StdoutLine: {'line': b'   "/usr/bin/pvtk"\n'}
+[0.266884] (path_search) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[0.266912] (path_search) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[0.266940] (path_search) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[0.266969] (path_search) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[0.266998] (path_search) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[0.267026] (path_search) StdoutLine: {'line': b'but not all the files it references.\n'}
+[0.267054] (path_search) StdoutLine: {'line': b'\n'}
+[0.273530] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.273587] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.273620] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI).  This can lead to\n'}
+[0.273649] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.273679] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.273708] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.273737] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)\n'}
+[0.273766] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)\n'}
+[0.273795] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)\n'}
+[0.273822] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.273850] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.273877] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.273907] (path_search) StderrLine: {'line': b'\n'}
+[0.274201] (path_search) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[0.276652] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.276725] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.276759] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI2).  This can lead to\n'}
+[0.276790] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.276820] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.276850] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.276880] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI2.cmake:28 (find_package_handle_standard_args)\n'}
+[0.276909] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:193 (find_package)\n'}
+[0.276938] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_openni2)\n'}
+[0.276967] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.277000] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.277029] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.277058] (path_search) StderrLine: {'line': b'\n'}
+[0.277277] (path_search) StdoutLine: {'line': b'-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so)\n'}
+[0.277381] (path_search) StderrLine: {'line': b'** WARNING ** io features related to pcap will be disabled\n'}
+[0.277418] (path_search) StderrLine: {'line': b'** WARNING ** io features related to png will be disabled\n'}
+[0.282036] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.282073] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (libusb-1.0)\n'}
+[0.282110] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.282139] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.282168] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.282197] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.282225] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:291 (find_package_handle_standard_args)\n'}
+[0.282254] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:338 (find_libusb)\n'}
+[0.282283] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.282311] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.282340] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.282368] (path_search) StderrLine: {'line': b'\n'}
+[0.282396] (path_search) StderrLine: {'line': b'** WARNING ** io features related to libusb-1.0 will be disabled\n'}
+[0.284539] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.284574] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.284606] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI).  This can lead to\n'}
+[0.284644] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.284676] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.284719] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.284748] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)\n'}
+[0.284776] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)\n'}
+[0.284804] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)\n'}
+[0.284832] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.284860] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.284888] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.284917] (path_search) StderrLine: {'line': b'\n'}
+[0.285170] (path_search) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[0.287687] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.287721] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.287761] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI2).  This can lead to\n'}
+[0.287790] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.287819] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.287848] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.287875] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI2.cmake:28 (find_package_handle_standard_args)\n'}
+[0.287904] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:193 (find_package)\n'}
+[0.287931] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_openni2)\n'}
+[0.287962] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.287991] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.288022] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.288051] (path_search) StderrLine: {'line': b'\n'}
+[0.288297] (path_search) StdoutLine: {'line': b'-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so)\n'}
+[0.293412] (path_search) StdoutLine: {'line': b'-- QHULL found (include: /usr/include, lib: optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so)\n'}
+[0.295953] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.295993] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.296025] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI).  This can lead to\n'}
+[0.296056] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.296086] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.296117] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.296146] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)\n'}
+[0.296176] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)\n'}
+[0.296205] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)\n'}
+[0.296234] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.296263] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.296292] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.296322] (path_search) StderrLine: {'line': b'\n'}
+[0.296499] (path_search) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[0.299664] (-) TimerEvent: {}
+[0.301233] (path_search) StdoutLine: {'line': b'-- looking for PCL_COMMON\n'}
+[0.301348] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.301385] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_COMMON)\n'}
+[0.301423] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.301456] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.301487] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.301518] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.301549] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.301696] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.301729] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.301761] (path_search) StderrLine: {'line': b'\n'}
+[0.301792] (path_search) StdoutLine: {'line': b'-- looking for PCL_KDTREE\n'}
+[0.301823] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.301855] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_KDTREE)\n'}
+[0.301887] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.301918] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.301949] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.301980] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.302012] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.302043] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.302074] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.302105] (path_search) StderrLine: {'line': b'\n'}
+[0.302135] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.302166] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_OCTREE)\n'}
+[0.302197] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.302227] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.302258] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.302289] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.302320] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.302351] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.302381] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.302412] (path_search) StderrLine: {'line': b'\n'}
+[0.302442] (path_search) StdoutLine: {'line': b'-- looking for PCL_OCTREE\n'}
+[0.302472] (path_search) StdoutLine: {'line': b'-- looking for PCL_SEARCH\n'}
+[0.302675] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.302709] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_SEARCH)\n'}
+[0.302740] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.302772] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.302803] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.302834] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.302918] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.302953] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.302985] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.303017] (path_search) StderrLine: {'line': b'\n'}
+[0.303048] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.303152] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.303184] (path_search) StderrLine: {'line': b'  (PCL_SAMPLE_CONSENSUS) does not match the name of the calling package\n'}
+[0.303216] (path_search) StderrLine: {'line': b'  (PCL).  This can lead to problems in calling code that expects\n'}
+[0.303247] (path_search) StderrLine: {'line': b'  `find_package` result variables (e.g., `_FOUND`) to follow a certain\n'}
+[0.303279] (path_search) StderrLine: {'line': b'  pattern.\n'}
+[0.303310] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.303341] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.303373] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.303488] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.303519] (path_search) StderrLine: {'line': b'\n'}
+[0.303548] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.303600] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.303631] (path_search) StderrLine: {'line': b'  (PCL_FILTERS) does not match the name of the calling package (PCL).  This\n'}
+[0.303662] (path_search) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.303693] (path_search) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.303723] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.303754] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.303784] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.303815] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.303844] (path_search) StderrLine: {'line': b'\n'}
+[0.303874] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.303904] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_2D)\n'}
+[0.303935] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.303965] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.303996] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.304026] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.304056] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[0.304190] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.304221] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.304250] (path_search) StderrLine: {'line': b'\n'}
+[0.304281] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.304311] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.304342] (path_search) StderrLine: {'line': b'  (PCL_GEOMETRY) does not match the name of the calling package (PCL).  This\n'}
+[0.304373] (path_search) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.304404] (path_search) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.304434] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.304584] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[0.304626] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.304663] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.304707] (path_search) StderrLine: {'line': b'\n'}
+[0.304737] (path_search) StdoutLine: {'line': b'-- looking for PCL_SAMPLE_CONSENSUS\n'}
+[0.304767] (path_search) StdoutLine: {'line': b'-- looking for PCL_FILTERS\n'}
+[0.304799] (path_search) StdoutLine: {'line': b'-- looking for PCL_2D\n'}
+[0.304830] (path_search) StdoutLine: {'line': b'-- looking for PCL_GEOMETRY\n'}
+[0.304862] (path_search) StdoutLine: {'line': b'-- looking for PCL_IO\n'}
+[0.304893] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.304924] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_IO)\n'}
+[0.304954] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.304985] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.305015] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.305045] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.305076] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.305106] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.305136] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.305167] (path_search) StderrLine: {'line': b'\n'}
+[0.305197] (path_search) StdoutLine: {'line': b'-- looking for PCL_FEATURES\n'}
+[0.305229] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.305334] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.305367] (path_search) StderrLine: {'line': b'  (PCL_FEATURES) does not match the name of the calling package (PCL).  This\n'}
+[0.305398] (path_search) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.305430] (path_search) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.305461] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.305492] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.305524] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.305554] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.305585] (path_search) StderrLine: {'line': b'\n'}
+[0.305616] (path_search) StdoutLine: {'line': b'-- looking for PCL_ML\n'}
+[0.305647] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.305678] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_ML)\n'}
+[0.305709] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.305739] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.305769] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.305800] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.305830] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.305977] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.306007] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.306037] (path_search) StderrLine: {'line': b'\n'}
+[0.306068] (path_search) StdoutLine: {'line': b'-- looking for PCL_SEGMENTATION\n'}
+[0.306099] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.306130] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.306162] (path_search) StderrLine: {'line': b'  (PCL_SEGMENTATION) does not match the name of the calling package (PCL).\n'}
+[0.306193] (path_search) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.306223] (path_search) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.306295] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.306326] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.306355] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.306385] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.306414] (path_search) StderrLine: {'line': b'\n'}
+[0.306443] (path_search) StdoutLine: {'line': b'-- looking for PCL_VISUALIZATION\n'}
+[0.306472] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.306501] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.306531] (path_search) StderrLine: {'line': b'  (PCL_VISUALIZATION) does not match the name of the calling package (PCL).\n'}
+[0.306560] (path_search) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.306588] (path_search) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.306617] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.306646] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.306675] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.306703] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.306734] (path_search) StderrLine: {'line': b'\n'}
+[0.306762] (path_search) StdoutLine: {'line': b'-- looking for PCL_SURFACE\n'}
+[0.306791] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.306820] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.306850] (path_search) StderrLine: {'line': b'  (PCL_SURFACE) does not match the name of the calling package (PCL).  This\n'}
+[0.306879] (path_search) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.306907] (path_search) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.306937] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.306966] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.306995] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.307026] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.307057] (path_search) StderrLine: {'line': b'\n'}
+[0.307086] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.307143] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.307173] (path_search) StderrLine: {'line': b'  (PCL_REGISTRATION) does not match the name of the calling package (PCL).\n'}
+[0.307202] (path_search) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.307231] (path_search) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.307258] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.307286] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.307318] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.307347] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.307375] (path_search) StderrLine: {'line': b'\n'}
+[0.307404] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.307433] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.307462] (path_search) StderrLine: {'line': b'  (PCL_KEYPOINTS) does not match the name of the calling package (PCL).  This\n'}
+[0.307491] (path_search) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.307520] (path_search) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.307549] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.307577] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.307606] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.307635] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.307664] (path_search) StderrLine: {'line': b'\n'}
+[0.307692] (path_search) StdoutLine: {'line': b'-- looking for PCL_REGISTRATION\n'}
+[0.307721] (path_search) StdoutLine: {'line': b'-- looking for PCL_KEYPOINTS\n'}
+[0.307750] (path_search) StdoutLine: {'line': b'-- looking for PCL_TRACKING\n'}
+[0.307779] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.307808] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.307837] (path_search) StderrLine: {'line': b'  (PCL_TRACKING) does not match the name of the calling package (PCL).  This\n'}
+[0.307866] (path_search) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.307894] (path_search) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.307923] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.307951] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.307980] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.308009] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.308038] (path_search) StderrLine: {'line': b'\n'}
+[0.308065] (path_search) StdoutLine: {'line': b'-- looking for PCL_RECOGNITION\n'}
+[0.308094] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.308122] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.308151] (path_search) StderrLine: {'line': b'  (PCL_RECOGNITION) does not match the name of the calling package (PCL).\n'}
+[0.308179] (path_search) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.308210] (path_search) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.308239] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.308267] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.308295] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.308324] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.308353] (path_search) StderrLine: {'line': b'\n'}
+[0.308381] (path_search) StdoutLine: {'line': b'-- looking for PCL_STEREO\n'}
+[0.308411] (path_search) StdoutLine: {'line': b'-- looking for PCL_APPS\n'}
+[0.308439] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.308468] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_STEREO)\n'}
+[0.308594] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.308637] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.308669] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.308704] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.308734] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.308763] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.308793] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.308823] (path_search) StderrLine: {'line': b'\n'}
+[0.308852] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.308881] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_APPS)\n'}
+[0.308909] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.308941] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.308970] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.308999] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.309028] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.309057] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.309086] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.309114] (path_search) StderrLine: {'line': b'\n'}
+[0.309143] (path_search) StdoutLine: {'line': b'-- looking for PCL_IN_HAND_SCANNER\n'}
+[0.309172] (path_search) StdoutLine: {'line': b'-- looking for PCL_POINT_CLOUD_EDITOR\n'}
+[0.309201] (path_search) StdoutLine: {'line': b'-- looking for PCL_OUTOFCORE\n'}
+[0.309229] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.309260] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.309289] (path_search) StderrLine: {'line': b'  (PCL_IN_HAND_SCANNER) does not match the name of the calling package (PCL).\n'}
+[0.309317] (path_search) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.309346] (path_search) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.309375] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.309404] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[0.309435] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.309464] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.309492] (path_search) StderrLine: {'line': b'\n'}
+[0.309520] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.309550] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.309578] (path_search) StderrLine: {'line': b'  (PCL_POINT_CLOUD_EDITOR) does not match the name of the calling package\n'}
+[0.309607] (path_search) StderrLine: {'line': b'  (PCL).  This can lead to problems in calling code that expects\n'}
+[0.309635] (path_search) StderrLine: {'line': b'  `find_package` result variables (e.g., `_FOUND`) to follow a certain\n'}
+[0.309664] (path_search) StderrLine: {'line': b'  pattern.\n'}
+[0.309692] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.309721] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[0.309750] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.309779] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.309808] (path_search) StderrLine: {'line': b'\n'}
+[0.309837] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.309866] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.309894] (path_search) StderrLine: {'line': b'  (PCL_OUTOFCORE) does not match the name of the calling package (PCL).  This\n'}
+[0.309922] (path_search) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.309950] (path_search) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.309978] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.310007] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.310036] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.310065] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.310093] (path_search) StderrLine: {'line': b'\n'}
+[0.310122] (path_search) StdoutLine: {'line': b'-- looking for PCL_PEOPLE\n'}
+[0.310151] (path_search) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.310180] (path_search) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_PEOPLE)\n'}
+[0.310208] (path_search) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.310237] (path_search) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.310266] (path_search) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.310294] (path_search) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.310322] (path_search) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.310351] (path_search) StderrLine: {'line': b'  CMakeLists.txt:12 (find_package)\n'}
+[0.310379] (path_search) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.310408] (path_search) StderrLine: {'line': b'\n'}
+[0.310437] (path_search) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.333108] (path_search) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.333814] (path_search) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.399794] (-) TimerEvent: {}
+[0.410613] (path_search) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.478115] (path_search) StdoutLine: {'line': b'-- Found rclpy: 3.3.12 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[0.487287] (path_search) StderrLine: {'line': b'CMake Error at CMakeLists.txt:18 (find_package):\n'}
+[0.487354] (path_search) StderrLine: {'line': b'  By not providing "Findmapping.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.487388] (path_search) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "mapping", but\n'}
+[0.487419] (path_search) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.487449] (path_search) StderrLine: {'line': b'\n'}
+[0.487478] (path_search) StderrLine: {'line': b'  Could not find a package configuration file provided by "mapping" with any\n'}
+[0.487507] (path_search) StderrLine: {'line': b'  of the following names:\n'}
+[0.487535] (path_search) StderrLine: {'line': b'\n'}
+[0.487564] (path_search) StderrLine: {'line': b'    mappingConfig.cmake\n'}
+[0.487592] (path_search) StderrLine: {'line': b'    mapping-config.cmake\n'}
+[0.487619] (path_search) StderrLine: {'line': b'\n'}
+[0.487646] (path_search) StderrLine: {'line': b'  Add the installation prefix of "mapping" to CMAKE_PREFIX_PATH or set\n'}
+[0.487687] (path_search) StderrLine: {'line': b'  "mapping_DIR" to a directory containing one of the above files.  If\n'}
+[0.487720] (path_search) StderrLine: {'line': b'  "mapping" provides a separate development package or SDK, be sure it has\n'}
+[0.487750] (path_search) StderrLine: {'line': b'  been installed.\n'}
+[0.487785] (path_search) StderrLine: {'line': b'\n'}
+[0.487813] (path_search) StderrLine: {'line': b'\n'}
+[0.487841] (path_search) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.487870] (path_search) StdoutLine: {'line': b'See also "/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/path_search/build/path_search/CMakeFiles/CMakeOutput.log".\n'}
+[0.492318] (path_search) CommandEnded: {'returncode': 1}
+[0.499853] (-) TimerEvent: {}
+[0.503096] (path_search) JobEnded: {'identifier': 'path_search', 'rc': 1}
+[0.513352] (-) EventReactorShutdown: {}

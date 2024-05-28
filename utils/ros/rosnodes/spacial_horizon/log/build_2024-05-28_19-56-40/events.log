@@ -1,0 +1,450 @@
+[0.000000] (-) TimerEvent: {}
+[0.000038] (spacial_horizon) JobQueued: {'identifier': 'spacial_horizon', 'dependencies': OrderedDict()}
+[0.000055] (spacial_horizon) JobStarted: {'identifier': 'spacial_horizon'}
+[0.004771] (spacial_horizon) JobProgress: {'identifier': 'spacial_horizon', 'progress': 'cmake'}
+[0.005335] (spacial_horizon) Command: {'cmd': ['/usr/bin/cmake', '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/spacial_horizon', '-DCMAKE_INSTALL_PREFIX=/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/spacial_horizon/install/spacial_horizon'], 'cwd': '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/spacial_horizon/build/spacial_horizon', 'env': OrderedDict([('VIRTUALENVWRAPPER_WORKON_CD', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('WORKON_HOME', '/home/ahmo030/python_env'), ('USER', 'ahmo030'), ('ROS_PACKAGE_PATH', '/home/ahmo030/packages_ws/src:/home/ahmo030/packages_ws/src:/home/ahmo030/arena_ws/src/planners/lflh:/home/ahmo030/arena_ws/src/planners/all_in_one/all_in_one_planner:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/amcl_utils:/home/ahmo030/arena_ws/src/planners/applr:/home/ahmo030/arena_ws/src/planners/arena-ros:/home/ahmo030/arena_ws/src/arena/evaluation/arena_evaluation:/home/ahmo030/arena_ws/src/arena/evaluation/arena_evaluation_msgs:/home/ahmo030/arena_ws/src/arena/simulation-setup:/home/ahmo030/arena_ws/src/planners/trail/barn_msgs:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/brics_actuator:/home/ahmo030/arena_ws/src/planners/cadrl-ros:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_base_controller_utils:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_control_msgs:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_gazebo_ros_control:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_helper_tools:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_omni_drive_controller:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_scan_unifier:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_sick_s300:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_srvs:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/cob_twist_controller:/home/ahmo030/arena_ws/src/planners/cohan/cohan_msgs:/home/ahmo030/arena_ws/src/planners/cohan/agent_path_prediction:/home/ahmo030/arena_ws/src/planners/crowdnav-ros:/home/ahmo030/arena_ws/src/planners/trail/drl_vo_barn_nav:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/eval:/home/ahmo030/arena_ws/src/arena/utils/navigation/utils/fake_localization:/home/ahmo030/arena_ws/src/arena/utils/flatland/flatland:/home/ahmo030/arena_ws/src/arena/utils/flatland/flatland_msgs:/home/ahmo030/arena_ws/src/arena/utils/flatland/flatland_server:/home/ahmo030/arena_ws/src/arena/utils/flatland/flatland_viz:/home/ahmo030/arena_ws/src/extern/ford_msgs:/home/ahmo030/arena_ws/src/extern/gazebo_ros_2Dmap_plugin:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/cob4/generic_throttle:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/grid_map_generator:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/ira_laser_tools:/home/ahmo030/arena_ws/src/extern/jackal/jackal_control:/home/ahmo030/arena_ws/src/extern/jackal/jackal_description:/home/ahmo030/arena_ws/src/extern/jackal/jackal_msgs:/home/ahmo030/arena_ws/src/extern/jackal/jackal_navigation:/home/ahmo030/arena_ws/src/extern/jackal/jackal_tutorials:/home/ahmo030/arena_ws/src/planners/all_in_one/all_in_one_3rd_party/light_scan_sim:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/rosnodes/map_clock_simulator:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/rosnodes/map_distance_server:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/map_generator:/home/ahmo030/arena_ws/src/arena/utils/navigation/utils/map_server:/home/ahmo030/arena_ws/src/arena/utils/navigation/utils/amcl:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/mapping:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/core/core/mbf_abstract_core:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/core/mbf_msgs:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/utils/mbf_utility:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/core/nav/mbf_abstract_nav:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/core/nav/mbf_simple_nav:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/ridgeback/mecanum_gazebo_plugin:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/move_base_flex:/home/ahmo030/arena_ws/src/planners/mpc/mpc_local_planner_examples:/home/ahmo030/arena_ws/src/planners/mpc/mpc_local_planner_msgs:/home/ahmo030/arena_ws/src/arena/utils/navigation/navigation:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/msgs/observations:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/omni_base_description:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/path_search:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/3rdparty/libpedsim:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_msgs/pedsim_msgs:/home/ahmo030/arena_ws/src/arena/utils/crowdsim/crowdsim_msgs:/home/ahmo030/arena_ws/src/arena/utils/crowdsim/crowdsim_agents:/home/ahmo030/arena_ws/src/arena/utils/flatland/flatland_plugins:/home/ahmo030/arena_ws/src/arena/utils/flatland/arena_plugins:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/plugins/gazebo_utils:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/plugins/pedsim_gazebo_actor_plugin:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/plugins/pedsim_gazebo_plugin:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_ros:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_msgs/pedsim_srvs:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/pedsim_utils:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/pedsim_sensors:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/pedsim_simulator:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/pedsim_visualizer:/home/ahmo030/arena_ws/src/arena/utils/crowdsim/crowdsim:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/msgs/plan_msgs:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/plan_visualization:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/rosnodes/plan_manager:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/pmb2_description:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/ridgeback/ridgeback_control:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/ridgeback/ridgeback_gazebo_plugins:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/rl_utils:/home/ahmo030/arena_ws/src/planners/rlca-ros:/home/ahmo030/arena_ws/src/planners/rosnav:/home/ahmo030/arena_ws/src/planners/cohan/rviz_path_array:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/plugins/rviz_plugins:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/rviz_utils:/home/ahmo030/arena_ws/src/planners/sarl-star/sarl_star_ros:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/rosnodes/sensor_simulator:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/rosnodes/spacial_horizon:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/2ndparty/spencer_messages/spencer_human_attribute_msgs:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/2ndparty/spencer_messages/spencer_social_relation_msgs:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/2ndparty/spencer_messages/spencer_tracking_msgs:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/2ndparty/spencer_tracking_rviz_plugin:/home/ahmo030/arena_ws/src/arena/utils/pedsim_ros/pedsim_engine/2ndparty/spencer_messages/spencer_vision_msgs:/home/ahmo030/arena_ws/src/arena/arena-rosnav/task_generator:/home/ahmo030/arena_ws/src/arena/arena-rosnav/testing:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/tiago_bringup:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/tiago_controller_configuration:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/tiago_controller_configuration_gazebo:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/tiago_description:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/tiago_description_calibration:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/tiago/tiago_gazebo:/home/ahmo030/arena_ws/src/arena/arena-rosnav/training:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/misc/traj_planner:/home/ahmo030/arena_ws/src/arena/arena-rosnav/utils/ros/rosnodes/intermediate_planner:/home/ahmo030/arena_ws/src/arena/utils/unitree_ros/unitree_legged_msgs:/home/ahmo030/arena_ws/src/arena/utils/unitree_ros/unitree_controllers/unitree_controller_go1:/home/ahmo030/arena_ws/src/arena/utils/unitree_ros/unitree_ros/unitree_legged_control:/home/ahmo030/arena_ws/src/arena/utils/navigation/utils/voxel_grid:/home/ahmo030/arena_ws/src/arena/utils/navigation/core/costmap_2d:/home/ahmo030/arena_ws/src/planners/cohan/cohan_layers:/home/ahmo030/arena_ws/src/planners/cohan/invisible_humans_detection:/home/ahmo030/arena_ws/src/arena/utils/navigation/core/nav_core:/home/ahmo030/arena_ws/src/planners/all_in_one/all_in_one_global_planner_interface:/home/ahmo030/arena_ws/src/planners/all_in_one/all_in_one_local_planner_interface:/home/ahmo030/arena_ws/src/planners/dragon:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/local/base_local_planner:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/global/carrot_planner:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/recovery/clear_costmap_recovery:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/local/dwa_local_planner:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/core/core/mbf_costmap_core:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/planners/inter/bypass_inter:/home/ahmo030/arena_ws/src/planners/cohan/hateb_local_planner:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/planners/inter/inter_util:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/planners/inter/aggressive_inter:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/core/nav/mbf_costmap_nav:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/recovery/move_slow_and_clear:/home/ahmo030/arena_ws/src/planners/mpc/mpc_local_planner:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/global/navfn:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/global/global_planner:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/planners/inter/polite_inter:/home/ahmo030/arena_ws/src/arena/utils/navigation/planners/recovery/rotate_recovery:/home/ahmo030/arena_ws/src/arena/utils/navigation/core/move_base:/home/ahmo030/arena_ws/src/arena/arena-rosnav/arena_bringup:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/planners/inter/shortsighted_inter:/home/ahmo030/arena_ws/src/arena/utils/move_base_flex/planners/inter/sideways_inter:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/youbot/youbot_description:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/youbot/youbot_simulation/youbot_gazebo_control:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/youbot/youbot_simulation/youbot_gazebo_robot:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/youbot/youbot_simulation/youbot_gazebo_worlds:/home/ahmo030/arena_ws/src/arena/utils/3rd-party-robot-packages/youbot/youbot_simulation/youbot_simulation:/opt/ros/noetic/share'), ('XDG_SESSION_TYPE', 'x11'), ('EUSDIR', '/opt/ros/noetic/share/euslisp/jskeus/eus/'), ('ROS_ETC_DIR', '/opt/ros/noetic/etc/ros'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/ros/noetic/share/euslisp/jskeus/eus//Linux64/lib:/home/ahmo030/packages_ws/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu:/opt/ros/noetic/share/euslisp/jskeus/eus//Linux64/lib'), ('HOME', '/home/ahmo030'), ('VIRTUALENVWRAPPER_PYTHON', '/usr/bin/python3'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2048'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=aed561dacbae33b9f87bbd166655a113'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ahmo030'), ('_', '/usr/bin/python'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/ahmo030/packages_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ahmo030'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/ahmo030/.local/bin:/home/ahmo030/.local/bin:/home/ahmo030/.local/bin:/home/ahmo030/.local/bin:/home/ahmo030/.local/bin:/opt/ros/noetic/share/euslisp/jskeus/eus//Linux64/bin:/opt/ros/noetic/bin:/home/ahmo030/.local/bin:/opt/ros/noetic/share/euslisp/jskeus/eus//Linux64/bin:/home/ahmo030/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ahmed-ubuntu:@/tmp/.ICE-unix/2048,unix/ahmed-ubuntu:/tmp/.ICE-unix/2048'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e4bf3612_29da_4994_b67b_ce04c16cdcdf'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('ROSLISP_PACKAGE_DIRECTORIES', '/home/ahmo030/packages_ws/devel/share/common-lisp:/home/ahmo030/arena_ws/devel/share/common-lisp'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.865'), ('ROS_ROOT', '/opt/ros/noetic/share/ros'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('ARCHDIR', 'Linux64'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VIRTUALENVWRAPPER_PROJECT_FILENAME', '.project'), ('VIRTUALENVWRAPPER_HOOK_DIR', '/home/ahmo030/python_env'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VIRTUALENVWRAPPER_SCRIPT', '/usr/local/bin/virtualenvwrapper.sh'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/spacial_horizon/build/spacial_horizon'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=aed561dacbae33b9f87bbd166655a113'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('VIRTUALENVWRAPPER_VIRTUALENV', '/usr/bin/virtualenv'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/ahmo030/packages_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble:/home/ahmo030/packages_ws/devel:/home/ahmo030/arena_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[0.012165] (spacial_horizon) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.085080] (spacial_horizon) StdoutLine: {'line': b'-- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.099577] (-) TimerEvent: {}
+[0.101382] (spacial_horizon) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.102661] (spacial_horizon) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.105977] (spacial_horizon) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.113495] (spacial_horizon) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.122230] (spacial_horizon) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.157771] (spacial_horizon) StdoutLine: {'line': b'-- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[0.199669] (-) TimerEvent: {}
+[0.299805] (-) TimerEvent: {}
+[0.327071] (spacial_horizon) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.365788] (spacial_horizon) StdoutLine: {'line': b'-- The imported target "vtkParseOGLExt" references the file\n'}
+[0.366042] (spacial_horizon) StdoutLine: {'line': b'   "/usr/bin/vtkParseOGLExt-7.1"\n'}
+[0.366085] (spacial_horizon) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[0.366119] (spacial_horizon) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[0.366152] (spacial_horizon) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[0.366184] (spacial_horizon) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[0.366216] (spacial_horizon) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[0.366247] (spacial_horizon) StdoutLine: {'line': b'but not all the files it references.\n'}
+[0.366278] (spacial_horizon) StdoutLine: {'line': b'\n'}
+[0.366309] (spacial_horizon) StdoutLine: {'line': b'-- The imported target "vtkRenderingPythonTkWidgets" references the file\n'}
+[0.366340] (spacial_horizon) StdoutLine: {'line': b'   "/usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so"\n'}
+[0.366372] (spacial_horizon) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[0.366403] (spacial_horizon) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[0.366435] (spacial_horizon) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[0.366467] (spacial_horizon) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[0.366498] (spacial_horizon) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[0.366529] (spacial_horizon) StdoutLine: {'line': b'but not all the files it references.\n'}
+[0.366560] (spacial_horizon) StdoutLine: {'line': b'\n'}
+[0.366592] (spacial_horizon) StdoutLine: {'line': b'-- The imported target "vtk" references the file\n'}
+[0.366623] (spacial_horizon) StdoutLine: {'line': b'   "/usr/bin/vtk"\n'}
+[0.366662] (spacial_horizon) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[0.366693] (spacial_horizon) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[0.366724] (spacial_horizon) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[0.366755] (spacial_horizon) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[0.366786] (spacial_horizon) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[0.366816] (spacial_horizon) StdoutLine: {'line': b'but not all the files it references.\n'}
+[0.366847] (spacial_horizon) StdoutLine: {'line': b'\n'}
+[0.366878] (spacial_horizon) StdoutLine: {'line': b'-- The imported target "pvtk" references the file\n'}
+[0.366908] (spacial_horizon) StdoutLine: {'line': b'   "/usr/bin/pvtk"\n'}
+[0.366939] (spacial_horizon) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[0.366970] (spacial_horizon) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[0.367001] (spacial_horizon) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[0.367033] (spacial_horizon) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[0.367063] (spacial_horizon) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[0.367093] (spacial_horizon) StdoutLine: {'line': b'but not all the files it references.\n'}
+[0.367124] (spacial_horizon) StdoutLine: {'line': b'\n'}
+[0.374732] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.374846] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.374889] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI).  This can lead to\n'}
+[0.374930] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.374970] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.375002] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.375034] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)\n'}
+[0.375070] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)\n'}
+[0.375103] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)\n'}
+[0.375144] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.375190] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.375238] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.375276] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.375411] (spacial_horizon) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[0.378318] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.378367] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.378401] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI2).  This can lead to\n'}
+[0.378434] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.378467] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.378498] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.378534] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI2.cmake:28 (find_package_handle_standard_args)\n'}
+[0.378565] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:193 (find_package)\n'}
+[0.378597] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_openni2)\n'}
+[0.378628] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.378658] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.378691] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.378723] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.378913] (spacial_horizon) StdoutLine: {'line': b'-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so)\n'}
+[0.379024] (spacial_horizon) StderrLine: {'line': b'** WARNING ** io features related to pcap will be disabled\n'}
+[0.379115] (spacial_horizon) StderrLine: {'line': b'** WARNING ** io features related to png will be disabled\n'}
+[0.384354] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.384458] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (libusb-1.0)\n'}
+[0.384496] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.384530] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.384563] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.384595] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.384627] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:291 (find_package_handle_standard_args)\n'}
+[0.384658] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:338 (find_libusb)\n'}
+[0.384689] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.384720] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.384751] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.384781] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.384812] (spacial_horizon) StderrLine: {'line': b'** WARNING ** io features related to libusb-1.0 will be disabled\n'}
+[0.387513] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.387581] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.387619] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI).  This can lead to\n'}
+[0.387653] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.387685] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.387717] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.387748] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)\n'}
+[0.387779] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)\n'}
+[0.387809] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)\n'}
+[0.387840] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.387877] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.387907] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.387938] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.388130] (spacial_horizon) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[0.391252] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.391333] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.391371] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI2).  This can lead to\n'}
+[0.391406] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.391439] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.391472] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.391502] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI2.cmake:28 (find_package_handle_standard_args)\n'}
+[0.391534] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:193 (find_package)\n'}
+[0.391564] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_openni2)\n'}
+[0.391604] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.391636] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.391668] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.391700] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.391852] (spacial_horizon) StdoutLine: {'line': b'-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so)\n'}
+[0.397844] (spacial_horizon) StdoutLine: {'line': b'-- QHULL found (include: /usr/include, lib: optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so)\n'}
+[0.399858] (-) TimerEvent: {}
+[0.400789] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.400835] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.400870] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI).  This can lead to\n'}
+[0.400902] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.400935] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.400967] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.400998] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)\n'}
+[0.401029] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)\n'}
+[0.401060] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)\n'}
+[0.401090] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.401122] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.401153] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.401184] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.401374] (spacial_horizon) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[0.406609] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_COMMON\n'}
+[0.406821] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.406912] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_COMMON)\n'}
+[0.406950] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.406987] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.407021] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.407056] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.407089] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.407121] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.407155] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.407188] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.407220] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_KDTREE\n'}
+[0.407253] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.407286] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_KDTREE)\n'}
+[0.407319] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.407352] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.407385] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.407417] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.407451] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.407486] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.407519] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.407553] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.407734] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_OCTREE\n'}
+[0.407770] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_SEARCH\n'}
+[0.407805] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_SAMPLE_CONSENSUS\n'}
+[0.407839] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_FILTERS\n'}
+[0.407872] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.407903] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_OCTREE)\n'}
+[0.407935] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.407977] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.408014] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.408048] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.408090] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.408138] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.408178] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.408218] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.408254] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.408431] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_SEARCH)\n'}
+[0.408465] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.408530] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.408564] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.408598] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.408630] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.408661] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.408694] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.408727] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.408760] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.408793] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.408825] (spacial_horizon) StderrLine: {'line': b'  (PCL_SAMPLE_CONSENSUS) does not match the name of the calling package\n'}
+[0.408858] (spacial_horizon) StderrLine: {'line': b'  (PCL).  This can lead to problems in calling code that expects\n'}
+[0.408891] (spacial_horizon) StderrLine: {'line': b'  `find_package` result variables (e.g., `_FOUND`) to follow a certain\n'}
+[0.408923] (spacial_horizon) StderrLine: {'line': b'  pattern.\n'}
+[0.408956] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.408988] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.409021] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.409154] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.409187] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.409221] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.409255] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.409289] (spacial_horizon) StderrLine: {'line': b'  (PCL_FILTERS) does not match the name of the calling package (PCL).  This\n'}
+[0.409323] (spacial_horizon) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.409357] (spacial_horizon) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.409391] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.409424] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.409457] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.409490] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.409524] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.409558] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_2D\n'}
+[0.409592] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_GEOMETRY\n'}
+[0.409625] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_IO\n'}
+[0.409659] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.409699] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_2D)\n'}
+[0.409738] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.409961] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.410014] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.410055] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.410101] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[0.410145] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.410188] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.410232] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.410274] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.410316] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.410359] (spacial_horizon) StderrLine: {'line': b'  (PCL_GEOMETRY) does not match the name of the calling package (PCL).  This\n'}
+[0.410401] (spacial_horizon) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.410443] (spacial_horizon) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.410485] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.410526] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[0.410568] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.410614] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.410657] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.410700] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.410742] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_IO)\n'}
+[0.410785] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.410827] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.410869] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.410910] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.410953] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.410995] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.411037] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.411255] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.411300] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_FEATURES\n'}
+[0.411336] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.411371] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.411404] (spacial_horizon) StderrLine: {'line': b'  (PCL_FEATURES) does not match the name of the calling package (PCL).  This\n'}
+[0.411437] (spacial_horizon) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.411480] (spacial_horizon) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.411523] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.411564] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.411784] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.411825] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.411870] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.411913] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.411956] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_ML)\n'}
+[0.411998] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.412040] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.412083] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.412126] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.412168] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.412211] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.412253] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.412296] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.412338] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.412379] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.412422] (spacial_horizon) StderrLine: {'line': b'  (PCL_SEGMENTATION) does not match the name of the calling package (PCL).\n'}
+[0.412464] (spacial_horizon) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.412506] (spacial_horizon) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.412654] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.412691] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.412725] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.412758] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.412790] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.412822] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_ML\n'}
+[0.412853] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_SEGMENTATION\n'}
+[0.412886] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_VISUALIZATION\n'}
+[0.412917] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_SURFACE\n'}
+[0.412949] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_REGISTRATION\n'}
+[0.412982] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.413013] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.413044] (spacial_horizon) StderrLine: {'line': b'  (PCL_VISUALIZATION) does not match the name of the calling package (PCL).\n'}
+[0.413076] (spacial_horizon) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.413108] (spacial_horizon) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.413139] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.413169] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.413203] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.413234] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.413268] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.413299] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.413331] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.413361] (spacial_horizon) StderrLine: {'line': b'  (PCL_SURFACE) does not match the name of the calling package (PCL).  This\n'}
+[0.413392] (spacial_horizon) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.413423] (spacial_horizon) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.413461] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.413503] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.413548] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.413590] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.413631] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.413673] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.413776] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.413814] (spacial_horizon) StderrLine: {'line': b'  (PCL_REGISTRATION) does not match the name of the calling package (PCL).\n'}
+[0.413847] (spacial_horizon) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.413885] (spacial_horizon) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.413918] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.413950] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.413983] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.414015] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.414047] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.414078] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_KEYPOINTS\n'}
+[0.414109] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_TRACKING\n'}
+[0.414141] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_RECOGNITION\n'}
+[0.414173] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_STEREO\n'}
+[0.414204] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_APPS\n'}
+[0.414235] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.414268] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.414300] (spacial_horizon) StderrLine: {'line': b'  (PCL_KEYPOINTS) does not match the name of the calling package (PCL).  This\n'}
+[0.414331] (spacial_horizon) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.414363] (spacial_horizon) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.414395] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.414427] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.414459] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.414490] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.414521] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.414556] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.414588] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.414619] (spacial_horizon) StderrLine: {'line': b'  (PCL_TRACKING) does not match the name of the calling package (PCL).  This\n'}
+[0.414651] (spacial_horizon) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.414682] (spacial_horizon) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.414714] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.414745] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.414776] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.414807] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.414838] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.414869] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.414900] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.414932] (spacial_horizon) StderrLine: {'line': b'  (PCL_RECOGNITION) does not match the name of the calling package (PCL).\n'}
+[0.414964] (spacial_horizon) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.414995] (spacial_horizon) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.415027] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.415058] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.415089] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.415120] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.415151] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.415182] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.415214] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_STEREO)\n'}
+[0.415248] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.415279] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.415310] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.415342] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.415374] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.415407] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.415438] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.415469] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.415500] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.415534] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_APPS)\n'}
+[0.415566] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.415598] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.415632] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.415664] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.415696] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.415728] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.415760] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.415794] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.415825] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_IN_HAND_SCANNER\n'}
+[0.415857] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.415888] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.415920] (spacial_horizon) StderrLine: {'line': b'  (PCL_IN_HAND_SCANNER) does not match the name of the calling package (PCL).\n'}
+[0.415951] (spacial_horizon) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.415983] (spacial_horizon) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.416016] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.416048] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[0.416081] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.416112] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.416144] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.416175] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_POINT_CLOUD_EDITOR\n'}
+[0.416207] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.416238] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.416269] (spacial_horizon) StderrLine: {'line': b'  (PCL_POINT_CLOUD_EDITOR) does not match the name of the calling package\n'}
+[0.416299] (spacial_horizon) StderrLine: {'line': b'  (PCL).  This can lead to problems in calling code that expects\n'}
+[0.416330] (spacial_horizon) StderrLine: {'line': b'  `find_package` result variables (e.g., `_FOUND`) to follow a certain\n'}
+[0.416361] (spacial_horizon) StderrLine: {'line': b'  pattern.\n'}
+[0.416393] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.416424] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[0.416456] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.416488] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.416519] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.416551] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_OUTOFCORE\n'}
+[0.416583] (spacial_horizon) StdoutLine: {'line': b'-- looking for PCL_PEOPLE\n'}
+[0.416615] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.416646] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.416677] (spacial_horizon) StderrLine: {'line': b'  (PCL_OUTOFCORE) does not match the name of the calling package (PCL).  This\n'}
+[0.416709] (spacial_horizon) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.416741] (spacial_horizon) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.416773] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.416806] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.416838] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.416870] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.416902] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.416934] (spacial_horizon) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.416965] (spacial_horizon) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_PEOPLE)\n'}
+[0.416997] (spacial_horizon) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.417027] (spacial_horizon) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.417057] (spacial_horizon) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.417087] (spacial_horizon) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.417123] (spacial_horizon) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.417161] (spacial_horizon) StderrLine: {'line': b'  CMakeLists.txt:119 (find_package)\n'}
+[0.417206] (spacial_horizon) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.417250] (spacial_horizon) StderrLine: {'line': b'\n'}
+[0.417289] (spacial_horizon) StdoutLine: {'line': b'-- Found actionlib_msgs: 4.2.3 (/opt/ros/humble/share/actionlib_msgs/cmake)\n'}
+[0.499934] (-) TimerEvent: {}
+[0.600058] (-) TimerEvent: {}
+[0.700183] (-) TimerEvent: {}
+[0.761277] (spacial_horizon) StdoutLine: {'line': b'-- Found rosgraph_msgs: 1.2.1 (/opt/ros/humble/share/rosgraph_msgs/cmake)\n'}
+[0.800287] (-) TimerEvent: {}
+[0.900434] (-) TimerEvent: {}
+[1.000565] (-) TimerEvent: {}
+[1.100725] (-) TimerEvent: {}
+[1.200869] (-) TimerEvent: {}
+[1.300991] (-) TimerEvent: {}
+[1.401137] (-) TimerEvent: {}
+[1.501271] (-) TimerEvent: {}
+[1.601388] (-) TimerEvent: {}
+[1.670256] (spacial_horizon) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[1.701487] (-) TimerEvent: {}
+[1.715626] (spacial_horizon) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.742085] (spacial_horizon) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.742812] (spacial_horizon) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.801572] (-) TimerEvent: {}
+[1.822691] (spacial_horizon) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.885491] (spacial_horizon) StdoutLine: {'line': b'-- Found tf2: 0.25.6 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.899699] (spacial_horizon) StderrLine: {'line': b'CMake Error at CMakeLists.txt:125 (find_package):\n'}
+[1.899785] (spacial_horizon) StderrLine: {'line': b'  By not providing "Find1.7.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[1.899823] (spacial_horizon) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "1.7", but\n'}
+[1.899856] (spacial_horizon) StderrLine: {'line': b'  CMake did not find one.\n'}
+[1.899888] (spacial_horizon) StderrLine: {'line': b'\n'}
+[1.899919] (spacial_horizon) StderrLine: {'line': b'  Could not find a package configuration file provided by "1.7" with any of\n'}
+[1.899951] (spacial_horizon) StderrLine: {'line': b'  the following names:\n'}
+[1.899982] (spacial_horizon) StderrLine: {'line': b'\n'}
+[1.900012] (spacial_horizon) StderrLine: {'line': b'    1.7Config.cmake\n'}
+[1.900043] (spacial_horizon) StderrLine: {'line': b'    1.7-config.cmake\n'}
+[1.900078] (spacial_horizon) StderrLine: {'line': b'\n'}
+[1.900110] (spacial_horizon) StderrLine: {'line': b'  Add the installation prefix of "1.7" to CMAKE_PREFIX_PATH or set "1.7_DIR"\n'}
+[1.900160] (spacial_horizon) StderrLine: {'line': b'  to a directory containing one of the above files.  If "1.7" provides a\n'}
+[1.900194] (spacial_horizon) StderrLine: {'line': b'  separate development package or SDK, be sure it has been installed.\n'}
+[1.900226] (spacial_horizon) StderrLine: {'line': b'\n'}
+[1.900256] (spacial_horizon) StderrLine: {'line': b'\n'}
+[1.900287] (spacial_horizon) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.900318] (spacial_horizon) StdoutLine: {'line': b'See also "/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/spacial_horizon/build/spacial_horizon/CMakeFiles/CMakeOutput.log".\n'}
+[1.901626] (-) TimerEvent: {}
+[1.906156] (spacial_horizon) CommandEnded: {'returncode': 1}
+[1.917842] (spacial_horizon) JobEnded: {'identifier': 'spacial_horizon', 'rc': 1}
+[1.928086] (-) EventReactorShutdown: {}

@@ -1,0 +1,8 @@
+running build
+running build_py
+running install
+running install_lib
+running install_egg_info
+Removing /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rl_utils/install/rl_utils/lib/python3.10/site-packages/rl_utils-0.0.0.egg-info
+Writing /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rl_utils/install/rl_utils/lib/python3.10/site-packages/rl_utils-0.0.0.egg-info
+writing list of installed files to '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rl_utils/build/rl_utils/install.log'

@@ -1,0 +1,7 @@
+/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rl_utils/setup.py:3: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.core import setup
+package init file 'rl_utils/__init__.py' not found (or not a regular file)
+package init file 'rl_utils/__init__.py' not found (or not a regular file)
+warning: install_lib: '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rl_utils/build/rl_utils/build/lib' does not exist -- no Python modules to install
+
+package init file 'rl_utils/__init__.py' not found (or not a regular file)
