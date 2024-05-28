@@ -1,0 +1,14 @@
+source;share/task_generator/hook/cmake_prefix_path.ps1
+source;share/task_generator/hook/cmake_prefix_path.dsv
+source;share/task_generator/hook/cmake_prefix_path.sh
+source;share/task_generator/hook/path.ps1
+source;share/task_generator/hook/path.dsv
+source;share/task_generator/hook/path.sh
+source;share/task_generator/hook/pythonscriptspath.ps1
+source;share/task_generator/hook/pythonscriptspath.dsv
+source;share/task_generator/hook/pythonscriptspath.sh
+source;share/task_generator/local_setup.bash
+source;share/task_generator/local_setup.dsv
+source;share/task_generator/local_setup.ps1
+source;share/task_generator/local_setup.sh
+source;share/task_generator/local_setup.zsh

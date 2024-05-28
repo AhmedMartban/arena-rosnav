@@ -1,0 +1,4 @@
+srv/GetDistanceMap.idl
+srv/GetDistanceMap.srv
+srv/GetDistanceMap_Request.msg
+srv/GetDistanceMap_Response.msg

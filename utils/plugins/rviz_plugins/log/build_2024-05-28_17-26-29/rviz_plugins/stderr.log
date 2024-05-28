@@ -1,0 +1,10 @@
+CMake Error at CMakeLists.txt:38 (add_library):
+  Cannot find source file:
+
+    /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/build/rviz_plugins/moc_goal_tool.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

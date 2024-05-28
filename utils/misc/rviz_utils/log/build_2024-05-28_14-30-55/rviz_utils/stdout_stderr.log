@@ -1,0 +1,25 @@
+/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/setup.py:3: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.core import setup
+running build
+running build_py
+package init file 'rviz_utils/__init__.py' not found (or not a regular file)
+creating /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/build/rviz_utils/build
+creating /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/build/rviz_utils/build/lib
+creating /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/build/rviz_utils/build/lib/rviz_utils
+copying rviz_utils/config.py -> /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/build/rviz_utils/build/lib/rviz_utils
+copying rviz_utils/utils.py -> /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/build/rviz_utils/build/lib/rviz_utils
+copying rviz_utils/matchers.py -> /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/build/rviz_utils/build/lib/rviz_utils
+package init file 'rviz_utils/__init__.py' not found (or not a regular file)
+running install
+running install_lib
+creating /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/install/rviz_utils/lib/python3.10/site-packages/rviz_utils
+copying /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/build/rviz_utils/build/lib/rviz_utils/config.py -> /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/install/rviz_utils/lib/python3.10/site-packages/rviz_utils
+copying /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/build/rviz_utils/build/lib/rviz_utils/utils.py -> /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/install/rviz_utils/lib/python3.10/site-packages/rviz_utils
+copying /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/build/rviz_utils/build/lib/rviz_utils/matchers.py -> /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/install/rviz_utils/lib/python3.10/site-packages/rviz_utils
+byte-compiling /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/install/rviz_utils/lib/python3.10/site-packages/rviz_utils/config.py to config.cpython-310.pyc
+byte-compiling /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/install/rviz_utils/lib/python3.10/site-packages/rviz_utils/utils.py to utils.cpython-310.pyc
+byte-compiling /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/install/rviz_utils/lib/python3.10/site-packages/rviz_utils/matchers.py to matchers.cpython-310.pyc
+running install_egg_info
+Writing /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/install/rviz_utils/lib/python3.10/site-packages/rviz_utils-0.0.0.egg-info
+package init file 'rviz_utils/__init__.py' not found (or not a regular file)
+writing list of installed files to '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/rviz_utils/build/rviz_utils/install.log'

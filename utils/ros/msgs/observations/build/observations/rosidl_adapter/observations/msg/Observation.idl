@@ -1,0 +1,13 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from observations/msg/Observation.msg
+// generated code does not contain a copyright notice
+
+
+module observations {
+  module msg {
+    typedef float float__362[362];
+    struct Observation {
+      float__362 observation;
+    };
+  };
+};

@@ -1,0 +1,4 @@
+source;share/map_distance_server/environment/ament_prefix_path.sh
+source;share/map_distance_server/environment/library_path.sh
+source;share/map_distance_server/environment/path.sh
+source;share/map_distance_server/environment/pythonpath.sh

@@ -1,0 +1,6 @@
+[0.006s] Invoking command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval': /usr/bin/cmake --build /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval -- -j16 -l16
+[0.009s] CMake Error: The current CMakeCache.txt directory /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval/CMakeCache.txt is different than the directory /ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+[0.013s] CMake Error: The source directory "/ros2-migration/arena/arena-rosnav/utils/misc/eval" does not exist.
+[0.013s] Specify --help for usage, or press the help button on the CMake GUI.
+[0.014s] gmake: *** [Makefile:254: cmake_check_build_system] Error 1
+[0.015s] Invoked command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval' returned '2': /usr/bin/cmake --build /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval -- -j16 -l16

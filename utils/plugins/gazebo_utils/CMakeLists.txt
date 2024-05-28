@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(rviz_plugins)
+project(gazebo_utils)
 
 # Add support for C++14 or later
 if(NOT CMAKE_CXX_STANDARD)

@@ -1,0 +1,6 @@
+{
+  "package_name": "observations",
+  "non_idl_tuples": [
+    "/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/msgs/observations:msg/Observation.msg"
+  ]
+}

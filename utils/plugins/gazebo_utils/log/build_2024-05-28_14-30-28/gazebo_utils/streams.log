@@ -1,0 +1,83 @@
+[0.005s] Invoking command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils/build/gazebo_utils': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils -DCMAKE_INSTALL_PREFIX=/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils/install/gazebo_utils
+[0.033s] -- The C compiler identification is GNU 11.4.0
+[0.071s] -- The CXX compiler identification is GNU 11.4.0
+[0.074s] -- Detecting C compiler ABI info
+[0.155s] -- Detecting C compiler ABI info - done
+[0.159s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.159s] -- Detecting C compile features
+[0.160s] -- Detecting C compile features - done
+[0.161s] -- Detecting CXX compiler ABI info
+[0.263s] -- Detecting CXX compiler ABI info - done
+[0.267s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.267s] -- Detecting CXX compile features
+[0.267s] -- Detecting CXX compile features - done
+[0.268s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.363s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.438s] -- Found rviz_common: 11.2.12 (/opt/ros/humble/share/rviz_common/cmake)
+[0.982s] -- Setting OGRE_DIR to: '/opt/ros/humble/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[1.012s] -- Found OGRE
+[1.012s] --   static     : OFF
+[1.012s] --   components : HLMS;MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[1.012s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[1.013s] --   media      : /opt/ros/humble/opt/rviz_ogre_vendor/share/OGRE/Media
+[1.013s] -- OGRE_LIBRARIES: OgreHLMS;OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[1.013s] -- OGRE_LIBRARY_DIRS: /opt/ros/humble/opt/rviz_ogre_vendor/lib
+[1.013s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[1.013s] -- OGRE_PLUGIN_DIR: /opt/ros/humble/opt/rviz_ogre_vendor/lib/OGRE
+[1.014s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[1.014s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[1.014s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[1.015s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[1.029s] -- Could not find freeimage library
+[1.123s] -- Found ZLIB: /opt/ros/noetic/lib/libz.a (found version "1.2.11") 
+[1.163s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[1.494s] -- Found X11: /usr/include   
+[1.504s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[1.710s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[1.710s] -- Looking for gethostbyname
+[1.775s] -- Looking for gethostbyname - found
+[1.775s] -- Looking for connect
+[1.867s] -- Looking for connect - found
+[1.867s] -- Looking for remove
+[1.926s] -- Looking for remove - found
+[1.926s] -- Looking for shmat
+[1.997s] -- Looking for shmat - found
+[1.997s] -- Looking for IceConnectionNumber in ICE
+[2.066s] -- Looking for IceConnectionNumber in ICE - found
+[2.068s] -- rviz_ogre_vendor::RenderSystem_GL for IMPORTED_LOCATION_RELEASE: _render_system_gl_static_library_abs-NOTFOUND
+[2.068s] -- rviz_ogre_vendor::RenderSystem_GL for IMPORTED_LOCATION_DEBUG: _render_system_gl_static_library_abs-NOTFOUND
+[2.270s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[2.296s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.298s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.302s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.310s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.320s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.436s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.437s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.457s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[2.479s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.481s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[2.491s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.496s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[2.500s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[2.506s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.512s] -- Looking for pthread.h
+[2.621s] -- Looking for pthread.h - found
+[2.621s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.666s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.667s] -- Found Threads: TRUE  
+[2.920s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.920s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[3.314s] -- Found rviz_default_plugins: 11.2.12 (/opt/ros/humble/share/rviz_default_plugins/cmake)
+[3.754s] CMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):
+[3.754s]   ament_package_xml() package name 'gazebo_utils' in '/package.xml' does not
+[3.754s]   match current PROJECT_NAME 'rviz_plugins'.  You must call project() with
+[3.754s]   the same package name before.
+[3.754s] Call Stack (most recent call first):
+[3.754s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[3.754s]   CMakeLists.txt:76 (ament_package)
+[3.754s] 
+[3.754s] 
+[3.754s] -- Configuring incomplete, errors occurred!
+[3.754s] See also "/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils/build/gazebo_utils/CMakeFiles/CMakeOutput.log".
+[3.761s] Invoked command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils/build/gazebo_utils' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils -DCMAKE_INSTALL_PREFIX=/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils/install/gazebo_utils

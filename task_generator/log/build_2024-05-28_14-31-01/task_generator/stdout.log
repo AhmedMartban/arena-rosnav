@@ -1,0 +1,40 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclpy: 3.3.12 (/opt/ros/humble/share/rclpy/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/build/task_generator
+-- Install configuration: ""
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/bin/main.py
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/bin/scenario_helper.py
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/bin/server.py
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/bin/filewatcher.py
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/bin/delay_restart.py
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/ament_index/resource_index/package_run_dependencies/task_generator
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/ament_index/resource_index/parent_prefix_path/task_generator
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/environment/ament_prefix_path.sh
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/environment/ament_prefix_path.dsv
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/environment/path.sh
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/environment/path.dsv
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/local_setup.bash
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/local_setup.sh
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/local_setup.zsh
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/local_setup.dsv
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/package.dsv
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/ament_index/resource_index/packages/task_generator
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/cmake/task_generatorConfig.cmake
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/cmake/task_generatorConfig-version.cmake
+-- Installing: /home/ahmo030/ros2-migration/arena/arena-rosnav/task_generator/install/task_generator/share/task_generator/package.xml

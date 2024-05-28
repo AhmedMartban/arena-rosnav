@@ -1,0 +1,13 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/map_distance_server__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/map_distance_server/srv/detail/get_distance_map__type_support.cpp.o"
+  "CMakeFiles/map_distance_server__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/map_distance_server/srv/detail/get_distance_map__type_support.cpp.o.d"
+  "libmap_distance_server__rosidl_typesupport_introspection_cpp.pdb"
+  "libmap_distance_server__rosidl_typesupport_introspection_cpp.so"
+  "rosidl_typesupport_introspection_cpp/map_distance_server/srv/detail/get_distance_map__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/map_distance_server/srv/detail/get_distance_map__type_support.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/map_distance_server__rosidl_typesupport_introspection_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
