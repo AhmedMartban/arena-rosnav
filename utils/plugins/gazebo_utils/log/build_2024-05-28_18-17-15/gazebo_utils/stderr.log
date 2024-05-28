@@ -1,0 +1,3 @@
+gmake[2]: *** No rule to make target '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/include/task_tool.h', needed by '__/rviz_plugins/include/moc_task_tool.cpp'.  Stop.
+gmake[1]: *** [CMakeFiles/Makefile2:136: CMakeFiles/gazebo_utils.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

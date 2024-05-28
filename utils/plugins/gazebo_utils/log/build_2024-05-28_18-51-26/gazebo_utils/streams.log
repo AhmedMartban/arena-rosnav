@@ -1,0 +1,34 @@
+[0.006s] Invoking command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils/build/gazebo_utils': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils/build/gazebo_utils -- -j16 -l16
+[0.030s] [ 10%] Automatic MOC and UIC for target gazebo_utils
+[0.049s] [ 10%] Built target gazebo_utils_autogen
+[0.061s] Consolidate compiler generated dependencies of target gazebo_utils
+[0.072s] [ 30%] Building CXX object CMakeFiles/gazebo_utils.dir/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/goal_tool.cpp.o
+[0.072s] [ 30%] Building CXX object CMakeFiles/gazebo_utils.dir/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/pose_tool.cpp.o
+[0.072s] [ 40%] Building CXX object CMakeFiles/gazebo_utils.dir/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/task_tool.cpp.o
+[0.072s] [ 50%] Building CXX object CMakeFiles/gazebo_utils.dir/__/rviz_plugins/src/moc_goal_tool.cpp.o
+[0.077s] In file included from /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/task_tool.cpp:1:
+[0.077s] /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/task_tool.h:5:10: fatal error: ros/ros.h: No such file or directory
+[0.078s]     5 | #include <ros/ros.h>
+[0.078s]       |          ^~~~~~~~~~~
+[0.078s] compilation terminated.
+[0.078s] /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/goal_tool.cpp:30:10: fatal error: tf/transform_listener.h: No such file or directory
+[0.078s]    30 | #include <tf/transform_listener.h>
+[0.078s]       |          ^~~~~~~~~~~~~~~~~~~~~~~~~
+[0.078s] compilation terminated.
+[0.155s] gmake[2]: *** [CMakeFiles/gazebo_utils.dir/build.make:126: CMakeFiles/gazebo_utils.dir/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/task_tool.cpp.o] Error 1
+[0.155s] gmake[2]: *** Waiting for unfinished jobs....
+[0.155s] gmake[2]: *** [CMakeFiles/gazebo_utils.dir/build.make:112: CMakeFiles/gazebo_utils.dir/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/goal_tool.cpp.o] Error 1
+[0.157s] In file included from /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils/build/gazebo_utils/__/rviz_plugins/src/moc_goal_tool.cpp:10:
+[0.157s] /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils/build/gazebo_utils/__/rviz_plugins/src/../../../../../../rviz_plugins/src/goal_tool.h:36:11: fatal error: ros/ros.h: No such file or directory
+[0.157s]    36 | # include <ros/ros.h>
+[0.157s]       |           ^~~~~~~~~~~
+[0.157s] compilation terminated.
+[0.158s] gmake[2]: *** [CMakeFiles/gazebo_utils.dir/build.make:140: CMakeFiles/gazebo_utils.dir/__/rviz_plugins/src/moc_goal_tool.cpp.o] Error 1
+[0.446s] /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/pose_tool.cpp:35:10: fatal error: rviz/geometry.h: No such file or directory
+[0.446s]    35 | #include "rviz/geometry.h"
+[0.446s]       |          ^~~~~~~~~~~~~~~~~
+[0.446s] compilation terminated.
+[0.449s] gmake[2]: *** [CMakeFiles/gazebo_utils.dir/build.make:98: CMakeFiles/gazebo_utils.dir/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/pose_tool.cpp.o] Error 1
+[0.449s] gmake[1]: *** [CMakeFiles/Makefile2:138: CMakeFiles/gazebo_utils.dir/all] Error 2
+[0.450s] gmake: *** [Makefile:146: all] Error 2
+[0.451s] Invoked command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils/build/gazebo_utils' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/gazebo_utils/build/gazebo_utils -- -j16 -l16
