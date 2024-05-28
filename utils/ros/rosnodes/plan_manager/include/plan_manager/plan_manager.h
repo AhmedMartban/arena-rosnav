@@ -7,7 +7,7 @@
 
 #include <vector>
 
-#include <ros/ros.h>
+#include "rclcpp/rclcpp.h"
 #include <geometry_msgs/Pose.h>
 #include <geometry_msgs/PoseStamped.h>  // goal, subgoal needs time stamp
 #include <nav_msgs/Path.h>
