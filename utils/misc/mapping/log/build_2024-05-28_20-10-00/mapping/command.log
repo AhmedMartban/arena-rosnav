@@ -1,2 +1,0 @@
-Invoking command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping -- -j16 -l16
-Invoked command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/mapping/build/mapping -- -j16 -l16

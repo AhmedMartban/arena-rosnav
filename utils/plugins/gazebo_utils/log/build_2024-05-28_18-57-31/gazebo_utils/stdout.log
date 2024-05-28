@@ -1,6 +1,0 @@
-[ 10%] Automatic MOC and UIC for target gazebo_utils
-[ 10%] Built target gazebo_utils_autogen
-[ 30%] Building CXX object CMakeFiles/gazebo_utils.dir/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/goal_tool.cpp.o
-[ 30%] Building CXX object CMakeFiles/gazebo_utils.dir/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/pose_tool.cpp.o
-[ 40%] Building CXX object CMakeFiles/gazebo_utils.dir/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/plugins/rviz_plugins/src/task_tool.cpp.o
-[ 50%] Building CXX object CMakeFiles/gazebo_utils.dir/__/rviz_plugins/src/moc_goal_tool.cpp.o

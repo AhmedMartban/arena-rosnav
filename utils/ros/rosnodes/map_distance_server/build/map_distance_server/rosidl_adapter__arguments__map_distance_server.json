@@ -1,6 +1,0 @@
-{
-  "package_name": "map_distance_server",
-  "non_idl_tuples": [
-    "/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/map_distance_server:srv/GetDistanceMap.srv"
-  ]
-}

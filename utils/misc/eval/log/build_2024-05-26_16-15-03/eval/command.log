@@ -1,2 +1,0 @@
-Invoking command in '/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval': /usr/bin/cmake /ros2-migration/arena/arena-rosnav/utils/misc/eval -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2-migration/arena/arena-rosnav/utils/misc/eval/install/eval
-Invoked command in '/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval' returned '1': /usr/bin/cmake /ros2-migration/arena/arena-rosnav/utils/misc/eval -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/ros2-migration/arena/arena-rosnav/utils/misc/eval/install/eval

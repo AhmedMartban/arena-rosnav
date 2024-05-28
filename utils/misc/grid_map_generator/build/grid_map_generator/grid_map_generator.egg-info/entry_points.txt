@@ -1,3 +1,0 @@
-[console_scripts]
-script_name = grid_map_generator.script:main
-

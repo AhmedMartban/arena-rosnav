@@ -1,4 +1,0 @@
-source;share/eval/local_setup.bash
-source;share/eval/local_setup.dsv
-source;share/eval/local_setup.sh
-source;share/eval/local_setup.zsh

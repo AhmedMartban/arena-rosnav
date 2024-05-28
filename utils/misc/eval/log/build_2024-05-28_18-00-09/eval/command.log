@@ -1,4 +1,0 @@
-Invoking command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval': /usr/bin/cmake --build /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval -- -j16 -l16
-Invoked command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval' returned '0': /usr/bin/cmake --build /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval -- -j16 -l16
-Invoking command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval': /usr/bin/cmake --install /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval
-Invoked command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval' returned '0': /usr/bin/cmake --install /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/misc/eval/build/eval

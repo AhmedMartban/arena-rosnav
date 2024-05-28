@@ -1,7 +1,0 @@
-[0.006s] Invoking command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/plan_manager/build/plan_manager': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/plan_manager -DCMAKE_INSTALL_PREFIX=/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/plan_manager/install/plan_manager
-[0.009s] CMake Error at CMakeLists.txt:171:
-[0.009s]   Parse error.  Function missing ending ")".  End of file reached.
-[0.009s] 
-[0.009s] 
-[0.009s] -- Configuring incomplete, errors occurred!
-[0.010s] Invoked command in '/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/plan_manager/build/plan_manager' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/plan_manager -DCMAKE_INSTALL_PREFIX=/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/plan_manager/install/plan_manager

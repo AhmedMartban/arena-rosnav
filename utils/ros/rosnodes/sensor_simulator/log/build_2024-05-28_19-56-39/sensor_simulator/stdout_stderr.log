@@ -1,6 +1,0 @@
-CMake Error at CMakeLists.txt:100 (catkin_package):
-  Unknown CMake command "catkin_package".
-
-
--- Configuring incomplete, errors occurred!
-See also "/home/ahmo030/ros2-migration/arena/arena-rosnav/utils/ros/rosnodes/sensor_simulator/build/sensor_simulator/CMakeFiles/CMakeOutput.log".
