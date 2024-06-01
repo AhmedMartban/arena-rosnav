@@ -168,8 +168,8 @@ set(LIBS ${ament_cmake_LIBRARIES} ${tf2_ros_LIBRARIES} ${sensor_msgs_LIBRARIES}
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 
-add_dependencies(plan_manager_node ${${PROJECT_NAME}_EXPORTED_TARGETS}
-add_dependencies(test_node ${${PROJECT_NAME}_EXPORTED_TARGETS}
+add_dependencies(plan_manager_node ${${PROJECT_NAME}_EXPORTED_TARGETS})
+add_dependencies(test_node ${${PROJECT_NAME}_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 
