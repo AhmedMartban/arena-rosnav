@@ -408,7 +408,7 @@ void InterPlanner::visualize_path(std::vector<Eigen::Vector2d> path, const ros::
       gui_path.poses[i]=pose;               //plan.push_back(pose);
   }
   
-  pub.publish(gui_path);
+  pub->publish(gui_path);
 }
 
 

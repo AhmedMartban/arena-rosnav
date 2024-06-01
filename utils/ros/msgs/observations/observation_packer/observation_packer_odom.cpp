@@ -195,7 +195,7 @@ int main(int argc, char ** argv)
 			// packing current observation
 			observations::Observation msg;
 			packMsg(msg);
-			pub.publish(msg);
+			pub->publish(msg);
 		}
 
 		// slow down

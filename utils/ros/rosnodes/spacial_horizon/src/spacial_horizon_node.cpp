@@ -94,7 +94,7 @@ void SpacialHorizon::goalCallback(const geometry_msgs::PoseStampedPtr &msg)
         pose_stamped.pose.position.y = end_pos(1);
         pose_stamped.pose.position.z = 0.0;
 
-        pub_subgoal.publish(pose_stamped);
+        pub_subgoal->publish(pose_stamped);
         std::cout << " SUBGOAL = GOAL" << std::endl;
     }
 }
@@ -184,7 +184,7 @@ void SpacialHorizon::updateSubgoalCallback(const ros::TimerEvent &e)
 
         ROS_INFO_STREAM("[Spacial Horizon] Publishing new subgoal");
 
-        pub_subgoal.publish(pose_stamped);
+        pub_subgoal->publish(pose_stamped);
     }
 }
 
@@ -234,7 +234,7 @@ void SpacialHorizon::callPlanningService(ros::ServiceClient &serviceClient,
             return;
         }
 
-        pub_global_plan.publish(srv.response.plan);
+        pub_global_plan->publish(srv.response.plan);
     }
     else
     {
