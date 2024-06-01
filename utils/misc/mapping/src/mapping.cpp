@@ -1395,7 +1395,7 @@ void GridMap::publishUpdateRange() {
   cube_pos = 0.5 * (esdf_min_pos + esdf_max_pos);
   cube_scale = esdf_max_pos - esdf_min_pos;
   mk.header.frame_id = mp_.frame_id_;
-  mk.header.stamp = rclcpp::Time::now();
+  mk.header.stamp = this->now();
   mk.type = visualization_msgs::msg::Marker::CUBE;
   mk.action = visualization_msgs::msg::Marker::ADD;
   mk.id = 0;

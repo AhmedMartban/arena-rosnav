@@ -111,7 +111,7 @@ bool AStar::ConvertToIndexAndAdjustStartEndPoints(Vector2d start_pt, Vector2d en
 
 bool AStar::AstarSearch(const double step_size, Vector2d start_pt, Vector2d end_pt)
 {
-    rclcpp::Time time_1 = rclcpp::Time::now();
+    rclcpp::Time time_1 = this->now();
     ++rounds_;
 
     step_size_ = step_size;
@@ -158,7 +158,7 @@ bool AStar::AstarSearch(const double step_size, Vector2d start_pt, Vector2d end_
 
         if (current->index(0) == endPtr->index(0) && current->index(1) == endPtr->index(1))
         {
-            // rclcpp::Time time_2 = rclcpp::Time::now();
+            // rclcpp::Time time_2 = this->now();
             // printf("\033[34mA star iter:%d, time:%.3f\033[0m\n",num_iter, (time_2 - time_1).toSec()*1000);
             // if((time_2 - time_1).toSec() > 0.1)
             //     RCLCPP_WARN(rclcpp::get_logger("PathSearch"), "Time consume in A star path finding is %f", (time_2 - time_1).toSec() );
@@ -218,7 +218,7 @@ bool AStar::AstarSearch(const double step_size, Vector2d start_pt, Vector2d end_
                         neighborPtr->fScore = tentative_gScore + getHeu(neighborPtr, endPtr);
                     }
                 }
-        rclcpp::Time time_2 = rclcpp::Time::now();
+        rclcpp::Time time_2 = this->now();
         if ((time_2 - time_1).toSec() > 0.2)
         {
             RCLCPP_WARN(rclcpp::get_logger("PathSearch"), "Failed in A star path searching !!! 0.2 seconds time limit exceeded.");
@@ -226,7 +226,7 @@ bool AStar::AstarSearch(const double step_size, Vector2d start_pt, Vector2d end_
         }
     }
 
-    rclcpp::Time time_2 = rclcpp::Time::now();
+    rclcpp::Time time_2 = this->now();
 
     if ((time_2 - time_1).toSec() > 0.1)
         RCLCPP_WARN(rclcpp::get_logger("PathSearch"), "Time consume in A star path finding is %.3fs, iter=%d", (time_2 - time_1).toSec(), num_iter);

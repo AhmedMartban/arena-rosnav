@@ -543,7 +543,7 @@ bool BsplineOptimizerAstar::rebound_optimize()
     variable_num_ = 2 * (end_id - start_id);
     double final_cost;
 
-    rclcpp::Time t0 = rclcpp::Time::now(), t1, t2;
+    rclcpp::Time t0 = this->now(), t1, t2;
     int restart_nums = 0, rebound_times = 0;
     ;
     bool flag_force_return, flag_occ, success;
@@ -568,9 +568,9 @@ bool BsplineOptimizerAstar::rebound_optimize()
       lbfgs_params.g_epsilon = 0.01;
 
       /* ---------- optimize ---------- */
-      t1 = rclcpp::Time::now();
+      t1 = this->now();
       int result = lbfgs::lbfgs_optimize(variable_num_, q, &final_cost, BsplineOptimizerAstar::costFunctionRebound, NULL, BsplineOptimizerAstar::earlyExit, this, &lbfgs_params);
-      t2 = rclcpp::Time::now();
+      t2 = this->now();
       double time_ms = (t2 - t1).toSec() * 1000;
       double total_time_ms = (t2 - t0).toSec() * 1000;
 
@@ -770,7 +770,7 @@ void BsplineOptimizerAstar::combineCostRefine(const double *x, double *grad, dou
     Eigen::MatrixXd g_fitness = Eigen::MatrixXd::Zero(2, cps_.points.cols());
     Eigen::MatrixXd g_feasibility = Eigen::MatrixXd::Zero(2, cps_.points.cols());
 
-    //time_satrt = rclcpp::Time::now();
+    //time_satrt = this->now();
 
     calcSmoothnessCost(cps_.points, f_smoothness, g_smoothness);
     calcFitnessCost(cps_.points, f_fitness, g_fitness);

@@ -152,7 +152,7 @@ void BsplineOptimizerESDF::optimize() {
     // cout << fixed << setprecision(7);
     // vec_time_.clear();
     // vec_cost_.clear();
-    // time_start_ = rclcpp::Time::now();
+    // time_start_ = this->now();
 
     double        final_cost;
     nlopt::result result = opt.optimize(q, final_cost);
@@ -442,7 +442,7 @@ double BsplineOptimizerESDF::costFunction(const std::vector<double>& x, std::vec
   return cost;
 
   // /* evaluation */
-  // rclcpp::Time te1 = rclcpp::Time::now();
+  // rclcpp::Time te1 = this->now();
   // double time_now = (te1 - opt->time_start_).toSec();
   // opt->vec_time_.push_back(time_now);
   // if (opt->vec_cost_.size() == 0)
