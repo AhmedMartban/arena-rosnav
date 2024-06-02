@@ -60,7 +60,7 @@ struct RobotState
     geometry_msgs::PoseStamped to_PoseStampted(){
         geometry_msgs::PoseStamped pose_stamped;
        
-        pose_stamped.header.stamp=ros::Time::now();
+        pose_stamped.header.stamp=node->now();
         pose_stamped.header.frame_id = "map";
         pose_stamped.pose.position.x=pose2d(0);
         pose_stamped.pose.position.y=pose2d(1);
@@ -76,7 +76,7 @@ struct RobotState
         plan_msgs::RobotStateStamped state_stamped;
         plan_msgs::RobotState state;
         //header
-        state_stamped.header.stamp=ros::Time::now();
+        state_stamped.header.stamp=node->now();
         state_stamped.header.frame_id = "map";
         
         // pose

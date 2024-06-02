@@ -70,7 +70,7 @@ private:
 
     
     /* ROS utils */
-    ros::NodeHandle node_;
+    auto node_ = std::make_shared<rclcpp::Node>("node_");;
     
     ros::Timer exec_timer_, safety_timer_, vis_timer_;
     

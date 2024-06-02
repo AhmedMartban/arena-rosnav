@@ -129,13 +129,21 @@ set(INCLUDE_DIRS ${ament_cmake_INCLUDE_DIRS} ${std_msgs_INCLUDE_DIRS}
   ${geometry_msgs_INCLUDE_DIRS} ${actionlib_INCLUDE_DIRS} ${nav_msgs_INCLUDE_DIRS}
   ${rclcpp_INCLUDE_DIRS} ${tf2_INCLUDE_DIRS} ${1.7_INCLUDE_DIRS}
   ${REQUIRED_INCLUDE_DIRS} ${rclpy_INCLUDE_DIRS})
-include_directories(${INCLUDE_DIRS})
+target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp>
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ./
+)
 set(LIBRARY_DIRS ${ament_cmake_LIBRARIES} ${std_msgs_LIBRARIES}
   ${Eigen3_LIBRARIES} ${visualization_msgs_LIBRARIES} ${PCL_LIBRARIES}
   ${geometry_msgs_LIBRARIES} ${actionlib_LIBRARIES} ${nav_msgs_LIBRARIES}
   ${rclcpp_LIBRARIES} ${tf2_LIBRARIES} ${1.7_LIBRARIES} ${REQUIRED_LIBRARIES}
   ${rclpy_LIBRARIES})
-target_link_libraries(spacial_horizon_node ${LIBRARY_DIRS})
+target_link_libraries(spacial_horizon_node
+  ${cpp_typesupport_target}
+  # ${SDL2_LIBRARIES}
+  # ${OPENGL_LIBRARIES}
+)
 set(LIBS ${ament_cmake_LIBRARIES} ${std_msgs_LIBRARIES} ${Eigen3_LIBRARIES}
   ${visualization_msgs_LIBRARIES} ${PCL_LIBRARIES} ${geometry_msgs_LIBRARIES}
   ${actionlib_LIBRARIES} ${nav_msgs_LIBRARIES} ${rclcpp_LIBRARIES}
@@ -239,6 +247,10 @@ ament_export_dependencies(rclcpp)
 ament_export_dependencies(tf2)
 ament_export_dependencies(1.7)
 ament_export_dependencies(rclpy)
-ament_export_include_directories(${INCLUDE_DIRS})
+ament_export_target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp>
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ./
+)
 
 ament_package()

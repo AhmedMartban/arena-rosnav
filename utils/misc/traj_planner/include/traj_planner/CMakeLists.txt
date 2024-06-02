@@ -25,7 +25,11 @@ set(INCLUDE_DIRS ${ament_cmake_INCLUDE_DIRS} ${Eigen3_INCLUDE_DIRS}
   ${PCL_INCLUDE_DIRS} ${nav_msgs_INCLUDE_DIRS} ${nlopt_INCLUDE_DIRS}
   ${std_msgs_INCLUDE_DIRS} ${rclpy_INCLUDE_DIRS} ${REQUIRED_INCLUDE_DIRS}
   ${mapping_INCLUDE_DIRS})
-include_directories(${INCLUDE_DIRS})
+target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp>
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ./
+)
 set(LIBRARY_DIRS ${ament_cmake_LIBRARIES} ${Eigen3_LIBRARIES}
   ${geometry_msgs_LIBRARIES} ${path_search_LIBRARIES} ${rclcpp_LIBRARIES}
   ${PCL_LIBRARIES} ${nav_msgs_LIBRARIES} ${nlopt_LIBRARIES} ${std_msgs_LIBRARIES}
@@ -230,7 +234,11 @@ ament_export_dependencies(nlopt)
 ament_export_dependencies(std_msgs)
 ament_export_dependencies(rclpy)
 ament_export_dependencies(mapping)
-ament_export_include_directories(${INCLUDE_DIRS})
+ament_export_target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp>
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ./
+)
 ament_export_libraries(traj_planner ${LIBS})
 
 ament_package()

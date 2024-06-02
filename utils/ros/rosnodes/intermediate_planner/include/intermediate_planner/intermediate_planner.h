@@ -38,7 +38,7 @@
 class InterPlanner{
 private:
     // ros node
-    ros::NodeHandle node_;
+    auto node_ = std::make_shared<rclcpp::Node>("node_");;
 
     // subscriber
     ros::Subscriber goal_sub_, odom_sub_;

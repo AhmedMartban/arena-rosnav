@@ -141,15 +141,27 @@ set(INCLUDE_DIRS ${ament_cmake_INCLUDE_DIRS} ${tf2_ros_INCLUDE_DIRS}
   ${geometry_msgs_INCLUDE_DIRS} ${tf2_geometry_msgs_INCLUDE_DIRS}
   ${plan_visualization_INCLUDE_DIRS} ${REQUIRED_INCLUDE_DIRS}
   ${rclcpp_INCLUDE_DIRS} ${std_msgs_INCLUDE_DIRS})
-include_directories(${INCLUDE_DIRS})
+target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp>
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ./
+)
 set(LIBRARY_DIRS ${ament_cmake_LIBRARIES} ${tf2_ros_LIBRARIES}
   ${sensor_msgs_LIBRARIES} ${rclpy_LIBRARIES} ${plan_msgs_LIBRARIES}
   ${nav_msgs_LIBRARIES} ${Eigen3_LIBRARIES} ${tf2_LIBRARIES}
   ${geometry_msgs_LIBRARIES} ${tf2_geometry_msgs_LIBRARIES}
   ${plan_visualization_LIBRARIES} ${REQUIRED_LIBRARIES} ${rclcpp_LIBRARIES}
   ${std_msgs_LIBRARIES})
-target_link_libraries(plan_manager_node ${LIBRARY_DIRS})
-target_link_libraries(test_node ${LIBRARY_DIRS})
+target_link_libraries(plan_manager_node
+  ${cpp_typesupport_target}
+  # ${SDL2_LIBRARIES}
+  # ${OPENGL_LIBRARIES}
+)
+target_link_libraries(test_node
+  ${cpp_typesupport_target}
+  # ${SDL2_LIBRARIES}
+  # ${OPENGL_LIBRARIES}
+)
 set(LIBS ${ament_cmake_LIBRARIES} ${tf2_ros_LIBRARIES} ${sensor_msgs_LIBRARIES}
   ${rclpy_LIBRARIES} ${plan_msgs_LIBRARIES} ${nav_msgs_LIBRARIES}
   ${Eigen3_LIBRARIES} ${tf2_LIBRARIES} ${geometry_msgs_LIBRARIES}
@@ -244,6 +256,10 @@ ament_export_dependencies(tf2_geometry_msgs)
 ament_export_dependencies(plan_visualization)
 ament_export_dependencies(rclcpp)
 ament_export_dependencies(std_msgs)
-ament_export_include_directories(${INCLUDE_DIRS})
+ament_export_target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp>
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ./
+)
 
 ament_package()
