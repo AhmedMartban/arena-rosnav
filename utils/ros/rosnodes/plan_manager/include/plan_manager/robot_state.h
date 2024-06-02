@@ -2,12 +2,12 @@
 #define _ROBOT_STATE_H_
 
 #include <Eigen/Eigen>
-#include <geometry_msgs/Pose.h>
-#include <nav_msgs/Odometry.h>
+#include "geometry_msgs/msg/pose.hpp"
+#include "nav_msgs/msg/odometry.hpp"
 
 #include <tf2/LinearMath/Matrix3x3.h>
 #include <tf2/LinearMath/Quaternion.h>
-#include <geometry_msgs/Quaternion.h>
+#include "geometry_msgs/msg/quaternion.hpp"
 #include "tf/transform_datatypes.h"
 
 #include <plan_msgs/RobotStateStamped.h>

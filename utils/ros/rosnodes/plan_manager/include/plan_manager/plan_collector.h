@@ -7,8 +7,8 @@
 
 #include "rclcpp/rclcpp.h"
 #include <nav_msgs/GetPlan.h>
-#include <nav_msgs/Path.h>
-#include <geometry_msgs/PoseStamped.h>  // goal, subgoal needs time stamp
+#include "nav_msgs/msg/path.hpp"
+#include "geometry_msgs/msg/pose_stamped.hpp"  // goal, subgoal needs time stamp
 
 
 #include <plan_manager/robot_state.h>

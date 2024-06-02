@@ -8,10 +8,10 @@
 #include <vector>
 
 #include "rclcpp/rclcpp.h"
-#include <geometry_msgs/Pose.h>
-#include <geometry_msgs/PoseStamped.h>  // goal, subgoal needs time stamp
-#include <nav_msgs/Path.h>
-#include <nav_msgs/Odometry.h>
+#include "geometry_msgs/msg/pose.hpp"
+#include "geometry_msgs/msg/pose_stamped.hpp"  // goal, subgoal needs time stamp
+#include "nav_msgs/msg/path.hpp"
+#include "nav_msgs/msg/odometry.hpp"
 #include <nav_msgs/GetPlan.h>
 #include <plan_msgs/RobotStateStamped.h>
 

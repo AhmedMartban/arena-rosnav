@@ -7,9 +7,9 @@
 #include "rclcpp/rclcpp.h"
 #include <string.h>
 
-#include <geometry_msgs/PoseStamped.h>
-#include <nav_msgs/Odometry.h>
-#include <nav_msgs/Path.h>
+#include "geometry_msgs/msg/pose_stamped.hpp"
+#include "nav_msgs/msg/odometry.hpp"
+#include "nav_msgs/msg/path.hpp"
 
 // mapping
 #include "mapping/mapping.h"

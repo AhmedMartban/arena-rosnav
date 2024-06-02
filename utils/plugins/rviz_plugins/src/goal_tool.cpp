@@ -29,7 +29,7 @@
 
 #include "tf2_ros/transform_listener.h"
 
-#include <geometry_msgs/PoseStamped.h>
+#include "geometry_msgs/msg/pose_stamped.hpp"
 
 #include "rviz/display_context.h"
 #include "rviz/properties/string_property.h"
@@ -66,7 +66,7 @@ void Goal3DTool::onPoseSet(double x, double y, double z, double theta)
   std::string fixed_frame = context_->getFixedFrame().toStdString();
   tf::Quaternion quat;
   quat.setRPY(0.0, 0.0, theta);
-  tf::Stamped<tf::Pose> p = tf::Stamped<tf::Pose>(tf::Pose(quat, tf::Point(x, y, z)), ros::Time::now(), fixed_frame);
+  tf::Stamped<tf::Pose> p = tf::Stamped<tf::Pose>(tf::Pose(quat, tf::Point(x, y, z)), node->now(), fixed_frame);
   geometry_msgs::PoseStamped goal;
   tf::poseStampedTFToMsg(p, goal);
   ROS_INFO("Setting goal: Frame:%s, Position(%.3f, %.3f, %.3f), Orientation(%.3f, %.3f, %.3f, %.3f) = Angle: %.3f\n", fixed_frame.c_str(),

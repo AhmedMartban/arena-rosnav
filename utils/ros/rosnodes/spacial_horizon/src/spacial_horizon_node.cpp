@@ -31,7 +31,7 @@ void SpacialHorizon::init(ros::NodeHandle &nh)
     );
     
     /* ros communication with public node */
-    ros::NodeHandle public_nh; // sim1/goal
+    auto public_nh = std::make_shared<rclcpp::Node>("public_nh");; // sim1/goal
     sub_goal =
         public_nh.subscribe(SUB_TOPIC_GOAL, 1, &SpacialHorizon::goalCallback, this);
     sub_odom =
@@ -47,7 +47,7 @@ void SpacialHorizon::init(ros::NodeHandle &nh)
 void SpacialHorizon::initializeGlobalPlanningService()
 {
     ROS_INFO_STREAM("[Spacial Horizon - INIT] Initializing MBF service client");
-    ros::NodeHandle nh;
+    auto nh = std::make_shared<rclcpp::Node>("nh");;
     std::string service_name = ros::this_node::getNamespace() + "/" + SERVICE_GLOBAL_PLANNER;
 
     while (!ros::service::waitForService(service_name, ros::Duration(3.0)))
@@ -88,7 +88,7 @@ void SpacialHorizon::goalCallback(const geometry_msgs::PoseStampedPtr &msg)
     // when disable_intermediate_planner is true, the goal is the subgoal
     if (disable_intermediate_planner){
         geometry_msgs::PoseStamped pose_stamped;
-        pose_stamped.header.stamp = ros::Time::now();
+        pose_stamped.header.stamp = node->now();
         pose_stamped.header.frame_id = "map";
         pose_stamped.pose.position.x = end_pos(0);
         pose_stamped.pose.position.y = end_pos(1);
@@ -176,7 +176,7 @@ void SpacialHorizon::updateSubgoalCallback(const ros::TimerEvent &e)
         }
 
         geometry_msgs::PoseStamped pose_stamped;
-        pose_stamped.header.stamp = ros::Time::now();
+        pose_stamped.header.stamp = node->now();
         pose_stamped.header.frame_id = "map";
         pose_stamped.pose.position.x = subgoal(0);
         pose_stamped.pose.position.y = subgoal(1);
@@ -247,9 +247,9 @@ void SpacialHorizon::callPlanningService(ros::ServiceClient &serviceClient,
 int main(int argc, char **argv)
 {
     std::cout << "Spacial Horizon node started" << std::endl;
-    ros::init(argc, argv, "spacial_horizon_node");
+    rclcpp::init(argc, argv, "spacial_horizon_node");
 
-    ros::NodeHandle nh("~");
+    auto nh = std::make_shared<rclcpp::Node>("nh");"~");
     SpacialHorizon spacial_horizon;
     spacial_horizon.init(nh);
 
@@ -257,5 +257,5 @@ int main(int argc, char **argv)
     ROS_INFO_STREAM(":\tSpacial_Horizon successfully loaded for namespace\t"
                     << ns);
 
-    ros::spin();
+    rclcpp::spin(node);
 }
