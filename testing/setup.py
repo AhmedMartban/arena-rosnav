@@ -18,7 +18,9 @@ setup(
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
-
+        'console_scripts': [
+            'action_publisher = scripts.action_publisher:main',
+            'drl_agent_node = scripts.drl_agent_node:main',
         ],
     },
 )
