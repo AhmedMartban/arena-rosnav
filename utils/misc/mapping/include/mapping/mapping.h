@@ -138,13 +138,14 @@ struct MappingData {
 
 class GridMap{
     public:
-        GridMap() {}
+        GridMap(rclcpp::Node::SharedPtr nh) : node_(nh) {}
+
         ~GridMap() {}
         typedef std::shared_ptr<GridMap> Ptr;
 
         enum { INVALID_IDX = -10000 };
 
-        void initMap(rclcpp::Node& nh);
+        void initMap(rclcpp::Node::SharedPtr nh);
 
         /* occupancy map management */
         // static map 
@@ -217,7 +218,7 @@ class GridMap{
 
 
     private:
-        rclcpp::Node node_;
+        rclcpp::Node::SharedPtr node_;
         MappingParameters mp_;
         MappingData md_;
 
