@@ -265,9 +265,9 @@ class GridMap{
         void odomCallback(const nav_msgs::msg::Odometry::ConstSharedPtr& odom);
 
         /* Time event callback: update occupancy by raycasting, and update ESDF*/
-        void updateOccupancyCallback(const rclcpp::TimerEvent& /*event*/);
-        void updateESDFCallback(const rclcpp::TimerEvent& /*event*/);
-        void visCallback(const rclcpp::TimerEvent& /*event*/);  
+        void updateOccupancyCallback();
+        void updateESDFCallback();
+        void visCallback();  
         
         // main update process
         /* occupancy map update */
