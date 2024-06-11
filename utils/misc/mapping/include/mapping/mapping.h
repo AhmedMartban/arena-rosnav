@@ -234,24 +234,29 @@ class GridMap{
         SynchronizerScanOdom sync_scan_odom_;
 
         // sensor: subscriber
-        ros::Subscriber indep_scan_sub_, indep_odom_sub_;
+        rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr indep_scan_sub_;
+        rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr indep_odom_sub_;
 
         // map server service
-        ros::ServiceClient static_map_client_;
+        rclcpp::Client<nav_msgs::srv::GetMap>::SharedPtr static_map_client_;
         nav_msgs::msg::OccupancyGrid static_map_;
 
-        // publiser
-        ros::Publisher map_pub_,static_map_pub_,dynamic_map_pub_;
-        ros::Publisher esdf_pub_,esdf_static_pub_;
-        ros::Publisher depth_pub_; //laser pointcloud2
-        ros::Publisher update_range_pub_;
-        ros::Publisher unknown_pub_;
-
+        // publisher
+        rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr map_pub_;
+        rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr static_map_pub_;
+        rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr dynamic_map_pub_;
+        rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr esdf_pub_;
+        rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr esdf_static_pub_;
+        rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr depth_pub_;
+        rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr update_range_pub_;
+        rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr unknown_pub_;
 
         // timer
-        rclcpp::Timer occ_timer_;
-        rclcpp::Timer esdf_timer_;
-        rclcpp::Timer vis_timer_;
+        rclcpp::TimerBase::SharedPtr occ_timer_;
+        rclcpp::TimerBase::SharedPtr esdf_timer_;
+        rclcpp::TimerBase::SharedPtr vis_timer_;
+
+
 
         
         /* Sensor Callbacks */
