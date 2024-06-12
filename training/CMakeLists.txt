@@ -21,67 +21,7 @@ find_package(tf2_ros REQUIRED)
 #find_package(flatland_msgs REQUIRED) does not exist in ROS2
 find_package(rosidl_default_generators REQUIRED)
 find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
+
 set(CMAKE_CXX_STANDARD 14)
 
 ## System dependencies are found with CMake's conventions
@@ -129,156 +69,7 @@ rosidl_generate_interfaces(
         srv/String.srv
     DEPENDENCIES
 )
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-        srv/String.srv
-    DEPENDENCIES
-)
+
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -372,8 +163,8 @@ ament_package()
 ## in contrast to setup.py, you can choose the destination
 install(PROGRAMS
   scripts/train_agent.py
-#    scripts/env/flatland_gym_env.py
-   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+  # scripts/env/flatland_gym_env.py
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 ## Mark executables for installation
