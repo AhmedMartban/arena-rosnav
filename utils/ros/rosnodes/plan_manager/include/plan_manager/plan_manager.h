@@ -7,7 +7,7 @@
 
 #include <vector>
 
-#include "rclcpp/rclcpp.h"
+#include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"  // goal, subgoal needs time stamp
 #include "nav_msgs/msg/path.hpp"

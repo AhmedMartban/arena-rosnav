@@ -5,7 +5,7 @@
 #include <iostream>
 #include <memory>
 
-#include "rclcpp/rclcpp.h"
+#include "rclcpp/rclcpp.hpp"
 #include <nav_msgs/GetPlan.h>
 #include "nav_msgs/msg/path.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"  // goal, subgoal needs time stamp

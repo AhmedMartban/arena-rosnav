@@ -8,9 +8,9 @@
 #include <tf2/LinearMath/Matrix3x3.h>
 #include <tf2/LinearMath/Quaternion.h>
 #include "geometry_msgs/msg/quaternion.hpp"
-#include "tf/transform_datatypes.h"
+#include "tf2/transform_datatypes.h"
 
-#include <plan_msgs/RobotStateStamped.h>
+#include <plan_msgs/msg/RobotStateStamped.h>
 #include <plan_msgs/RobotState.h>
 
 struct RobotState

@@ -34,7 +34,7 @@
 
 #include <QCursor>
 
-#include "rclcpp/rclcpp.h"
+#include "rclcpp/rclcpp.hpp"
 
 #include "rviz/tool.h"
 
