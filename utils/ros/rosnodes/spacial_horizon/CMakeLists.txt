@@ -111,74 +111,77 @@ set(Eigen3_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIR})
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 
-add_executable(spacial_horizon_node src/spacial_horizon_node.cpp)
+
+
+
+
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(visualization_msgs REQUIRED)
 find_package(PCL REQUIRED)
 find_package(geometry_msgs REQUIRED)
-find_package(actionlib REQUIRED)
+find_package(rclcpp_action REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(tf2 REQUIRED)
-find_package(1.7 REQUIRED)
 find_package(rclpy REQUIRED)
+
+
+include_directories(
+  include
+  ${rclcpp_INCLUDE_DIRS}
+  ${std_msgs_INCLUDE_DIRS}
+  ${Eigen3_INCLUDE_DIRS}
+  ${visualization_msgs_INCLUDE_DIRS}
+  ${PCL_INCLUDE_DIRS}
+  ${geometry_msgs_INCLUDE_DIRS}
+  ${rclcpp_action_INCLUDE_DIRS}
+  ${nav_msgs_INCLUDE_DIRS}
+  ${tf2_INCLUDE_DIRS}
+  ${rclpy_INCLUDE_DIRS}
+)
+
+
+
+
+
+
+
+add_executable(spacial_horizon_node src/spacial_horizon_node.cpp)
+ament_target_dependencies(spacial_horizon_node rclcpp std_msgs)
+
+
 set(INCLUDE_DIRS ${ament_cmake_INCLUDE_DIRS} ${std_msgs_INCLUDE_DIRS}
   ${Eigen3_INCLUDE_DIRS} ${visualization_msgs_INCLUDE_DIRS} ${PCL_INCLUDE_DIRS}
-  ${geometry_msgs_INCLUDE_DIRS} ${actionlib_INCLUDE_DIRS} ${nav_msgs_INCLUDE_DIRS}
-  ${rclcpp_INCLUDE_DIRS} ${tf2_INCLUDE_DIRS} ${1.7_INCLUDE_DIRS}
+  ${geometry_msgs_INCLUDE_DIRS} ${rclcpp_action_INCLUDE_DIRS} ${nav_msgs_INCLUDE_DIRS}
+  ${tf2_INCLUDE_DIRS}
   ${REQUIRED_INCLUDE_DIRS} ${rclpy_INCLUDE_DIRS})
-target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+target_include_directories(spacial_horizon_node PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp>
   ${CMAKE_CURRENT_SOURCE_DIR}
-  ./
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+  ${rclcpp_INCLUDE_DIRS}
 )
 set(LIBRARY_DIRS ${ament_cmake_LIBRARIES} ${std_msgs_LIBRARIES}
   ${Eigen3_LIBRARIES} ${visualization_msgs_LIBRARIES} ${PCL_LIBRARIES}
-  ${geometry_msgs_LIBRARIES} ${actionlib_LIBRARIES} ${nav_msgs_LIBRARIES}
-  ${rclcpp_LIBRARIES} ${tf2_LIBRARIES} ${1.7_LIBRARIES} ${REQUIRED_LIBRARIES}
+  ${geometry_msgs_LIBRARIES} ${rclcpp_action_LIBRARIES} ${nav_msgs_LIBRARIES}
+  ${tf2_LIBRARIES} ${REQUIRED_LIBRARIES}
   ${rclpy_LIBRARIES})
 target_link_libraries(spacial_horizon_node
-  ${cpp_typesupport_target}
-  # ${SDL2_LIBRARIES}
-  # ${OPENGL_LIBRARIES}
+  ${ament_cmake_LIBRARIES}
+  ${std_msgs_LIBRARIES}
+  ${Eigen3_LIBRARIES}
+  ${visualization_msgs_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${geometry_msgs_LIBRARIES}
+  ${rclcpp_action_LIBRARIES}
+  ${nav_msgs_LIBRARIES}
+  ${rclcpp_LIBRARIES}
+  ${tf2_LIBRARIES}
+  ${REQUIRED_LIBRARIES}
+  ${rclpy_LIBRARIES}
 )
-set(LIBS ${ament_cmake_LIBRARIES} ${std_msgs_LIBRARIES} ${Eigen3_LIBRARIES}
-  ${visualization_msgs_LIBRARIES} ${PCL_LIBRARIES} ${geometry_msgs_LIBRARIES}
-  ${actionlib_LIBRARIES} ${nav_msgs_LIBRARIES} ${rclcpp_LIBRARIES}
-  ${tf2_LIBRARIES} ${1.7_LIBRARIES} ${REQUIRED_LIBRARIES} ${rclpy_LIBRARIES})
-
-
-## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/spacial_horizon.cpp
-# )
-
-## Add cmake target dependencies of the library
-## as an example, code may need to be generated before libraries
-## either from message generation or dynamic reconfigure
-# add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
-## Declare a C++ executable
-## With catkin_make all packages are built within a single CMake context
-## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/spacial_horizon_node.cpp)
-
-## Rename C++ executable without prefix
-## The above recommended prefix causes long target names, the following renames the
-## target back to the shorter version for ease of user use
-## e.g. "rosrun someones_pkg node" instead of "rosrun someones_pkg someones_pkg_node"
-# set_target_properties(${PROJECT_NAME}_node PROPERTIES OUTPUT_NAME node PREFIX "")
-
-## Add cmake target dependencies of the executable
-## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
-## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
 
 #############
 ## Install ##
@@ -196,9 +199,9 @@ set(LIBS ${ament_cmake_LIBRARIES} ${std_msgs_LIBRARIES} ${Eigen3_LIBRARIES}
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html
-# install(TARGETS ${PROJECT_NAME}_node
-#   RUNTIME DESTINATION bin
-# )
+install(TARGETS spacial_horizon_node
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
+)
 
 ## Mark libraries for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_libraries.html
@@ -209,11 +212,11 @@ set(LIBS ${ament_cmake_LIBRARIES} ${std_msgs_LIBRARIES} ${Eigen3_LIBRARIES}
 # )
 
 ## Mark cpp header files for installation
-# install(DIRECTORY include/${PROJECT_NAME}/
-#   DESTINATION include/${PROJECT_NAME}
-#   FILES_MATCHING PATTERN "*.h"
-#   PATTERN ".svn" EXCLUDE
-# )
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION include/${PROJECT_NAME}
+  FILES_MATCHING PATTERN "*.h"
+  PATTERN ".svn" EXCLUDE
+)
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 # install(FILES
@@ -241,16 +244,14 @@ ament_export_dependencies(Eigen3)
 ament_export_dependencies(visualization_msgs)
 ament_export_dependencies(PCL)
 ament_export_dependencies(geometry_msgs)
-ament_export_dependencies(actionlib)
+ament_export_dependencies(rclcpp_action)
 ament_export_dependencies(nav_msgs)
 ament_export_dependencies(rclcpp)
 ament_export_dependencies(tf2)
-ament_export_dependencies(1.7)
 ament_export_dependencies(rclpy)
-ament_export_target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp>
-  ${CMAKE_CURRENT_SOURCE_DIR}
-  ./
+ament_export_include_directories(
+  include
 )
+
 
 ament_package()

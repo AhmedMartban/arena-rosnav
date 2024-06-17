@@ -3,16 +3,17 @@
 
 #include <Eigen/Eigen>
 #include <iostream>
-#include "rclcpp/rclcpp.h"
+#include "rclcpp/rclcpp.hpp"
 #include <algorithm>
 #include <vector>
 
+#include "std_msgs/msg/string.hpp"
 #include "nav_msgs/msg/odometry.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
-#include "geometry_msgs/PoseWithCovarianceStamped.h"
+#include "geometry_msgs/msg/pose_with_covariance_stamped.hpp"
 #include "nav_msgs/msg/path.hpp"
-#include <nav_msgs/GetPlan.h>
-#include <visualization_msgs/MarkerArray.h>
+#include <nav_msgs/srv/get_plan.h>
+#include <visualization_msgs/msg/marker_array.h>
 
 #include <boost/foreach.hpp>
 #define forEach BOOST_FOREACH
