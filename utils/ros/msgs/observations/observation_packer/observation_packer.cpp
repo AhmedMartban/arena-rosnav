@@ -117,7 +117,7 @@ void updateRelativeWithAbsoluteGoal()
 	relative_goal_transform = absolute_goal_transform.getToLocalOf(odom_transform);
 }
 
-void odom_callback(const nav_msgs::Odometry::ConstPtr &msg)
+void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
 {
 	odom_transform.setFromMsg(msg->pose.pose);
 	robot_state.setFromMsg(msg->pose.pose);
