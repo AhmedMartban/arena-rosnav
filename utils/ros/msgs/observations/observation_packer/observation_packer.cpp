@@ -124,7 +124,7 @@ void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
 	odom_callback_called = true;
 }
 
-void amcl_callback(const geometry_msgs::PoseWithCovarianceStampedPtr &msg)
+void amcl_callback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr msg)
 {
 	odom_transform.setFromMsg(msg->pose.pose);
 	robot_state.setFromMsg(msg->pose.pose);
