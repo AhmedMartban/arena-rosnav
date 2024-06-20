@@ -62,7 +62,7 @@ void updateAbsoluteGoal()
 	absolute_goal_transform = odom_transform.getLocalTranslate(relative_goal_transform.position);
 }
 
-void goal_callback(const geometry_msgs::PoseStampedPtr &msg)
+void goal_callback(const std::shared_ptr<geometry_msgs::msg::PoseStamped> &msg)
 {
 	float x = msg->pose.position.x - odom_transform.position.x;
 	float y = msg->pose.position.y - odom_transform.position.y;
