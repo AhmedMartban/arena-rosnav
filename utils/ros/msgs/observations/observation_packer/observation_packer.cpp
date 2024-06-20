@@ -43,7 +43,7 @@ void setAbsoluteGoal(const zVector2D &new_pos)
 	relative_goal_transform.toLocalOf(odom_transform);
 }
 
-void quaternionFromMsg(tf2::Quaternion &q, const geometry_msgs::Quaternion &q_msg)
+void quaternionFromMsg(tf2::Quaternion &q, const geometry_msgs::msg::Quaternion &q_msg)
 {
 	q[0] = q_msg.x;
 	q[1] = q_msg.y;
