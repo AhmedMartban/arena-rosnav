@@ -13,7 +13,7 @@
 #include "nav_msgs/msg/path.hpp"
 #include "nav_msgs/msg/odometry.hpp"
 #include <nav_msgs/srv/get_plan.h>
-#include <plan_msgs/RobotStateStamped.h>
+#include <plan_msgs/msg/RobotStateStamped.h>
 
 #include <visualization_msgs/Marker.h>
 
