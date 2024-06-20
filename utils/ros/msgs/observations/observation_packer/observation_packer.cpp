@@ -91,7 +91,7 @@ void goal_callback(const std::shared_ptr<geometry_msgs::msg::PoseStamped> &msg)
 	// goal.set(msg->pose.position.x, msg->pose.position.y, 0);
 }
 
-void laser_callback(const sensor_msgs::LaserScan::ConstPtr &msg)
+void laser_callback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
 {
 	for (int i = 0; i < msg->ranges.size(); i++)
 	{
