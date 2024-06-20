@@ -152,7 +152,7 @@ float cal_angle_to_goal()
 	return tmp - robot_state.theta + 4 * M_PI;
 }
 
-void packMsg(observations::Observation &obs)
+void packMsg(observations::msg::Observation &obs)
 {
 	// obs.observation[0] = distance_to_goal;
 	// obs.observation[1] = angle_to_goal;
