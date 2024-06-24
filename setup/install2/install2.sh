@@ -26,6 +26,9 @@ fi
 
 until vcs import src < src/arena/arena-rosnav/.repos ; do echo "failed to update, retrying..." ; done
 #
+
+#compat
+ln -s src/arena/arena-rosnav/setup/install2/* src/arena/arena-rosnav/
  
 #python env init
 cd src/arena/arena-rosnav
@@ -39,7 +42,6 @@ cd ${TARGET_DIR}
 # Missing Deps
 echo "Installing Missing Deps...:"
 
-sudo apt update && sudo apt install -y libopencv-dev liblua5.2-dev libarmadillo-dev liblcm-dev
 rosdep update && rosdep install --from-paths src --ignore-src -r -y
  
 # Project Install
