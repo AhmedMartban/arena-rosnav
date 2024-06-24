@@ -24,26 +24,10 @@ RUN apt install -y software-properties-common curl
 
         # install
             RUN apt install -y git
-            RUN apt install -y python3 \
-                ros-humble-desktop \
-                python-is-python3 \
-                python3-rosdep \
-                python3-rosdep-modules \
-                python3-pip \
-                python3-rosinstall-generator \
-                python3-vcstool \
-                build-essential \
-                python3-colcon-common-extensions \
-                python3-argcomplete \
-                python3-colcon-mixin \
-                python3-pytest \
-                python3-rospkg \
-                python3-rosdistro \
-                python3-setuptools \
-                python3-catkin-pkg \
-                flake8 \
-                ros-humble-launch-testing-ament-cmake \
-                ros-humble-rosidl-generator-dds-idl
+            # change path later
+            ADD arena/arena-rosnav/setup /setup
+            WORKDIR /setup
+            RUN apt install -y $(awk '{print $1}' package.list)
             
     RUN rosdep init && rosdep update
 
