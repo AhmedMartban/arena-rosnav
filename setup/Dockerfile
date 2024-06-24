@@ -23,11 +23,11 @@ RUN apt install -y software-properties-common curl
             ADD arena-rosnav/setup /tmp/arena
             WORKDIR /tmp/arena
             RUN apt update
-            RUN apt install -y $(awk '{print $1}' src/arena/arena-rosnav/setup/package1.list)
+            RUN apt install -y $(awk '{print $1}' install1/package.list)
             WORKDIR /
             RUN rm -r /tmp/arena
             
-    RUN rosdep init && rosdep update
+    # RUN rosdep init && rosdep update
 
     # poetry
         RUN curl -sSL https://install.python-poetry.org | python3 - && echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
@@ -38,12 +38,14 @@ RUN apt install -y software-properties-common curl
     # sources
         #TEMP
         # build as: docker build -t arena-rosnav:humble -f arena/arena-rosnav/setup/Dockerfile arena
-        ADD . src
+        ADD . src/arena
         #END TEMP
         
         # RUN git clone --depth=1 --branch ${BRANCH} https://github.com/Arena-Rosnav/arena-rosnav.git src/arena/arena-rosnav
         # RUN until vcs import src < src/arena/arena-rosnav/setup/.repos ; do echo "failed to update, retrying..." ; done
-        
+
+        # compat
+        RUN ln -rs src/arena/arena-rosnav/setup/install2/* src/arena/arena-rosnav/
 
     # deps
         # poetry
@@ -55,10 +57,11 @@ RUN apt install -y software-properties-common curl
         # rosdep
             RUN rosdep update && apt update
             RUN rosdep install --from-paths src --ignore-src -r -y
-            RUN apt install -y $(awk '{print $1}' src/arena/arena-rosnav/setup/package2.list)
+            RUN apt install -y $(awk '{print $1}' src/arena/arena-rosnav/setup/install2/package.list)
+            
     # build and export
 #        RUN source "$(cd src/arena/arena-rosnav && poetry env info -p)/bin/activate" && \
 #            source /opt/ros/humble/setup.bash && \
 #            colcon build --symlink-install --cmake-args " -DPython3_ROOT_DIR=$(cd src/arena/arena-rosnav && poetry env info -p)"
 #
-#        RUN echo "source $(pwd)/devel/setup.bash" >> ~/.bashrc
+#        RUN echo "source $(pwd)/install/local_setup.bash" >> ~/.bashrc
