@@ -1,5 +1,6 @@
 [tool.poetry]
 name = "arena-rosnav"
+package-mode = false
 version = "0.1.0"
 description = ""
 authors = ["ReykCS <reyk-carstens@web.de>", "Volodymyr Shcherbyna <edu@vshch.com>"]
