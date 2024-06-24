@@ -20,14 +20,12 @@ RUN apt install -y software-properties-common curl
                 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
         # update
+            ADD arena-rosnav/setup /tmp/arena
+            WORKDIR /tmp/arena
             RUN apt update
-
-        # install
-            RUN apt install -y git
-            # change path later
-            ADD arena/arena-rosnav/setup /setup
-            WORKDIR /setup
-            RUN apt install -y $(awk '{print $1}' package.list)
+            RUN apt install -y $(awk '{print $1}' src/arena/arena-rosnav/setup/package1.list)
+            WORKDIR /
+            RUN rm -r /tmp/arena
             
     RUN rosdep init && rosdep update
 
@@ -39,17 +37,15 @@ RUN apt install -y software-properties-common curl
 
     # sources
         #TEMP
-        # build as: docker build -t arena-rosnav:humble -f arena/arena-rosnav/Dockerfile arena
+        # build as: docker build -t arena-rosnav:humble -f arena/arena-rosnav/setup/Dockerfile arena
         ADD . src
         #END TEMP
         
         # RUN git clone --depth=1 --branch ${BRANCH} https://github.com/Arena-Rosnav/arena-rosnav.git src/arena/arena-rosnav
-        # RUN until vcs import src < src/arena/arena-rosnav/.repos ; do echo "failed to update, retrying..." ; done
+        # RUN until vcs import src < src/arena/arena-rosnav/setup/.repos ; do echo "failed to update, retrying..." ; done
+        
 
     # deps
-        # apt
-            # RUN apt install -y libopencv-dev liblua5.2-dev libarmadillo-dev liblcm-dev
-
         # poetry
             ENV PYTHON_KEYRING_BACKEND=keyring.backends.fail.Keyring
             RUN cd src/arena/arena-rosnav && \
@@ -57,10 +53,9 @@ RUN apt install -y software-properties-common curl
             #    $HOME/.local/bin/poetry env use python3.8
 
         # rosdep
-            RUN rosdep update && \
-                apt update && \
-                rosdep install --from-paths src --ignore-src -r -y
-
+            RUN rosdep update && apt update
+            RUN rosdep install --from-paths src --ignore-src -r -y
+            RUN apt install -y $(awk '{print $1}' src/arena/arena-rosnav/setup/package2.list)
     # build and export
 #        RUN source "$(cd src/arena/arena-rosnav && poetry env info -p)/bin/activate" && \
 #            source /opt/ros/humble/setup.bash && \
