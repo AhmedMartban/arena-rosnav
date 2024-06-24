@@ -51,8 +51,8 @@ RUN apt install -y software-properties-common curl
         # poetry
             ENV PYTHON_KEYRING_BACKEND=keyring.backends.fail.Keyring
             RUN cd src/arena/arena-rosnav && \
-                $HOME/.local/bin/poetry install --no-root
-            #    $HOME/.local/bin/poetry env use python3.8
+                $HOME/.local/bin/poetry install --no-root || \
+                ($HOME/.local/bin/poetry lock --no-update && $HOME/.local/bin/poetry install --no-root)
 
         # rosdep
             RUN rosdep update && apt update
