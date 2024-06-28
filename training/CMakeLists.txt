@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.5)
 project(training)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
@@ -7,27 +7,29 @@ project(training)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
-  geometry_msgs
-  nav_msgs
-  roscpp
-  rospy
-  sensor_msgs
-  tf2
-  tf2_geometry_msgs
-  tf2_ros
-  flatland_msgs
-  message_generation
-)
+
+find_package(rosidl_default_generators REQUIRED)
+find_package(ament_cmake REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rclpy REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
+find_package(tf2_ros REQUIRED)
+#find_package(flatland_msgs REQUIRED) does not exist in ROS2
+find_package(rosidl_default_generators REQUIRED)
+find_package(ament_cmake REQUIRED)
+
+set(CMAKE_CXX_STANDARD 14)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
-
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
-catkin_python_setup()
 
 ################################################
 ## Declare ROS messages, services and actions ##
@@ -61,10 +63,13 @@ catkin_python_setup()
 # )
 
 ## Generate services in the 'srv' folder
-add_service_files(DIRECTORY srv
-  FILES
-  String.srv
+
+rosidl_generate_interfaces(
+    ${PROJECT_NAME}
+        srv/String.srv
+    DEPENDENCIES
 )
+
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -74,10 +79,6 @@ add_service_files(DIRECTORY srv
 # )
 
 # Generate added messages and services with any dependencies listed here
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -108,12 +109,6 @@ generate_messages(
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES training
-#    CATKIN_DEPENDS geometry_msgs nav_msgs roscpp rospy sensor_msgs tf2 tf2_geometry_msgs tf2_ros
-#  DEPENDS system_lib
-)
 
 ###########
 ## Build ##
@@ -124,8 +119,8 @@ catkin_package(
 include_directories(
 # include
   scripts
-  ${catkin_INCLUDE_DIRS}
 )
+ament_package()
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
@@ -166,10 +161,10 @@ include_directories(
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-catkin_install_python(PROGRAMS
+install(PROGRAMS
   scripts/train_agent.py
-#    scripts/env/flatland_gym_env.py
-   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+  # scripts/env/flatland_gym_env.py
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 ## Mark executables for installation

@@ -32,7 +32,8 @@ def main():
     # in debug mode, we emulate multiprocessing on only one process
     # in order to be better able to locate bugs
     if config["debug_mode"]:
-        rospy.init_node("debug_node", disable_signals=False)
+        rclpy.init()
+        node = rclpy.create_node("debug_node", disable_signals=False)
 
     # generate agent name and model specific paths
     generate_agent_name(config)
