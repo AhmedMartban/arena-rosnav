@@ -1,21 +1,23 @@
-
-
 import os
 import numpy as np
 
 from task_generator.constants import Constants
-from task_generator.shared import rosparam_get
+from task_generator.constants.runtime import TASKGEN_CONFIGNODE
 
 import nav_msgs.msg as nav_msgs
 
+# declare parameters 
+TASKGEN_CONFIGNODE.declare_parameter('simulator', 'gazebo')
+TASKGEN_CONFIGNODE.declare_parameter('map_file', 'dynamic_map')
+
 def get_simulator() -> Constants.Simulator:
-    return Constants.Simulator(rosparam_get(str, "simulator", "gazebo").lower())
+    return Constants.Simulator(TASKGEN_CONFIGNODE.get_parameter('simulator').get_parameter_value().string_value.lower())
 
 def get_arena_type() -> Constants.ArenaType:
     return Constants.ArenaType(os.getenv("ARENA_TYPE", "training").lower())
 
 def is_synthetic_map() -> bool:
-    return rosparam_get(str, "map_file") in ["dynamic_map"]
+    return TASKGEN_CONFIGNODE.get_parameter('map_file').get_parameter_value().string_value in ["dynamic_map"]
 
 def generate_map_inner_border(free_space_indices, map_: nav_msgs.OccupancyGrid):
     """generate map border (four vertices of the map)
