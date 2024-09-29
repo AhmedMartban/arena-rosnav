@@ -1,10 +1,13 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, SetEnvironmentVariable
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, SetEnvironmentVariable, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, Command, PathJoinSubstitution, TextSubstitution, PythonExpression
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
+from launch_ros.substitutions import FindPackageShare
+from launch.event_handlers import OnProcessStart
+from launch.actions import RegisterEventHandler, LogInfo
 import xacro
 
 def generate_launch_description():
@@ -24,10 +27,13 @@ def generate_launch_description():
         os.path.join(workspace_root, 'src', 'arena', 'simulation-setup', 'worlds'),
         os.path.join(workspace_root, 'src', 'arena', 'simulation-setup', 'gazebo_models'),
         os.path.join(workspace_root, 'src', 'arena', 'simulation-setup', 'gazebo_models', 'Cafe table', 'materials', 'textures'),
-        os.path.join(workspace_root, 'src', 'deps')
+        os.path.join(workspace_root, 'src', 'deps'),
+        os.path.join(workspace_root, 'src', 'deps', 'hunav_gazebo_wrapper'),
+        os.path.join(workspace_root, 'src', 'deps', 'hunav_sim')
     ]
+
     GZ_SIM_RESOURCE_PATHS_COMBINED = ':'.join(GZ_SIM_RESOURCE_PATHS)
-    
+
     # Update the environment
     os.environ['GZ_CONFIG_PATH'] = GZ_CONFIG_PATH
     os.environ['GZ_SIM_PHYSICS_ENGINE_PATH'] = GZ_SIM_PHYSICS_ENGINE_PATH
@@ -37,15 +43,6 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time')
     world_file = LaunchConfiguration('world_file')
     robot_model = LaunchConfiguration('model')
-    
-    # Construct the full world file path
-    world_file = PathJoinSubstitution([
-        workspace_root,
-        'src', 'arena', 'simulation-setup', 'worlds',
-        world_file,
-        'worlds',
-        PythonExpression(['"', world_file, '.world"'])
-    ])
 
     # Gazebo launch
     gz_sim_launch_file = os.path.join(
@@ -110,14 +107,73 @@ def generate_launch_description():
         output='screen'
     )
 
+    #### Hunavsim Integration ####
+    # Agent configuration file
+    agent_conf_file = PathJoinSubstitution([
+        FindPackageShare('hunav_agent_manager'),
+        'config', 'agents.yaml'
+    ])
+
+    # Hunav Loader Node
+    hunav_loader_node = Node(
+        package='hunav_agent_manager',
+        executable='hunav_loader',
+        output='screen',
+        parameters=[agent_conf_file]
+    )
+
+    # World Generator Node
+    world_file_name = LaunchConfiguration('base_world')
+    hunav_gazebo_worldgen_node = Node(
+        package='hunav_gazebo_wrapper',
+        executable='hunav_gazebo_world_generator',
+        output='screen',
+        parameters=[{'base_world': world_file_name}]
+    )
+
+    # Launch the World Generator after Hunav Loader starts
+    ordered_launch_event = RegisterEventHandler(
+        OnProcessStart(
+            target_action=hunav_loader_node,
+            on_start=[
+                LogInfo(msg='HunNavLoader started, launching HuNav_Gazebo_world_generator after 2 seconds...'),
+                TimerAction(
+                    period=2.0,
+                    actions=[hunav_gazebo_worldgen_node],
+                )
+            ]
+        )
+    )
+
+    # Hunav Manager Node
+    hunav_manager_node = Node(
+        package='hunav_agent_manager',
+        executable='hunav_agent_manager',
+        output='screen',
+        parameters=[{'use_sim_time': use_sim_time}]
+    )
+
+    # Hunav Evaluator Node
+    hunav_evaluator_node = Node(
+        package='hunav_evaluator',
+        executable='hunav_evaluator_node',
+        output='screen',
+        parameters=[{'metrics_file': 'metrics.yaml'}]  # You can replace with your specific config
+    )
+
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true', description='Use simulation (Gazebo) clock if true'),
         DeclareLaunchArgument('world_file', default_value='map_empty', description='World file name'),
         DeclareLaunchArgument('model', default_value='jackal', description='Robot model name'),
+        DeclareLaunchArgument('base_world', default_value='example_cafe.world', description='Specify world file name'),
         gazebo,
         robot_state_publisher,
         spawn_robot,
         bridge,
+        hunav_loader_node,
+        ordered_launch_event,  # Start the world generation after the Hunav loader
+        hunav_manager_node,
+        hunav_evaluator_node
     ])
 
 def add_directories_recursively(root_dirs):
@@ -126,7 +182,3 @@ def add_directories_recursively(root_dirs):
         for dirpath, dirnames, filenames in os.walk(root_dir):
             all_dirs.append(dirpath)
     return all_dirs
-
-
-if __name__ == '__main__':
-    generate_launch_description()
