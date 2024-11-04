@@ -16,6 +16,21 @@ export ARENA_WS_DIR=$(realpath "$(eval echo ${INPUT:-${ARENA_WS_DIR}})")
 
 sudo echo "$ARENA_WS_DIR"
 
+# == remove ros problems ==
+files=$(grep -l "ros" /etc/apt/sources.list.d/* | grep -v "ros2")
+
+if [ -n "$files" ]; then
+    echo "The following files can cause some problems to installer:"
+    echo "$files"
+    read -p "Do you want to delete these files? (Y/n) [Y]: " choice
+    choice=${choice:-Y}
+
+    if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
+        sudo rm -f $files
+        echo "Deleted $(echo $files)"
+    fi
+fi
+
 # == python deps ==
 
 # pyenv
@@ -176,6 +191,23 @@ cd "${ARENA_WS_DIR}"
 cd "${ARENA_WS_DIR}"
 until vcs import src < src/arena/arena-rosnav/arena.repos ; do echo "failed to update, retrying..." ; done
 
+# == install nav2 ==
+echo "Cloning navigation2 into deps folder from $ARENA_ROS_VERSION branch"
+cd "${ARENA_WS_DIR}/src/deps"
+git clone https://github.com/ros-navigation/navigation2.git --branch $ARENA_ROS_VERSION
+
+# Run rosdep from the workspace root to properly scan deps
+cd "${ARENA_WS_DIR}"
+rosdep install -y \
+  --from-paths src/deps \
+  --ignore-src
+. "${ARENA_WS_DIR}/src/arena/arena-rosnav/tools/colcon_build"
+
+# intall SLAM 
+
+git clone https://github.com/SteveMacenski/slam_toolbox.git --branch $ARENA_ROS_VERSION
+rosdep install -q -y -r --from-paths src/deps --ignore-src
+
 # == install jackal deps for ros2 ==
 
 echo "Cloning jackal repository contents from foxy-devel branch..."
@@ -190,7 +222,7 @@ rm -rf temp_jackal LICENSE README.md .gitignore .github
 
 # == build ==
 cd "${ARENA_WS_DIR}"
-ln -s src/arena/arena-rosnav/tools/colcon_build .
+. "${ARENA_WS_DIR}/src/arena/arena-rosnav/tools/colcon_build"
 # == optional installers ==
 
 cd "${ARENA_WS_DIR}/src/arena/arena-rosnav/installers"
