@@ -99,7 +99,7 @@ def generate_launch_description():
                 "origin": reference.param_value(typing.List[float]),
             }
         ],
-        output="screen",
+        output="log",
         condition=launch.conditions.UnlessCondition(headless.substitution),
     )
 

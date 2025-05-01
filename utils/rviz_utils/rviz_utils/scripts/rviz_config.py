@@ -307,7 +307,7 @@ def main():
                     name="rviz2",
                     arguments=['-d', config_file],
                     parameters=[{"use_sim_time": True}],
-                    output="screen",
+                    output="log",
                 )
             ])
         )

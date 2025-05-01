@@ -94,7 +94,7 @@ class _PedestrianHelper:
 
         sdf = f"""<?xml version="1.0" ?>
         <sdf version="1.9">
-            <actor name="{agent_config.name}_FFRTOIESO">
+            <actor name="{agent_config.name}">
                 <pose>{agent_config.position.x} {agent_config.position.y} {cls._HEIGHTS.get(agent_config.skin, 1.0)} 0 0 {agent_config.yaw}</pose>
 
                 <skin>
@@ -405,16 +405,16 @@ class HunavManager(DummyEntityManager):
                 }
                 self._logger.info(f"self._pedestrians{self._pedestrians}")
 
-            #     # Create and spawn visual model
-            #     sdf = _PedestrianHelper.create_sdf(hunav_obstacle)
-            #     new_obstacle = attrs.evolve(
-            #         obstacle,
-            #         model=obstacle.model.override(
-            #             ModelType.SDF,
-            #             lambda model: model.replace(description=sdf), noload=True)
-            #     )
+                # Create and spawn visual model
+                sdf = _PedestrianHelper.create_sdf(hunav_obstacle)
+                new_obstacle = attrs.evolve(
+                    obstacle,
+                    model=obstacle.model.override(
+                        ModelType.SDF,
+                        lambda model: model.replace(description=sdf), noload=True)
+                )
 
-            #     return new_obstacle
+                return new_obstacle
 
             return None
 

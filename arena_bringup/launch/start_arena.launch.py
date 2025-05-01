@@ -146,6 +146,8 @@ def generate_launch_description():
                     'reference': str(reference),
                     'prefix': prefix,
                     'parameter_file': os.path.join(get_package_share_directory('arena_bringup'), 'configs', 'task_generator.yaml'),
+                    'ros-args': '',
+                    'log-level': 'error',  ###################### stop annoying outputs  
                 }.items(),
             )
         ])
