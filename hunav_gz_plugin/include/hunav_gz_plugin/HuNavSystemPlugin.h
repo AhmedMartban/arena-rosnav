@@ -114,7 +114,9 @@ public:
   // void goalCallback(const geometry_msgs::msg::PoseStamped::SharedPtr msg);
 
 private:
+  //obstacles and frames
   std::shared_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
+  std::vector<gz::sim::Entity> wall_segments_;
   std::vector<geometry_msgs::msg::Point> wall_points_;
   bool walls_initialized_ =false; 
   /// Helper functions
@@ -124,6 +126,7 @@ private:
   bool getPedestrianStates(gz::sim::EntityComponentManager& _ecm, double _dt);
   bool getRobotState(const gz::sim::EntityComponentManager& _ecm, double _dt);
   void updateGazeboPedestrians(gz::sim::EntityComponentManager& _ecm, const gz::sim::UpdateInfo& _info, const hunav_msgs::msg::Agents& _agents);
+  void detectWallSegments(const gz::sim::EntityComponentManager& _ecm);
 
   void computeLinearVel(const gz::math::Pose3d& prevPose, const gz::math::Pose3d& currentPose, const double dt, gz::math::Vector3d& linearVelocity);
   void computeAngularVel(const gz::math::Pose3d& prevPose, const gz::math::Pose3d& currentPose, const double det, gz::math::Vector3d& angularVelocity);

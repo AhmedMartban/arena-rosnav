@@ -339,12 +339,7 @@ void HuNavSystemPluginIGN::initializeAgents(gz::sim::EntityComponentManager& _ec
       // }
       
       // Store the Wall Data which is coming from the Hunavmanager (store the already initialised closest_obstacles of the Peds from the manager into the variable, to have them still after every reset)
-      if (!agent.closest_obs.empty() && !walls_initialized_) {
-          
-          wall_points_ = agent.closest_obs;
-          walls_initialized_ = true;
-          //RCLCPP_INFO(rosnode_->get_logger(), "Stored %zu wallpoints from agent %s", wall_points_.size(), agent.name.c_str());
-      }
+
       // if(agent.closest_obs.empty()){
       //             RCLCPP_INFO(rosnode_->get_logger(), "CLOSEST OBSTACLES EMPTY !!!");
       // }
@@ -602,8 +597,54 @@ void HuNavSystemPluginIGN::initializeAgents(gz::sim::EntityComponentManager& _ec
 }
 
 
-
-
+void HuNavSystemPluginIGN::detectWallSegments(const gz::sim::EntityComponentManager& _ecm)
+{
+    if (walls_initialized_) return;
+    
+    wall_segments_.clear();
+    wall_points_.clear();  // <-- WICHTIG: Auch wall_points_ clearen!
+    
+    // Suche nach custom_wall_0
+    auto wallEntity = _ecm.EntityByComponents(gz::sim::components::Name("custom_wall_0"));
+    if (!wallEntity) {
+        RCLCPP_WARN_ONCE(rosnode_->get_logger(), "No custom_wall_0 found");
+        return;
+    }
+    
+    // Finde alle wall_segment Entities
+    _ecm.Each<gz::sim::components::Name, gz::sim::components::ParentEntity>(
+        [&](const gz::sim::Entity& _entity, 
+            const gz::sim::components::Name* _name,
+            const gz::sim::components::ParentEntity* _parent) 
+        {
+            // Prüfe ob Parent custom_wall_0 ist
+            if (_parent->Data() != wallEntity) return true;
+            
+            std::string name = _name->Data();
+            if (name.find("wall_segment") != std::string::npos) {
+                wall_segments_.push_back(_entity);
+                
+                // Füge auch einen initialen Punkt für wall_points_ hinzu
+                gz::math::Pose3d wall_pose = worldPose(_entity, _ecm);
+                geometry_msgs::msg::Point point;
+                point.x = wall_pose.Pos().X();
+                point.y = wall_pose.Pos().Y();
+                point.z = 0.4;
+                wall_points_.push_back(point);
+                
+                RCLCPP_INFO(rosnode_->get_logger(), 
+                    "Found wall segment: %s at [%.2f, %.2f]", 
+                    name.c_str(), point.x, point.y);
+            }
+            
+            return true;
+        });
+    
+    walls_initialized_ = !wall_segments_.empty();
+    RCLCPP_INFO(rosnode_->get_logger(), 
+        "Wall detection complete. Found %zu wall segments, %zu initial points", 
+        wall_segments_.size(), wall_points_.size());
+}
 
 
 /////////////////////////////////////////////////
@@ -613,7 +654,8 @@ void HuNavSystemPluginIGN::initializeAgents(gz::sim::EntityComponentManager& _ec
  */
 void HuNavSystemPluginIGN::getObstacles(const gz::sim::EntityComponentManager& _ecm)
 {
-
+   // Detect walls first
+  detectWallSegments(_ecm);
   //for(auto const& [agentEntity, agent] : pedestrians_)
   for (const auto& p : pedestrians_)
   {
@@ -622,7 +664,13 @@ void HuNavSystemPluginIGN::getObstacles(const gz::sim::EntityComponentManager& _
     // ignition::math::Vector3d closest_obs2;
     //pedestrians_[p.first].closest_obs.clear();
   
-    pedestrians_[p.first].closest_obs = wall_points_;  // No Clearing instead start with the walls as the base set of obstacles
+    // Debug: Wall points am Anfang
+    RCLCPP_INFO_ONCE(rosnode_->get_logger(), 
+        "Agent %s starting with %zu wall points", 
+        p.second.name.c_str(), wall_points_.size());
+        
+    pedestrians_[p.first].closest_obs = wall_points_; // No Clearing instead start with the walls as the base set of obstacles
+      
     //RCLCPP_INFO(rosnode_->get_logger(), "Stored %zu wallpoints from agent", wall_points_.size());
 
     //gz::math::Pose3d actor_pose = worldPose(p.first, _ecm);
@@ -634,6 +682,100 @@ void HuNavSystemPluginIGN::getObstacles(const gz::sim::EntityComponentManager& _
       continue;
     }
     auto actor_pose = traj->Data();
+
+
+
+    // Verarbeite die Wandsegmente
+    for (const auto& wall_segment : wall_segments_)
+    {
+        // Hole Name des Segments
+        auto nameComp = _ecm.Component<gz::sim::components::Name>(wall_segment);
+        if (!nameComp) continue;
+        
+        // Hole WorldPose des Segments
+        gz::math::Pose3d wall_pose = worldPose(wall_segment, _ecm);
+        
+        // Finde die collision child entity
+        gz::sim::Entity collisionEntity = gz::sim::kNullEntity;
+        _ecm.Each<gz::sim::components::Name, gz::sim::components::ParentEntity>(
+            [&](const gz::sim::Entity& _entity,
+                const gz::sim::components::Name* _name,
+                const gz::sim::components::ParentEntity* _parent)
+            {
+                if (_parent->Data() == wall_segment && _name->Data() == "collision") {
+                    collisionEntity = _entity;
+                }
+                return true;
+            });
+        
+        if (collisionEntity == gz::sim::kNullEntity) {
+            RCLCPP_WARN(rosnode_->get_logger(), 
+                "Wall segment %s has no collision entity!", 
+                nameComp->Data().c_str());
+            continue;
+        }
+        
+        // Hole Geometry von collision
+        auto geometry = _ecm.Component<gz::sim::components::Geometry>(collisionEntity);
+        if (!geometry) {
+            RCLCPP_WARN(rosnode_->get_logger(), 
+                "Wall segment %s collision entity %d has no geometry!", 
+                nameComp->Data().c_str(), collisionEntity);
+            continue;
+        }
+        
+        if (geometry->Data().Type() == sdf::GeometryType::BOX)
+        {
+            auto box = geometry->Data().BoxShape();
+            double length = box->Size().X();
+            double thickness = box->Size().Y();
+            double height = box->Size().Z();
+            
+            // Generiere Punkte entlang der Wand
+            double spacing = 0.01;  // Alle 30cm ein Punkt
+            int numPoints = static_cast<int>(length / spacing) + 1;
+            int addedPoints = 0;
+            
+            for (int i = 0; i < numPoints; ++i)
+            {
+                double offset = -length/2.0 + i * spacing;
+                
+                // Transformiere basierend auf Wandorientierung
+                double angle = wall_pose.Rot().Yaw();
+                double x = wall_pose.Pos().X() + offset * cos(angle);
+                double y = wall_pose.Pos().Y() + offset * sin(angle);
+                
+                // Berechne Distanz zum Actor
+                double dist = sqrt(pow(x - actor_pose.Pos().X(), 2) + 
+                                  pow(y - actor_pose.Pos().Y(), 2));
+                
+                if (dist < 5.0) {
+                    geometry_msgs::msg::Point point;
+                    point.x = x;
+                    point.y = y;
+                    point.z = 0.0;
+                    pedestrians_[p.first].closest_obs.push_back(point);
+                    addedPoints++;
+                }
+            }
+            
+            if(firstObstaclePrint_) {
+                RCLCPP_INFO(rosnode_->get_logger(), 
+                    "Wall %s: Length=%.2f, Angle=%.2f, Added %d/%d obstacle points for actor %s", 
+                    nameComp->Data().c_str(), length, wall_pose.Rot().Yaw(), 
+                    addedPoints, numPoints, 
+                    pedestrians_[p.first].name.c_str());
+            }
+        }
+    }
+
+    // Debug: Nach Wall-Processing
+    if(firstObstaclePrint_) {
+        RCLCPP_INFO(rosnode_->get_logger(), 
+            "After wall processing: Actor %s has %zu obstacle points", 
+            pedestrians_[p.first].name.c_str(), 
+            pedestrians_[p.first].closest_obs.size());
+    }
 
     // we create a default bounding box for the actor
     auto actor_size = gz::math::Vector3d(0.35, 0.35, 1.65); 
@@ -763,6 +905,15 @@ void HuNavSystemPluginIGN::getObstacles(const gz::sim::EntityComponentManager& _
         }
       }
     }
+    
+    // Final Debug
+    if(firstObstaclePrint_) {
+        RCLCPP_INFO(rosnode_->get_logger(), 
+            "Final: Actor %s has %zu total obstacle points", 
+            pedestrians_[p.first].name.c_str(), 
+            pedestrians_[p.first].closest_obs.size());
+    }
+    
     firstObstaclePrint_ = false;
 
     // // we do not consider obstacles further than 10 m
@@ -853,6 +1004,7 @@ bool HuNavSystemPluginIGN::getPedestrianStates(gz::sim::EntityComponentManager& 
   {
     //gz::math::Pose3d pose = worldPose(pedEntity, _ecm);
     //gz::math::Pose3d pose = _ecm.Component<gz::sim::components::Pose>(pedEntity)->Data();
+  
     auto traj = _ecm.Component<gz::sim::components::TrajectoryPose>(pedEntity);
     if(!traj)
     {

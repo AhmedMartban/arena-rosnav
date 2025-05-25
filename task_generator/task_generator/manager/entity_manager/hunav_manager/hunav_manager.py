@@ -84,7 +84,14 @@ class _PedestrianHelper:
             while not re.match('arena.*_ws', os.path.basename(workspace_root)):
                 workspace_root = os.path.dirname(workspace_root)
             return workspace_root
-
+            
+        # Temporärer Logger für Debug
+        import rclpy
+        if not rclpy.ok():
+            rclpy.init()
+        temp_node = rclpy.create_node('temp_debug_node')
+        logger = temp_node.get_logger()
+        
         # Construct paths
         mesh_path = os.path.join(
             get_workspace_root(),
@@ -97,12 +104,7 @@ class _PedestrianHelper:
             'src/deps/hunav/hunav_sim/hunav_rviz2_panel/meshes/models/walk.dae'
         )
 
-        # Temporärer Logger für Debug
-        import rclpy
-        if not rclpy.ok():
-            rclpy.init()
-        temp_node = rclpy.create_node('temp_debug_node')
-        logger = temp_node.get_logger()
+
 
                 # DEBUG
         logger.warn(f"DEBUG: Looking for animation at: {animation_path}")
@@ -132,7 +134,7 @@ class _PedestrianHelper:
                 <plugin name="HuNavSystemPluginIGN" filename="libHuNavSystemPluginIGN.so">
                     <update_rate>1000.0</update_rate>
                     <robot_name>jackal</robot_name>
-                    <use_gazebo_obs>false</use_gazebo_obs>
+                    <use_gazebo_obs>true</use_gazebo_obs>
                     <global_frame_to_publish>map</global_frame_to_publish>
                     <use_navgoal_to_start>false</use_navgoal_to_start>
                     <navgoal_topic>goal_pose</navgoal_topic>
