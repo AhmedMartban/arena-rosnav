@@ -18,9 +18,14 @@ set(msg_files
   "msg/Pedestrians.msg"
 )
 
+set(srv_files
+  "srv/DeleteActors.srv"
+)
+
 # Generate messages
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
+  ${srv_files}
   DEPENDENCIES builtin_interfaces geometry_msgs std_msgs
 )
 

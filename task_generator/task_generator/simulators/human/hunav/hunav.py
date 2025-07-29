@@ -9,9 +9,9 @@ from ament_index_python.packages import get_package_share_directory
 from arena_rclpy_mixins.shared import Namespace
 from geometry_msgs.msg import Point
 from hunav_msgs.msg import Agent, AgentBehavior, Agents, WallSegment
-from hunav_msgs.srv import (ComputeAgent, ComputeAgents, DeleteActors,
-                            GetAgents, GetWalls, MoveAgent, ResetAgents)
+from hunav_msgs.srv import (ComputeAgent, ComputeAgents, GetAgents, GetWalls, MoveAgent, ResetAgents)
 from arena_people_msgs.msg import Pedestrian, Pedestrians
+from arena_people_msgs.srv import DeleteActors
 
 from task_generator.constants import Constants
 from task_generator.shared import (Model, ModelType, ModelWrapper, Obstacle,
@@ -545,17 +545,17 @@ class HunavHumanSimulator(DummyHumanSimulator):
             if response:
                 self._logger.debug(f"Successfully registered {len(response.updated_agents.agents)} agents")
 
-                # Update local agents with response data
-                for updated_agent in response.updated_agents.agents:
+                # # Update local agents with response data
+                # for updated_agent in response.updated_agents.agents:
 
-                    for i, agent in enumerate(self._agents_container.agents):
-                        if agent.id == updated_agent.id:
-                            self._agents_container.agents[i] = updated_agent
-                            break
+                #     for i, agent in enumerate(self._agents_container.agents):
+                #         if agent.id == updated_agent.id:
+                #             self._agents_container.agents[i] = updated_agent
+                #             break
 
-                    # Update pedestrians dictionary if exists
-                    if updated_agent.id in self._pedestrians:
-                        self._pedestrians[updated_agent.id]['agent'] = updated_agent
+                #     # Update pedestrians dictionary if exists
+                #     if updated_agent.id in self._pedestrians:
+                #         self._pedestrians[updated_agent.id]['agent'] = updated_agent
 
                 if self._simulator_type != Constants.SimSimulator.GAZEBO:
                     self._logger.debug("Non-Gazebo detected - starting movement timer")
@@ -596,19 +596,20 @@ class HunavHumanSimulator(DummyHumanSimulator):
         """Remove all spawned pedestrians from simulation safely"""
         self._logger.info(f"=== REMOVING {len(self._pedestrians)} PEDESTRIANS ===")
 
-        # Phase 1: Reset HuNav agents FIRST
+        # Phase 1: Delete Actors from ECM
         success = self._call_delete_actors_service()
 
         if not success:
-            self._logger.error("Failed to delete  HuNav agents from ECM - continuing anyway")
+            self._logger.error("Failed to delete  Pedestrians from ECM - continuing anyway")
             # Don't return False - continue with deletion
 
         # Phase 2: Clear local agents container
         self._agents_container = Agents()
         self._get_agents_container = Agents()
+        self._arena_pedestrians_container = Pedestrians()
         self._logger.debug("Cleared local agents container")
 
-        # Phase 3: Call plugin to delete actors from ECM
+        # Phase 3: Reset registered Agents from Hunavsim
         success = self._reset_hunav_agents()
         if not success:
             self._logger.error("Failed to reset HuNav agents - continuing anyway")
@@ -658,12 +659,12 @@ class HunavHumanSimulator(DummyHumanSimulator):
 
             request = DeleteActors.Request()
 
-            self._logger.debug("Calling delete_actors service...")
+            self._logger.error("Calling delete_actors service...")
 
             response = self._delete_actors_client.call(request)
 
             if response and response.success:
-                self._logger.info(f"Successfully deleted {response.deleted_count} actors")
+                self._logger.error(f"Successfully deleted {response.deleted_count} actors")
                 return True
             else:
                 self._logger.error("Delete actors service failed")
@@ -682,6 +683,11 @@ class HunavHumanSimulator(DummyHumanSimulator):
         self._agents_container.agents.clear()
         self._arena_pedestrians_container.pedestrians.clear()
 
+  
+        self._last_updated_agents = None
+        self._last_smooth_yaws = {}
+        self._agent_previous_orientations = {}
+
         # Stop and cleanup movement timer if running (for non-gazebo simulators)
         if hasattr(self, '_update_timer') and self._update_timer:
             try:
@@ -692,10 +698,13 @@ class HunavHumanSimulator(DummyHumanSimulator):
                 self._logger.error(f"Error stopping movement timer: {e}")
 
         # if hasattr(self, '_arena_peds_timer') and self._arena_peds_timer:
-        #     self._arena_peds_timer.destroy()
-        #     self._arena_peds_timer = None
-
-        self._logger.debug("All local data structures cleared")
+        #     try:
+        #         self._arena_peds_timer.destroy()
+        #         self._arena_peds_timer = None
+        #         self._logger.debug("Arena peds timer stopped and cleaned up")
+        #         self._logger.debug("All local data structures cleared")
+        #     except Exception as e:
+        #         self._logger.error(f"Error stopping arena_peds timer: {e}")
 
     def _create_agent_msg(self, hunav_obstacle: HunavDynamicObstacle) -> Agent:
         self._logger.info(f"Preparing agent {hunav_obstacle.name} (ID: {hunav_obstacle.id})")
