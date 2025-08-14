@@ -15,6 +15,8 @@ from task_generator.simulators.human.dummy import DummyHumanSimulator
 from task_generator.simulators.sim import BaseSim
 from task_generator.constants import Constants
 
+from arena_people_msgs.msg import Pedestrian, Pedestrians
+from arena_people_msgs.srv import DeleteActors
 
 from .trajectory_loader import SimpleTrajectoryLoader
 
@@ -120,13 +122,34 @@ class _PedestrianHelper:
 class SocNavHumanSimulator(DummyHumanSimulator):
     """Minimal SocNav Human Simulator - Starting Point"""
 
+    #SERVICE_DELETE_ACTORS = 'delete_actors' will be added soon 
+
     def __init__(self, namespace: Namespace, simulator: BaseSim):
         super().__init__(namespace, simulator)
         self._trajectory_loader = SimpleTrajectoryLoader()
         self._logger.info("SocNav Human Simulator initialized (minimal version)")
         self._logger.info("Ready for step-by-step integration")
 
-        self._load_episode('hotel')  # Load default episode, can be changed later
+        # Setup services
+        self._logger.debug("Setting up services...")
+        # setup_success = self._setup_services()            # will be added soon
+        # if not setup_success:
+        #     self._logger.error("Service setup failed!")
+        # else:
+        #     self._logger.error("Services setup complete")
+        arena_peds_success = self._setup_arena_peds_publisher()
+        if arena_peds_success:
+            self._test_arena_peds_publisher()
+            self._logger.error("Arena peds publisher setup success!")
+        else:
+            self._logger.error("Arena peds publisher setup failed!")
+
+        self._logger.debug("Waiting for services to be ready...")
+        #time.sleep(2.0)
+        self._logger.debug("Service wait complete")
+
+        self._logger.info("=== Socnav INIT COMPLETE ===")
+        self._load_episode('hotel')  # Load default episode
     # =====================================================
     # Required Abstract Methods (from DummyHumanSimulator)
     # =====================================================
@@ -137,62 +160,82 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         return self.node.conf.Arena.SIM.value
 
 
-    def _setup_services(self):
-        """Initialize all required services with debug logging"""
-        self._logger.info("=== SETUP_SERVICES START ===")
+    # def _setup_services(self):                                        # will be added soon
+    #     """Initialize all required services with debug logging"""
+    #     self._logger.error("=== SETUP_SERVICES START ===")
 
-        # Debug namespace information
-        self._logger.debug(f"Node namespace: {self.node.get_namespace()}")
-        self._logger.debug(f"Task generator namespace: {self._namespace}")
+    #     # Debug namespace information
+    #     self._logger.error(f"Node namespace: {self.node.get_namespace()}")
+    #     self._logger.error(f"Task generator namespace: {self._namespace}")
 
-        # Create service names with full namespace path
-        service_names = {
-            'delete_actors': self.node.service_namespace(self.SERVICE_DELETE_ACTORS)
+    #     # Create service names with full namespace path
+    #     service_names = {
+    #         'delete_actors': self.node.service_namespace(self.SERVICE_DELETE_ACTORS)
 
-        }
+    #     }
 
-        # Log service creation attempts
-        for service, full_name in service_names.items():
-            self._logger.info(f"Creating service client for {service} at: {full_name}")
+    #     # Log service creation attempts
+    #     for service, full_name in service_names.items():
+    #         self._logger.info(f"Creating service client for {service} at: {full_name}")
 
 
-        self._logger.debug("Creating delete_actors client...")
-        self._delete_actors_client = self.node.create_client(
-            DeleteActors,
-            service_names['delete_actors'],
-        )
+    #     self._logger.error("Creating delete_actors client...")
+    #     self._delete_actors_client = self.node.create_client(
+    #         DeleteActors,
+    #         service_names['delete_actors'],
+    #     )
 
-        # Wait for Services
-        required_services = [
-            (self._delete_actors_client, 'delete_actors')
-        ]
+    #     # Wait for Services
+    #     required_services = [
+    #         (self._delete_actors_client, 'delete_actors')
+    #     ]
 
-        max_attempts = float('inf')
-        for client, name in required_services:
-            attempts = 0
-            self._logger.debug(f"Waiting for service {name}...")
+    #     max_attempts = float('inf')
+    #     for client, name in required_services:
+    #         attempts = 0
+    #         self._logger.error(f"Waiting for service {name}...")
 
-            while attempts < max_attempts:
-                if client.wait_for_service(timeout_sec=2.0):
-                    self._logger.debug(f'Service {name} is available')
-                    break
-                attempts += 1
-                self._logger.debug(
-                    f'Waiting for service {name} (attempt {attempts}/{max_attempts})\n'
-                    f'Looking for service at: {service_names[name]}'
-                )
+    #         while attempts < max_attempts:
+    #             if client.wait_for_service(timeout_sec=2.0):
+    #                 self._logger.debug(f'Service {name} is available')
+    #                 break
+    #             attempts += 1
+    #             self._logger.debug(
+    #                 f'Waiting for service {name} (attempt {attempts}/{max_attempts})\n'
+    #                 f'Looking for service at: {service_names[name]}'
+    #             )
 
-            if attempts >= max_attempts:
-                self._logger.error(
-                    f'Service {name} not available after {max_attempts} attempts\n'
-                    f'Was looking for service at: {service_names[name]}'
-                )
-                self._logger.error("=== SETUP_SERVICES FAILED ===")
-                return False
+    #         if attempts >= max_attempts:
+    #             self._logger.error(
+    #                 f'Service {name} not available after {max_attempts} attempts\n'
+    #                 f'Was looking for service at: {service_names[name]}'
+    #             )
+    #             self._logger.error("=== SETUP_SERVICES FAILED ===")
+    #             return False
 
-        self._logger.info("=== SETUP_SERVICES COMPLETE ===")
-        return True
+    #     self._logger.error("=== SETUP_SERVICES COMPLETE ===")
+    #     return True
 
+    def _setup_arena_peds_publisher(self):
+        """Setup arena_peds publisher"""
+        try:
+            from arena_people_msgs.msg import Pedestrians
+            
+            self._logger.error("=== SETTING UP ARENA PEDS PUBLISHER ===")
+            
+            # Create publisher
+            self._arena_peds_publisher = self.node.create_publisher(
+                Pedestrians,
+                self._namespace('arena_peds'),
+                10
+            )
+            
+            self._logger.error("Arena peds publisher created successfully")
+            return True
+            
+        except Exception as e:
+            self._logger.error(f"Arena peds publisher setup failed: {e}")
+            return False
 
     def _load_episode(self, episode_name: str = "hotel"):
         """Load trajectory episode from CSV"""
@@ -204,10 +247,6 @@ class SocNavHumanSimulator(DummyHumanSimulator):
                 self._episode_loaded = True
                 stats = self._trajectory_loader.get_stats()
                 self._logger.error(f"Episode loaded successfully: {stats}")
-
-                trajectories = self._trajectory_loader.get_trajectories()
-                self._logger.error(f"Loaded {len(trajectories)} trajectories for episode: {episode_name}")
-                self._logger.error(f"Total frames: {self._trajectory_loader.total_frames}, Total pedestrians: {self._trajectory_loader.total_pedestrians}")
                 return True
             else:
                 self._logger.error(f"Failed to load episode: {episode_name}")
@@ -218,13 +257,46 @@ class SocNavHumanSimulator(DummyHumanSimulator):
             return False
 
 
-
+    def _test_arena_peds_publisher(self):
+        """Test arena_peds publisher with empty message"""
+        try:
+            from arena_people_msgs.msg import Pedestrians
+            
+            self._logger.error("=== TESTING ARENA PEDS PUBLISHER ===")
+            
+            # Create empty message
+            empty_msg = Pedestrians()
+            empty_msg.header.frame_id = "map"
+            empty_msg.header.stamp = self.node.get_clock().now().to_msg()
+            
+            # Publish
+            self._arena_peds_publisher.publish(empty_msg)
+            
+            self._logger.error("Successfully published empty arena_peds message")
+            
+        except Exception as e:
+            self._logger.error(f"Arena peds publisher test failed: {e}")
 
 
 
     #TODO: Create arena message for pedestrians 
 
     #TODO: Arena_peds Publisher 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
