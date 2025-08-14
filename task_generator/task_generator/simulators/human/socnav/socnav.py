@@ -13,20 +13,222 @@ from arena_rclpy_mixins.shared import Namespace
 from task_generator.shared import DynamicObstacle, Obstacle
 from task_generator.simulators.human.dummy import DummyHumanSimulator
 from task_generator.simulators.sim import BaseSim
+from task_generator.constants import Constants
 
+
+from .trajectory_loader import SimpleTrajectoryLoader
+
+class _PedestrianHelper:
+
+
+
+    _SKIN_TYPES = {
+        0: 'elegant_man.dae',
+        1: 'casual_man.dae',
+        2: 'elegant_woman.dae',
+        3: 'regular_man.dae',
+        4: 'worker_man.dae',
+        5: 'walk.dae'
+    }
+
+
+    @classmethod
+    def plugin_entity(cls, namespace: str) -> Obstacle:
+
+        sdf_content = f"""<?xml version="1.0" ?>
+            <sdf version="1.9">
+                <model name="human_plugin">
+                    <static>true</static>
+                    <link name="empty">
+                        <visual name="visual">
+                            <geometry>
+                                <box>
+                                    <size>0.01 0.01 0.01</size>
+                                </box>
+                            </geometry>
+                        </visual>
+                    </link>
+                    <plugin name="HumanSystemPlugin" filename="libHumanSystemPlugin.so">
+                        <update_rate>1000.0</update_rate>
+                        <namespace>{namespace}</namespace>
+                        <global_frame_to_publish>map</global_frame_to_publish>
+                        <pedestrians_topic>arena_peds</pedestrians_topic>
+                    </plugin>
+                </model>
+            </sdf>"""
+
+        return Obstacle(
+            name="human_plugin",
+            pose=Pose(Position(x=0.0, y=0.0, z=-1.0)),
+            model=ModelWrapper.Constant("human_plugin", {
+                ModelType.SDF: Model(
+                    type=ModelType.SDF,
+                    name="human_plugin",
+                    description=sdf_content,
+                    path="",
+                )
+            })
+        )
+
+
+
+    ###!! anpassen: SocNavDynamicObstacle? und init positions anpassen 
+    # @classmethod
+    # def create_sdf(cls, agent_config: HunavDynamicObstacle) -> str:
+    #     """Create SDF description for pedestrian using gz-sim actor format"""
+
+    #     # Get skin type
+    #     skin_type = cls._SKIN_TYPES.get(agent_config.skin, 'casual_man.dae')
+
+    #     # Animation mapping based on behavior
+    #     animation_file = '../models/walk.dae'  # temp
+
+    #     # Construct paths
+    #     mesh_path = os.path.join(
+    #         get_package_share_directory('hunav_rviz2_panel'),
+    #         'meshes/models',
+    #         skin_type
+    #     )
+
+    #     animation_path = os.path.join(
+    #         get_package_share_directory('hunav_rviz2_panel'),
+    #         'meshes/animations',
+    #         animation_file
+    #     )
+
+    #     # Create the SDF
+    #     sdf = f"""<?xml version="1.0" ?>
+    #     <sdf version="1.9">
+    #         <actor name="{agent_config.name}">
+    #             <pose>{agent_config.init_pose.x} {agent_config.init_pose.y} {cls._HEIGHTS.get(agent_config.skin, 1.0)} 0 0 {agent_config.yaw}</pose>
+
+    #             <skin>
+    #                 <filename>{mesh_path}</filename>
+    #                 <scale>1.0</scale>
+    #             </skin>
+
+    #             <animation name="walking">
+    #                 <filename>{animation_path}</filename>
+    #                 <scale>1.0</scale>
+    #                 <interpolate_x>true</interpolate_x>
+    #             </animation>
+    #         </actor>
+    #     </sdf>"""
+    #     return sdf
+        
 
 class SocNavHumanSimulator(DummyHumanSimulator):
     """Minimal SocNav Human Simulator - Starting Point"""
 
     def __init__(self, namespace: Namespace, simulator: BaseSim):
         super().__init__(namespace, simulator)
-        
+        self._trajectory_loader = SimpleTrajectoryLoader()
         self._logger.info("SocNav Human Simulator initialized (minimal version)")
         self._logger.info("Ready for step-by-step integration")
 
+        self._load_episode('hotel')  # Load default episode, can be changed later
     # =====================================================
     # Required Abstract Methods (from DummyHumanSimulator)
     # =====================================================
+
+    @property
+    def _simulator_type(self) -> Constants.SimSimulator:
+        """Detect which simulator is being used"""
+        return self.node.conf.Arena.SIM.value
+
+
+    def _setup_services(self):
+        """Initialize all required services with debug logging"""
+        self._logger.info("=== SETUP_SERVICES START ===")
+
+        # Debug namespace information
+        self._logger.debug(f"Node namespace: {self.node.get_namespace()}")
+        self._logger.debug(f"Task generator namespace: {self._namespace}")
+
+        # Create service names with full namespace path
+        service_names = {
+            'delete_actors': self.node.service_namespace(self.SERVICE_DELETE_ACTORS)
+
+        }
+
+        # Log service creation attempts
+        for service, full_name in service_names.items():
+            self._logger.info(f"Creating service client for {service} at: {full_name}")
+
+
+        self._logger.debug("Creating delete_actors client...")
+        self._delete_actors_client = self.node.create_client(
+            DeleteActors,
+            service_names['delete_actors'],
+        )
+
+        # Wait for Services
+        required_services = [
+            (self._delete_actors_client, 'delete_actors')
+        ]
+
+        max_attempts = float('inf')
+        for client, name in required_services:
+            attempts = 0
+            self._logger.debug(f"Waiting for service {name}...")
+
+            while attempts < max_attempts:
+                if client.wait_for_service(timeout_sec=2.0):
+                    self._logger.debug(f'Service {name} is available')
+                    break
+                attempts += 1
+                self._logger.debug(
+                    f'Waiting for service {name} (attempt {attempts}/{max_attempts})\n'
+                    f'Looking for service at: {service_names[name]}'
+                )
+
+            if attempts >= max_attempts:
+                self._logger.error(
+                    f'Service {name} not available after {max_attempts} attempts\n'
+                    f'Was looking for service at: {service_names[name]}'
+                )
+                self._logger.error("=== SETUP_SERVICES FAILED ===")
+                return False
+
+        self._logger.info("=== SETUP_SERVICES COMPLETE ===")
+        return True
+
+
+    def _load_episode(self, episode_name: str = "hotel"):
+        """Load trajectory episode from CSV"""
+        try:
+            self._logger.error(f"Loading SocNav episode: {episode_name}")
+            
+            success = self._trajectory_loader.load_csv(episode_name)
+            if success:
+                self._episode_loaded = True
+                stats = self._trajectory_loader.get_stats()
+                self._logger.error(f"Episode loaded successfully: {stats}")
+
+                trajectories = self._trajectory_loader.get_trajectories()
+                self._logger.error(f"Loaded {len(trajectories)} trajectories for episode: {episode_name}")
+                self._logger.error(f"Total frames: {self._trajectory_loader.total_frames}, Total pedestrians: {self._trajectory_loader.total_pedestrians}")
+                return True
+            else:
+                self._logger.error(f"Failed to load episode: {episode_name}")
+                return False
+                
+        except Exception as e:
+            self._logger.error(f"Error loading episode: {e}")
+            return False
+
+
+
+
+
+
+    #TODO: Create arena message for pedestrians 
+
+    #TODO: Arena_peds Publisher 
+
+
+
+
 
     def _spawn_obstacles_impl(
         self,
