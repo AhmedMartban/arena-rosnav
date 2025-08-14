@@ -129,7 +129,9 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         self._trajectory_loader = SimpleTrajectoryLoader()
         self._logger.info("SocNav Human Simulator initialized (minimal version)")
         self._logger.info("Ready for step-by-step integration")
-
+        
+        self._logger.error("=== LOADING EPISODE FIRST ===")
+        self._load_episode('hotel')
         # Setup services
         self._logger.debug("Setting up services...")
         # setup_success = self._setup_services()            # will be added soon
@@ -149,7 +151,6 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         self._logger.debug("Service wait complete")
 
         self._logger.info("=== Socnav INIT COMPLETE ===")
-        self._load_episode('hotel')  # Load default episode
     # =====================================================
     # Required Abstract Methods (from DummyHumanSimulator)
     # =====================================================
@@ -258,30 +259,69 @@ class SocNavHumanSimulator(DummyHumanSimulator):
 
 
     def _test_arena_peds_publisher(self):
-        """Test arena_peds publisher with empty message"""
+        '""Test the arena_peds publisher by publishing real pedestrians from the trajectory loader"""'
         try:
-            from arena_people_msgs.msg import Pedestrians
+            self._logger.error("=== TESTING REAL PEDESTRIAN PUBLISHING ===")
             
-            self._logger.error("=== TESTING ARENA PEDS PUBLISHER ===")
+            # Get pedestrians at frame 1
+            frame_1_peds = self._trajectory_loader.get_pedestrians_at_frame(1)
+            self._logger.error(f"Frame 1 has {len(frame_1_peds)} pedestrians")
             
-            # Create empty message
-            empty_msg = Pedestrians()
-            empty_msg.header.frame_id = "map"
-            empty_msg.header.stamp = self.node.get_clock().now().to_msg()
+            # Create pedestrians message
+            peds_msg = Pedestrians()
+            peds_msg.header.frame_id = "map"
+            peds_msg.header.stamp = self.node.get_clock().now().to_msg()
             
+            # Add each pedestrian
+            for ped_id, (x, y) in frame_1_peds.items():
+                arena_ped = self._create_arena_pedestrian(ped_id, x, y)
+                peds_msg.pedestrians.append(arena_ped)
+                
             # Publish
-            self._arena_peds_publisher.publish(empty_msg)
+            self._arena_peds_publisher.publish(peds_msg)
             
-            self._logger.error("Successfully published empty arena_peds message")
+            self._logger.error(f"Published {len(peds_msg.pedestrians)} real pedestrians!")
+            
+            # Log first pedestrian details
+            if peds_msg.pedestrians:
+                first_ped = peds_msg.pedestrians[0]
+                self._logger.error(f"First ped: {first_ped.name} at ({first_ped.position.position.x}, {first_ped.position.position.y})")
             
         except Exception as e:
-            self._logger.error(f"Arena peds publisher test failed: {e}")
+            self._logger.error(f"Real pedestrian test failed: {e}")
 
 
+    def _create_arena_pedestrian(self, ped_id: int, x: float, y: float) -> Pedestrian:
+        """Create arena_people_msgs.Pedestrian (separate from hunav)"""
+        
+        arena_ped = Pedestrian()
+        
+        # Basic info
+        arena_ped.name = f"socnav_ped_{ped_id}"
+        arena_ped.id = ped_id
+        
+        # Position
+        arena_ped.position.position.x = x
+        arena_ped.position.position.y = y
+        arena_ped.position.position.z = 1.25
+        
+        # Simple orientation (facing forward)
+        arena_ped.position.orientation.x = 0.0
+        arena_ped.position.orientation.y = 0.0
+        arena_ped.position.orientation.z = 0.0
+        arena_ped.position.orientation.w = 1.0
+        
+        # Zero velocity for now
+        arena_ped.twist.linear.x = 0.0
+        arena_ped.twist.linear.y = 0.0
+        arena_ped.twist.linear.z = 0.0
+        arena_ped.twist.angular.z = 0.0
+        
+        # Walking animation
+        arena_ped.animation_state = Pedestrian.WALKING
+        
+        return arena_ped
 
-    #TODO: Create arena message for pedestrians 
-
-    #TODO: Arena_peds Publisher 
 
 
 
