@@ -126,10 +126,13 @@ class SocNavHumanSimulator(DummyHumanSimulator):
 
     def __init__(self, namespace: Namespace, simulator: BaseSim):
         super().__init__(namespace, simulator)
+        self._current_frame = 1
+        self._simulation_running = False
+        self._active_pedestrians = {}  # {ped_id: pedestrian_data}
         self._trajectory_loader = SimpleTrajectoryLoader()
         self._logger.info("SocNav Human Simulator initialized (minimal version)")
         self._logger.info("Ready for step-by-step integration")
-        
+
         self._logger.error("=== LOADING EPISODE FIRST ===")
         self._load_episode('hotel')
         # Setup services
@@ -141,10 +144,8 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         #     self._logger.error("Services setup complete")
         arena_peds_success = self._setup_arena_peds_publisher()
         if arena_peds_success:
-            self._test_arena_peds_publisher()
+            self._start_trajectory_simulation()      
             self._logger.error("Arena peds publisher setup success!")
-        else:
-            self._logger.error("Arena peds publisher setup failed!")
 
         self._logger.debug("Waiting for services to be ready...")
         #time.sleep(2.0)
@@ -220,7 +221,6 @@ class SocNavHumanSimulator(DummyHumanSimulator):
     def _setup_arena_peds_publisher(self):
         """Setup arena_peds publisher"""
         try:
-            from arena_people_msgs.msg import Pedestrians
             
             self._logger.error("=== SETTING UP ARENA PEDS PUBLISHER ===")
             
@@ -237,6 +237,81 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         except Exception as e:
             self._logger.error(f"Arena peds publisher setup failed: {e}")
             return False
+
+
+
+
+    def _start_trajectory_simulation(self):
+        """Start frame-by-frame trajectory simulation"""
+        try:
+            self._logger.error("=== STARTING TRAJECTORY SIMULATION ===")
+            
+            # Reset simulation state
+            self._current_frame = 1
+            self._active_pedestrians = {}
+            self._simulation_running = True
+            
+            # Create timer for 25 fps (0.04 seconds = 25 fps)
+            self._simulation_timer = self.node.create_timer(
+                0.04,  # 25 fps like original data
+                self._simulation_step
+            )
+            
+            self._logger.error("Simulation started at 25 fps")
+            
+        except Exception as e:
+            self._logger.error(f"Failed to start simulation: {e}")
+
+
+    def _simulation_step(self):
+        """Single simulation step - called at 25 fps"""
+        if not self._simulation_running:
+            return
+            
+        try:
+            # Update frame counter
+            self._current_frame += 1
+            
+            # Get pedestrians for current frame
+            current_peds = self._trajectory_loader.get_pedestrians_at_frame(self._current_frame)
+            
+            # Create and publish arena message
+            self._publish_current_frame_pedestrians(current_peds)
+            
+            # Debug output every 25 frames (1 second)
+            if self._current_frame % 25 == 0:
+                self._logger.error(f"Frame {self._current_frame}: {len(current_peds)} pedestrians")
+                
+            # Stop after reasonable time (for testing)
+            if self._current_frame > 15000:  # ~20 seconds at 25 fps
+                self._stop_simulation()
+
+
+        except Exception as e:
+            self._logger.error(f"Simulation step error: {e}")
+
+
+
+    def _publish_current_frame_pedestrians(self, current_peds):
+        """Publish pedestrians for current frame"""
+        try:
+            # Create pedestrians message
+            peds_msg = Pedestrians()
+            peds_msg.header.frame_id = "map"
+            peds_msg.header.stamp = self.node.get_clock().now().to_msg()
+            
+            # Add each pedestrian
+            for ped_id, (x, y) in current_peds.items():
+                arena_ped = self._create_arena_pedestrian(ped_id, x, y)
+                peds_msg.pedestrians.append(arena_ped)
+                
+            # Publish
+            self._arena_peds_publisher.publish(peds_msg)
+            
+        except Exception as e:
+            self._logger.error(f"Failed to publish frame pedestrians: {e}")
+
+
 
     def _load_episode(self, episode_name: str = "hotel"):
         """Load trajectory episode from CSV"""
@@ -258,37 +333,7 @@ class SocNavHumanSimulator(DummyHumanSimulator):
             return False
 
 
-    def _test_arena_peds_publisher(self):
-        '""Test the arena_peds publisher by publishing real pedestrians from the trajectory loader"""'
-        try:
-            self._logger.error("=== TESTING REAL PEDESTRIAN PUBLISHING ===")
-            
-            # Get pedestrians at frame 1
-            frame_1_peds = self._trajectory_loader.get_pedestrians_at_frame(1)
-            self._logger.error(f"Frame 1 has {len(frame_1_peds)} pedestrians")
-            
-            # Create pedestrians message
-            peds_msg = Pedestrians()
-            peds_msg.header.frame_id = "map"
-            peds_msg.header.stamp = self.node.get_clock().now().to_msg()
-            
-            # Add each pedestrian
-            for ped_id, (x, y) in frame_1_peds.items():
-                arena_ped = self._create_arena_pedestrian(ped_id, x, y)
-                peds_msg.pedestrians.append(arena_ped)
-                
-            # Publish
-            self._arena_peds_publisher.publish(peds_msg)
-            
-            self._logger.error(f"Published {len(peds_msg.pedestrians)} real pedestrians!")
-            
-            # Log first pedestrian details
-            if peds_msg.pedestrians:
-                first_ped = peds_msg.pedestrians[0]
-                self._logger.error(f"First ped: {first_ped.name} at ({first_ped.position.position.x}, {first_ped.position.position.y})")
-            
-        except Exception as e:
-            self._logger.error(f"Real pedestrian test failed: {e}")
+
 
 
     def _create_arena_pedestrian(self, ped_id: int, x: float, y: float) -> Pedestrian:
@@ -323,7 +368,12 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         return arena_ped
 
 
-
+    def _stop_simulation(self):
+        """Stop the simulation"""
+        self._simulation_running = False
+        if hasattr(self, '_simulation_timer'):
+            self._simulation_timer.destroy()
+        self._logger.error("Simulation stopped")
 
 
 
@@ -382,3 +432,36 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         """Move robot implementation"""
         self._logger.info("SocNav: move_robot_impl called")
         return True
+
+
+    # def _test_arena_peds_publisher(self):
+    #     '""Test the arena_peds publisher by publishing real pedestrians from the trajectory loader"""'
+    #     try:
+    #         self._logger.error("=== TESTING REAL PEDESTRIAN PUBLISHING ===")
+            
+    #         # Get pedestrians at frame 1
+    #         frame_1_peds = self._trajectory_loader.get_pedestrians_at_frame(1)
+    #         self._logger.error(f"Frame 1 has {len(frame_1_peds)} pedestrians")
+            
+    #         # Create pedestrians message
+    #         peds_msg = Pedestrians()
+    #         peds_msg.header.frame_id = "map"
+    #         peds_msg.header.stamp = self.node.get_clock().now().to_msg()
+            
+    #         # Add each pedestrian
+    #         for ped_id, (x, y) in frame_1_peds.items():
+    #             arena_ped = self._create_arena_pedestrian(ped_id, x, y)
+    #             peds_msg.pedestrians.append(arena_ped)
+                
+    #         # Publish
+    #         self._arena_peds_publisher.publish(peds_msg)
+            
+    #         self._logger.error(f"Published {len(peds_msg.pedestrians)} real pedestrians!")
+            
+    #         # Log first pedestrian details
+    #         if peds_msg.pedestrians:
+    #             first_ped = peds_msg.pedestrians[0]
+    #             self._logger.error(f"First ped: {first_ped.name} at ({first_ped.position.position.x}, {first_ped.position.position.y})")
+            
+    #     except Exception as e:
+    #         self._logger.error(f"Real pedestrian test failed: {e}")
