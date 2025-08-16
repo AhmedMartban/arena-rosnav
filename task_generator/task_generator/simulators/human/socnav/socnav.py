@@ -126,6 +126,7 @@ class SocNavHumanSimulator(DummyHumanSimulator):
 
     def __init__(self, namespace: Namespace, simulator: BaseSim):
         super().__init__(namespace, simulator)
+        self._current_dataset = 'eth'
         self._current_frame = 1
         self._simulation_running = False
         self._active_pedestrians = {}  # {ped_id: pedestrian_data}
@@ -134,7 +135,7 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         self._logger.info("Ready for step-by-step integration")
 
         self._logger.error("=== LOADING EPISODE FIRST ===")
-        self._load_episode('hotel')
+        self._load_episode('eth')
         # Setup services
         self._logger.debug("Setting up services...")
         # setup_success = self._setup_services()            # will be added soon
@@ -313,7 +314,7 @@ class SocNavHumanSimulator(DummyHumanSimulator):
 
 
 
-    def _load_episode(self, episode_name: str = "hotel"):
+    def _load_episode(self, episode_name: str = "eth"):
         """Load trajectory episode from CSV"""
         try:
             self._logger.error(f"Loading SocNav episode: {episode_name}")
@@ -336,33 +337,71 @@ class SocNavHumanSimulator(DummyHumanSimulator):
 
 
 
+    def _apply_socnav_coordinate_transform(self, x: float, y: float, dataset: str = None) -> tuple:
+        """Apply official SocNavBench coordinate transformations"""
+        
+        if dataset is None:
+            dataset = self._current_dataset
+        
+        # Official dataset parameters from dataset_params.ini
+        dataset_params = {
+            "univ": {"offset": [12, 4.5, 0], "swapxy": True, "flipxn": False, "flipyn": False},
+            "eth": {"offset": [1.4, 14.4, 0], "swapxy": True, "flipxn": True, "flipyn": False},
+            "univ": {"offset": [10, 6, 0], "swapxy": False, "flipxn": True, "flipyn": True},
+            "zara01": {"offset": [9.5, 3.0, 0], "swapxy": False, "flipxn": True, "flipyn": True},
+            "zara02": {"offset": [9.5, 1.85, 0], "swapxy": False, "flipxn": True, "flipyn": True},
+        }
+        
+        params = dataset_params.get(dataset, dataset_params["eth"])
+        
+        # Store original for debugging
+        orig_x, orig_y = x, y
+        
+        # Step 1: Apply swapxy (swap X and Y coordinates)
+        if params["swapxy"]:
+            x, y = y, x
+        
+        # Step 2: Apply flip operations  
+        if params["flipxn"]:
+            x = -x
+        if params["flipyn"]:
+            y = -y
+        
+        # Step 3: Apply offset
+        arena_x = x + params["offset"][0]
+        arena_y = y + params["offset"][1]
+        
+        # Debug log for first transform
+        if hasattr(self, '_debug_transform_logged') and not self._debug_transform_logged:
+            self._logger.error(f"SocNav Transform [{dataset}]: raw({orig_x:.2f}, {orig_y:.2f}) → swapped({x-params['offset'][0]:.2f}, {y-params['offset'][1]:.2f}) → final({arena_x:.2f}, {arena_y:.2f})")
+            self._debug_transform_logged = True
+        
+        return arena_x, arena_y
+    
     def _create_arena_pedestrian(self, ped_id: int, x: float, y: float) -> Pedestrian:
-        """Create arena_people_msgs.Pedestrian (separate from hunav)"""
+        """Create arena pedestrian with SocNavBench coordinate transformation"""
+        
+        # Apply official SocNavBench coordinate transformation
+        arena_x, arena_y = self._apply_socnav_coordinate_transform(x, y)
         
         arena_ped = Pedestrian()
-        
-        # Basic info
         arena_ped.name = f"socnav_ped_{ped_id}"
         arena_ped.id = ped_id
         
-        # Position
-        arena_ped.position.position.x = x
-        arena_ped.position.position.y = y
-        arena_ped.position.position.z = 1.25
+        # Transformed coordinates
+        arena_ped.position.position.x = arena_x
+        arena_ped.position.position.y = arena_y
+        arena_ped.position.position.z = 0.8
         
-        # Simple orientation (facing forward)
-        arena_ped.position.orientation.x = 0.0
-        arena_ped.position.orientation.y = 0.0
-        arena_ped.position.orientation.z = 0.0
+        # Orientation (can be improved later with velocity calculation)
         arena_ped.position.orientation.w = 1.0
         
-        # Zero velocity for now
+        # Initial velocity (zero for now)
         arena_ped.twist.linear.x = 0.0
         arena_ped.twist.linear.y = 0.0
-        arena_ped.twist.linear.z = 0.0
         arena_ped.twist.angular.z = 0.0
         
-        # Walking animation
+        # Animation state
         arena_ped.animation_state = Pedestrian.WALKING
         
         return arena_ped
