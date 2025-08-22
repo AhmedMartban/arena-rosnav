@@ -47,8 +47,8 @@ class SimpleTrajectoryLoader:
             for row in data_transposed:
                 frame = int(row[0])
                 ped_id = int(row[1]) 
-                y = float(row[2])
-                x = float(row[3])
+                x = float(row[2])
+                y = float(row[3])
                 
                 if frame not in self.data:
                     self.data[frame] = {}
