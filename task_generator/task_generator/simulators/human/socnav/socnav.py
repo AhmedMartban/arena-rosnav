@@ -3,10 +3,11 @@
 SocNav Human Simulator for Arena
 Uses Pre recorded Trajectory Data 
 """
-#TO DO:
-#1.3 implement sdf creation for different skin types
-#2  implement service calls (delete_actors)
-#4. test in gazebo and isaac sim
+# Future Tasks TO DO:
+#2  implement service calls (delete_actors) # easy just copy it from hunav, when the human spawning works 
+#4. test in gazebo and isaac sim   ####### Currenty lagging big time! Because of the walls being spammed in gazebo
+# Just ohne thing needs to be adapted: Spawn_dynamic_obstacles_impl is only called once at the beginning in the current implementation of the base simulator
+# So either we need to modify the base simulator to call it every frame or we need to find another way to update the pedestrians every frame
 
 
 
@@ -27,6 +28,21 @@ from arena_people_msgs.msg import Pedestrian, Pedestrians
 from arena_people_msgs.srv import DeleteActors
 
 from .trajectory_loader import SimpleTrajectoryLoader
+import dataclasses 
+from task_generator.shared import Pose, Position, Model, ModelType, ModelWrapper
+from ament_index_python.packages import get_package_share_directory
+
+
+
+@dataclasses.dataclass
+class SocNavPedestrian:
+    """Simple SocNav pedestrian for SDF generation"""
+    name: str
+    ped_id: int
+    x: float
+    y: float
+    skin: int = 0
+    yaw: float = 0.0
 
 class _PedestrianHelper:
 
@@ -82,49 +98,43 @@ class _PedestrianHelper:
 
 
 
-    ###!! anpassen: SocNavDynamicObstacle? und init positions anpassen 
-    # @classmethod
-    # def create_sdf(cls, agent_config: HunavDynamicObstacle) -> str:
-    #     """Create SDF description for pedestrian using gz-sim actor format"""
-
-    #     # Get skin type
-    #     skin_type = cls._SKIN_TYPES.get(agent_config.skin, 'casual_man.dae')
-
-    #     # Animation mapping based on behavior
-    #     animation_file = '../models/walk.dae'  # temp
-
-    #     # Construct paths
-    #     mesh_path = os.path.join(
-    #         get_package_share_directory('hunav_rviz2_panel'),
-    #         'meshes/models',
-    #         skin_type
-    #     )
-
-    #     animation_path = os.path.join(
-    #         get_package_share_directory('hunav_rviz2_panel'),
-    #         'meshes/animations',
-    #         animation_file
-    #     )
-
-    #     # Create the SDF
-    #     sdf = f"""<?xml version="1.0" ?>
-    #     <sdf version="1.9">
-    #         <actor name="{agent_config.name}">
-    #             <pose>{agent_config.init_pose.x} {agent_config.init_pose.y} {cls._HEIGHTS.get(agent_config.skin, 1.0)} 0 0 {agent_config.yaw}</pose>
-
-    #             <skin>
-    #                 <filename>{mesh_path}</filename>
-    #                 <scale>1.0</scale>
-    #             </skin>
-
-    #             <animation name="walking">
-    #                 <filename>{animation_path}</filename>
-    #                 <scale>1.0</scale>
-    #                 <interpolate_x>true</interpolate_x>
-    #             </animation>
-    #         </actor>
-    #     </sdf>"""
-    #     return sdf
+    @classmethod
+    def create_sdf(cls, pedestrian: SocNavPedestrian) -> str:
+        """Create SDF for SocNav pedestrian"""
+        
+        skin_type = cls._SKIN_TYPES.get(pedestrian.skin, 'casual_man.dae')
+        animation_file = '../models/walk.dae'
+        
+        mesh_path = os.path.join(
+            get_package_share_directory('hunav_rviz2_panel'),
+            'meshes/models', 
+            skin_type
+        )
+        
+        animation_path = os.path.join(
+            get_package_share_directory('hunav_rviz2_panel'),
+            'meshes/animations',
+            animation_file
+        )
+        
+        sdf = f"""<?xml version="1.0" ?>
+        <sdf version="1.9">
+            <actor name="{pedestrian.name}">
+                <pose>{pedestrian.x} {pedestrian.y} 1.25 0 0 {pedestrian.yaw}</pose>
+                
+                <skin>
+                    <filename>{mesh_path}</filename>
+                    <scale>1.0</scale>
+                </skin>
+                
+                <animation name="walking">
+                    <filename>{animation_path}</filename>
+                    <scale>1.0</scale>
+                    <interpolate_x>true</interpolate_x>
+                </animation>
+            </actor>
+        </sdf>"""
+        return sdf
         
 
 class SocNavHumanSimulator(DummyHumanSimulator):
@@ -182,9 +192,6 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         self._logger.debug("Service wait complete")
 
         self._logger.info("=== Socnav INIT COMPLETE ===")
-    # =====================================================
-    # Required Abstract Methods (from DummyHumanSimulator)
-    # =====================================================
 
     @property
     def _simulator_type(self) -> Constants.SimSimulator:
@@ -439,19 +446,6 @@ class SocNavHumanSimulator(DummyHumanSimulator):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     def _spawn_obstacles_impl(
         self,
         obstacles: Sequence[Obstacle],
@@ -460,13 +454,46 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         self._logger.info(f"SocNav: spawn_obstacles_impl called with {len(obstacles)} obstacles")
         return obstacles
 
-    def _spawn_dynamic_obstacles_impl(
-        self,
-        obstacles: Sequence[DynamicObstacle],
-    ) -> Sequence[DynamicObstacle | None]:
-        """Spawn dynamic obstacles (pedestrians)"""
-        self._logger.info(f"SocNav: spawn_dynamic_obstacles_impl called with {len(obstacles)} dynamic obstacles")
-        return obstacles
+    def _spawn_dynamic_obstacles_impl(self, obstacles):
+        results = []
+        
+        if self._simulator_type == Constants.SimSimulator.GAZEBO:
+            if not hasattr(self, '_gz_plugin_spawned') or not self._gz_plugin_spawned:
+                self._simulator.spawn_entity(_PedestrianHelper.plugin_entity(self.node.service_namespace()))
+                self._gz_plugin_spawned = True
+                
+           
+            current_peds = self._trajectory_loader.get_pedestrians_at_frame(self._current_frame)
+            
+            for ped_id, (x, y) in current_peds.items():
+                
+                socnav_ped = SocNavPedestrian(
+                    name=f"socnav_ped_{ped_id}",
+                    ped_id=ped_id,
+                    x=x,
+                    y=y,
+                    yaw=0.0 # will be calculated in _create_arena_pedestrian
+                )
+                
+                #  Create SDF for pedestrian
+                sdf = _PedestrianHelper.create_sdf(socnav_ped)
+                
+                # Create obstacle
+                obstacle = Obstacle(
+                    name=socnav_ped.name,
+                    pose=Pose(Position(x=x, y=y, z=1.25)),
+                    model=ModelWrapper.Constant(socnav_ped.name, {
+                        ModelType.SDF: Model(
+                            type=ModelType.SDF,
+                            name=socnav_ped.name,
+                            description=sdf,
+                            path="",
+                        )
+                    })
+                )
+                results.append(obstacle)
+        
+        return results
 
     def _remove_obstacles_impl(self) -> bool:
         """Remove obstacles implementation"""
@@ -493,35 +520,3 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         self._logger.info("SocNav: move_robot_impl called")
         return True
 
-
-    # def _test_arena_peds_publisher(self):
-    #     '""Test the arena_peds publisher by publishing real pedestrians from the trajectory loader"""'
-    #     try:
-    #         self._logger.error("=== TESTING REAL PEDESTRIAN PUBLISHING ===")
-            
-    #         # Get pedestrians at frame 1
-    #         frame_1_peds = self._trajectory_loader.get_pedestrians_at_frame(1)
-    #         self._logger.error(f"Frame 1 has {len(frame_1_peds)} pedestrians")
-            
-    #         # Create pedestrians message
-    #         peds_msg = Pedestrians()
-    #         peds_msg.header.frame_id = "map"
-    #         peds_msg.header.stamp = self.node.get_clock().now().to_msg()
-            
-    #         # Add each pedestrian
-    #         for ped_id, (x, y) in frame_1_peds.items():
-    #             arena_ped = self._create_arena_pedestrian(ped_id, x, y)
-    #             peds_msg.pedestrians.append(arena_ped)
-                
-    #         # Publish
-    #         self._arena_peds_publisher.publish(peds_msg)
-            
-    #         self._logger.error(f"Published {len(peds_msg.pedestrians)} real pedestrians!")
-            
-    #         # Log first pedestrian details
-    #         if peds_msg.pedestrians:
-    #             first_ped = peds_msg.pedestrians[0]
-    #             self._logger.error(f"First ped: {first_ped.name} at ({first_ped.position.position.x}, {first_ped.position.position.y})")
-            
-    #     except Exception as e:
-    #         self._logger.error(f"Real pedestrian test failed: {e}")
