@@ -3,6 +3,15 @@
 SocNav Human Simulator for Arena
 Uses Pre recorded Trajectory Data 
 """
+#TO DO:
+#1.load trajectory data from csv based on episode name and load trajectories in desired time frame
+#1.2 orientation and velocity calculation
+#1.3 implement sdf creation for different skin types
+#2  implement service calls (delete_actors)
+#4. test in gazebo and isaac sim
+
+
+
 
 import os
 from typing import Sequence
@@ -126,7 +135,6 @@ class SocNavHumanSimulator(DummyHumanSimulator):
 
     def __init__(self, namespace: Namespace, simulator: BaseSim):
         super().__init__(namespace, simulator)
-        self._current_dataset = 'eth'
         self._current_frame = 1
         self._simulation_running = False
         self._active_pedestrians = {}  # {ped_id: pedestrian_data}
@@ -135,7 +143,6 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         self._logger.info("Ready for step-by-step integration")
 
         self._logger.error("=== LOADING EPISODE FIRST ===")
-        self._load_episode('eth')
         # Setup services
         self._logger.debug("Setting up services...")
         # setup_success = self._setup_services()            # will be added soon
@@ -143,6 +150,25 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         #     self._logger.error("Service setup failed!")
         # else:
         #     self._logger.error("Services setup complete")
+
+        
+        self.WORLD_TO_DATASET = {
+            'map_zara': 'zara01',
+            'map_eth': 'eth', 
+            'map_hotel': 'hotel',
+            'map_univ': 'univ',
+            'map_zara02': 'zara02'
+        }
+        
+        # ROS2 Parameter declaration & getting
+        world_param = self.node.get_parameter('world').value
+        dataset_name = self.WORLD_TO_DATASET.get(world_param, 'hotel')
+        self._load_episode(dataset_name)
+        self._logger.error(f"World parameter: {world_param}")
+        self._logger.error(f"Selected dataset: {dataset_name}")
+
+
+
         arena_peds_success = self._setup_arena_peds_publisher()
         if arena_peds_success:
             self._start_trajectory_simulation()      
