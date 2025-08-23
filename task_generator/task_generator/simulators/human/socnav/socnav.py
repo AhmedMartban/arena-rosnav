@@ -159,8 +159,11 @@ class SocNavHumanSimulator(DummyHumanSimulator):
             'map_univ': 'univ',
             'map_zara02': 'zara02'
         }
-        
+
         # ROS2 Parameter declaration & getting
+        self._start_delay_seconds = 10 # add control over the start and stop of the simulation
+        self._start_frame = 500
+        self._stop_frame = 15000  
         world_param = self.node.get_parameter('world').value
         dataset_name = self.WORLD_TO_DATASET.get(world_param, 'hotel')
         self._load_episode(dataset_name)
@@ -171,7 +174,7 @@ class SocNavHumanSimulator(DummyHumanSimulator):
 
         arena_peds_success = self._setup_arena_peds_publisher()
         if arena_peds_success:
-            self._start_trajectory_simulation()      
+            self._schedule_delayed_start()     
             self._logger.error("Arena peds publisher setup success!")
 
         self._logger.debug("Waiting for services to be ready...")
@@ -266,7 +269,21 @@ class SocNavHumanSimulator(DummyHumanSimulator):
             return False
 
 
+    def _schedule_delayed_start(self):
+        """Schedule simulation start with delay"""
+        self._logger.error(f"Scheduling simulation start in {self._start_delay_seconds} seconds, starting from frame {self._start_frame}")
+        
+        
+        self._start_timer = self.node.create_timer(
+            self._start_delay_seconds,  
+            self._delayed_start_callback
+        )
 
+    def _delayed_start_callback(self):
+        """Called after start delay - begins simulation"""
+        self._start_timer.destroy()  
+        self._logger.error(f"Starting simulation now at frame {self._start_frame}")
+        self._start_trajectory_simulation()
 
     def _start_trajectory_simulation(self):
         """Start frame-by-frame trajectory simulation"""
@@ -274,7 +291,7 @@ class SocNavHumanSimulator(DummyHumanSimulator):
             self._logger.error("=== STARTING TRAJECTORY SIMULATION ===")
             
             # Reset simulation state
-            self._current_frame = 1
+            self._current_frame = self._start_frame 
             self._active_pedestrians = {}
             self._simulation_running = True
             
@@ -284,7 +301,7 @@ class SocNavHumanSimulator(DummyHumanSimulator):
                 self._simulation_step
             )
             
-            self._logger.error("Simulation started at 25 fps")
+            self._logger.error(f"Simulation started at 25 fps from frame {self._start_frame}")
             
         except Exception as e:
             self._logger.error(f"Failed to start simulation: {e}")
@@ -309,8 +326,8 @@ class SocNavHumanSimulator(DummyHumanSimulator):
             if self._current_frame % 25 == 0:
                 self._logger.error(f"Frame {self._current_frame}: {len(current_peds)} pedestrians")
                 
-            # Stop after reasonable time (for testing)
-            if self._current_frame > 15000:  # ~20 seconds at 25 fps
+            # Stop after set time
+            if self._current_frame > self._stop_frame: 
                 self._stop_simulation()
 
 
