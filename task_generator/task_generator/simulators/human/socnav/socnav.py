@@ -4,8 +4,6 @@ SocNav Human Simulator for Arena
 Uses Pre recorded Trajectory Data 
 """
 #TO DO:
-#1.load trajectory data from csv based on episode name and load trajectories in desired time frame
-#1.2 orientation and velocity calculation
 #1.3 implement sdf creation for different skin types
 #2  implement service calls (delete_actors)
 #4. test in gazebo and isaac sim
@@ -14,6 +12,7 @@ Uses Pre recorded Trajectory Data
 
 
 import os
+import math
 from typing import Sequence
 from collections.abc import Sequence
 
@@ -138,6 +137,7 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         self._current_frame = 1
         self._simulation_running = False
         self._active_pedestrians = {}  # {ped_id: pedestrian_data}
+        self._previous_pedestrian_positions = {}  # {ped_id: (x, y)} (for velocity calc and orientation))
         self._trajectory_loader = SimpleTrajectoryLoader()
         self._logger.info("SocNav Human Simulator initialized (minimal version)")
         self._logger.info("Ready for step-by-step integration")
@@ -381,30 +381,52 @@ class SocNavHumanSimulator(DummyHumanSimulator):
 
 
     def _create_arena_pedestrian(self, ped_id: int, x: float, y: float) -> Pedestrian:
-        """Create arena pedestrian )"""
+        """Create arena pedestrian with calculated orientation and velocity"""
         
         arena_ped = Pedestrian()
         arena_ped.name = f"socnav_ped_{ped_id}"
         arena_ped.id = ped_id
         
-        # Raw coordinates - transformation handled by map.yaml
+        # Position
         arena_ped.position.position.x = x
         arena_ped.position.position.y = y
         arena_ped.position.position.z = 0.8
         
-        # Orientation
-        arena_ped.position.orientation.w = 1.0
+        # Calculate orientation and velocity from movement
+        velocity_x, velocity_y, yaw = self._calculate_motion(ped_id, x, y)
         
-        # Initial velocity
-        arena_ped.twist.linear.x = 0.0
-        arena_ped.twist.linear.y = 0.0
+        # Set orientation from yaw
+        arena_ped.position.orientation.w = math.cos(yaw / 2)
+        arena_ped.position.orientation.z = math.sin(yaw / 2)
+        
+        # Set velocity
+        arena_ped.twist.linear.x = velocity_x
+        arena_ped.twist.linear.y = velocity_y
         arena_ped.twist.angular.z = 0.0
         
-        # Animation state
         arena_ped.animation_state = Pedestrian.WALKING
-        
         return arena_ped
 
+    def _calculate_motion(self, ped_id: int, current_x: float, current_y: float):
+        """Calculate velocity and orientation from position change"""
+        dt = 0.04  # 25 fps = 0.04 seconds between frames
+        
+        if ped_id in self._previous_pedestrian_positions:
+            prev_x, prev_y = self._previous_pedestrian_positions[ped_id]
+            
+            # Calculate velocity
+            velocity_x = (current_x - prev_x) / dt
+            velocity_y = (current_y - prev_y) / dt
+            
+            # Calculate orientation (yaw) from movement direction
+            yaw = math.atan2(velocity_y, velocity_x)
+        else:
+            velocity_x = velocity_y = yaw = 0.0
+        
+        # Store current position for next frame
+        self._previous_pedestrian_positions[ped_id] = (current_x, current_y)
+        
+        return velocity_x, velocity_y, yaw
 
     def _stop_simulation(self):
         """Stop the simulation"""
