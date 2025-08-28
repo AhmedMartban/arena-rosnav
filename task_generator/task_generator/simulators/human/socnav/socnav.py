@@ -454,46 +454,54 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         self._logger.info(f"SocNav: spawn_obstacles_impl called with {len(obstacles)} obstacles")
         return obstacles
 
-    def _spawn_dynamic_obstacles_impl(self, obstacles):
-        results = []
+    def _spawn_dynamic_obstacles_impl(
+        self,
+        obstacles: Sequence[DynamicObstacle],
+    ) -> Sequence[DynamicObstacle | None]:
+        """Spawn dynamic obstacles (pedestrians)"""
+        self._logger.info(f"SocNav: spawn_dynamic_obstacles_impl called with {len(obstacles)} dynamic obstacles")
+        return obstacles
+
+    # def _spawn_dynamic_obstacles_impl(self, obstacles):                      Is easily ready for the next, spawn_dynamic_obstacle has to be just callable every frame
+    #     results = []
         
-        if self._simulator_type == Constants.SimSimulator.GAZEBO:
-            if not hasattr(self, '_gz_plugin_spawned') or not self._gz_plugin_spawned:
-                self._simulator.spawn_entity(_PedestrianHelper.plugin_entity(self.node.service_namespace()))
-                self._gz_plugin_spawned = True
+    #     if self._simulator_type == Constants.SimSimulator.GAZEBO:
+    #         if not hasattr(self, '_gz_plugin_spawned') or not self._gz_plugin_spawned:
+    #             self._simulator.spawn_entity(_PedestrianHelper.plugin_entity(self.node.service_namespace()))
+    #             self._gz_plugin_spawned = True
                 
            
-            current_peds = self._trajectory_loader.get_pedestrians_at_frame(self._current_frame)
+    #         current_peds = self._trajectory_loader.get_pedestrians_at_frame(self._current_frame)
             
-            for ped_id, (x, y) in current_peds.items():
+    #         for ped_id, (x, y) in current_peds.items():
                 
-                socnav_ped = SocNavPedestrian(
-                    name=f"socnav_ped_{ped_id}",
-                    ped_id=ped_id,
-                    x=x,
-                    y=y,
-                    yaw=0.0 # will be calculated in _create_arena_pedestrian
-                )
+    #             socnav_ped = SocNavPedestrian(
+    #                 name=f"socnav_ped_{ped_id}",
+    #                 ped_id=ped_id,
+    #                 x=x,
+    #                 y=y,
+    #                 yaw=0.0 # will be calculated in _create_arena_pedestrian
+    #             )
                 
-                #  Create SDF for pedestrian
-                sdf = _PedestrianHelper.create_sdf(socnav_ped)
+    #             #  Create SDF for pedestrian
+    #             sdf = _PedestrianHelper.create_sdf(socnav_ped)
                 
-                # Create obstacle
-                obstacle = Obstacle(
-                    name=socnav_ped.name,
-                    pose=Pose(Position(x=x, y=y, z=1.25)),
-                    model=ModelWrapper.Constant(socnav_ped.name, {
-                        ModelType.SDF: Model(
-                            type=ModelType.SDF,
-                            name=socnav_ped.name,
-                            description=sdf,
-                            path="",
-                        )
-                    })
-                )
-                results.append(obstacle)
+    #             # Create obstacle
+    #             obstacle = Obstacle(
+    #                 name=socnav_ped.name,
+    #                 pose=Pose(Position(x=x, y=y, z=1.25)),
+    #                 model=ModelWrapper.Constant(socnav_ped.name, {
+    #                     ModelType.SDF: Model(
+    #                         type=ModelType.SDF,
+    #                         name=socnav_ped.name,
+    #                         description=sdf,
+    #                         path="",
+    #                     )
+    #                 })
+    #             )
+    #             results.append(obstacle)
         
-        return results
+    #     return results
 
     def _remove_obstacles_impl(self) -> bool:
         """Remove obstacles implementation"""
