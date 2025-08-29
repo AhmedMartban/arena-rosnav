@@ -395,16 +395,16 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         arena_ped.id = ped_id
         
         # Position
-        arena_ped.position.position.x = x
-        arena_ped.position.position.y = y
-        arena_ped.position.position.z = 0.8
+        arena_ped.pose.position.x = x
+        arena_ped.pose.position.y = y
+        arena_ped.pose.position.z = 0.8
         
         # Calculate orientation and velocity from movement
         velocity_x, velocity_y, yaw = self._calculate_motion(ped_id, x, y)
         
         # Set orientation from yaw
-        arena_ped.position.orientation.w = math.cos(yaw / 2)
-        arena_ped.position.orientation.z = math.sin(yaw / 2)
+        arena_ped.pose.orientation.w = math.cos(yaw / 2)
+        arena_ped.pose.orientation.z = math.sin(yaw / 2)
         
         # Set velocity
         arena_ped.twist.linear.x = velocity_x
@@ -513,18 +513,18 @@ class SocNavHumanSimulator(DummyHumanSimulator):
         self._logger.info("SocNav: spawn_walls_impl called")
         return True
 
-    def _spawn_robot_impl(self, robot) -> bool:
+    def _spawn_robot_impl(self, robots) -> Sequence[bool]:
         """Spawn robot implementation"""
-        self._logger.info("SocNav: spawn_robot_impl called")
-        return True
+        self._logger.info(f"SocNav: spawn_robot_impl called with {len(robots)} robots")
+        return [True] * len(robots)  
 
-    def _remove_robot_impl(self, name) -> bool:
+    def _remove_robot_impl(self, robots) -> Sequence[bool]:
         """Remove robot implementation"""
-        self._logger.info("SocNav: remove_robot_impl called")
-        return True
+        self._logger.info(f"SocNav: remove_robot_impl called with {len(robots)} robots")
+        return [True] * len(robots)  
 
-    def _move_robot_impl(self, name, pose) -> bool:
+    def _move_robot_impl(self, robots) -> Sequence[bool]:
         """Move robot implementation"""
-        self._logger.info("SocNav: move_robot_impl called")
-        return True
+        self._logger.info(f"SocNav: move_robot_impl called with {len(robots)} robots")
+        return [True] * len(robots)  
 
