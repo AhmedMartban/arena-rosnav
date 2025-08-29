@@ -211,8 +211,10 @@ if [ ! -f "$INSTALLED" ] ; then
 
 
   ln -fs src/arena/arena-rosnav/tools/source.bash ./arena.bash
+  ln -fs src/arena/arena-rosnav/tools/source.zsh ./arena.zsh
   ln -fs src/arena/arena-rosnav/tools/poetry_install .
   ln -fs src/arena/arena-rosnav/tools/colcon_build .
+  ln -fs src/arena/arena-rosnav/tools/colcon_build.zsh .
 
   . poetry_install
 fi
@@ -274,5 +276,10 @@ done
 
 # final pass
 compile
+
+if [ ! -f "${ARENA_WS_DIR}/ws-arena.code-workspace" ]; then
+  ln -rs "${ARENA_WS_DIR}/src/arena/arena-rosnav/tools/arena.code-workspace" "${ARENA_WS_DIR}/ws-arena.code-workspace"
+  echo "Created symlink for ws-arena.code-workspace in ${ARENA_WS_DIR}"
+fi
 
 echo 'installation finished'

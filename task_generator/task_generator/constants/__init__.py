@@ -32,6 +32,7 @@ class Constants:
             RANDOM = "random"
             SCENARIO = "scenario"
             ENVIRONMENT = "environment"
+            PROMPT = "prompt"
 
             @classmethod
             def prefix(cls, *args):
